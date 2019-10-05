@@ -477,5 +477,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5982096898435113273, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 89dac19d5760f4d41a6c53b77ddeb4a5,
+        type: 2}
+    - target: {fileID: 5982096898435113273, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1458572143462536965, guid: 89dac19d5760f4d41a6c53b77ddeb4a5,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd22da00cd2ef6c4eae5d2ac44f7f726, type: 3}
