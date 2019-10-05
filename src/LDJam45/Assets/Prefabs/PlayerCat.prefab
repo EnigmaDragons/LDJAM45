@@ -29,7 +29,7 @@ Transform:
   m_Children:
   - {fileID: 6362486179521946866}
   m_Father: {fileID: 7319797692756229465}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7319797692070369628
 GameObject:
@@ -63,7 +63,7 @@ Transform:
   - {fileID: 7319797693884221695}
   - {fileID: 7319797692595782155}
   m_Father: {fileID: 7319797692756229465}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &7319797692070369630
 ParticleSystem:
@@ -9684,7 +9684,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7319797692756229465}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &7319797692733601213
 TrailRenderer:
@@ -9815,7 +9815,7 @@ Transform:
   m_Children:
   - {fileID: 7319797693489135802}
   m_Father: {fileID: 7319797692756229465}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &7319797692740844620
 MeshFilter:
@@ -9914,7 +9914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7319797692756229465}
   - component: {fileID: 7319797692756229464}
-  - component: {fileID: 1258884473}
+  - component: {fileID: 6589930768010418438}
   - component: {fileID: 2746726730563005847}
   - component: {fileID: 7319797692756229470}
   - component: {fileID: 7319797692756229468}
@@ -9940,10 +9940,10 @@ Transform:
   m_LocalPosition: {x: -7.75, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3150342485163607354}
   - {fileID: 7319797692070369631}
   - {fileID: 7319797692733601214}
   - {fileID: 7319797692740844609}
+  - {fileID: 3150342485163607354}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9963,7 +9963,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1258884473
+--- !u!95 &6589930768010418438
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -19856,6 +19856,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9bbf98a9ada54d14fbbc08f085af6830, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 6c750c67cdd022c4bb4016d479343e6b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19866,7 +19876,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 232b70b7f9d14a34da44714bae1dd10b, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6c750c67cdd022c4bb4016d479343e6b, type: 3}
 --- !u!4 &6362486179521946866 stripped
 Transform:
