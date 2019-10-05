@@ -243,6 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986e705acb281e4a9c3e1b5c6dfb301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 20
+  SpeedIncrease: 0.25
+  DistanceToPlayer: 25
   Waypoints:
   - {fileID: 1256046101}
   - {fileID: 400332129}
@@ -1563,11 +1566,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCat
-      objectReference: {fileID: 0}
-    - target: {fileID: 2980284256107846615, guid: 9e2ac7a814f58034d86ab2d6f1920195,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2235827643962993092, guid: 9e2ac7a814f58034d86ab2d6f1920195,
         type: 3}

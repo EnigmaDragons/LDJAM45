@@ -7,6 +7,7 @@ public class CatController : MonoBehaviour
     [SerializeField] private float Speed = 3.0f;
     [SerializeField] private float DashForce = 7.0f;
     [SerializeField] private float JumpForce = 5.0f;
+    [SerializeField] private float FallForce = 2.0f;
     [SerializeField] private float Cooldown = 1.0f;
 
     private bool Jumping = false;
@@ -36,12 +37,18 @@ public class CatController : MonoBehaviour
 
         // Jumping
         if (!Jumping && !Dashing) {            
-            if (Input.GetButton("Jump")) {
+            if (Input.GetButtonDown("Jump")) {
                 Jumping = true;
                 Movement.y += JumpForce;
-                rb.AddForce(Movement, ForceMode.Impulse);                                
-                StartCoroutine(CatJump());
+                //rb.AddForce(Movement, ForceMode.Impulse);            
+                rb.velocity = Vector3.up * JumpForce;
+                StartCoroutine(CatJump());                
             }
+        }
+
+        // Fall faster during jumps
+        if (rb.velocity.y < 0) {
+            rb.velocity += Vector3.up * Physics.gravity.y * FallForce * Time.deltaTime;
         }
 
         // Rotate Cat to moving position
