@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3996937605751924505}
   - component: {fileID: 5117508799411690853}
+  - component: {fileID: 8365133326883673034}
   m_Layer: 0
   m_Name: GameRules
   m_TagString: Untagged
@@ -48,3 +49,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
   _isFinished: 0
   _finishedEvents: []
+--- !u!114 &8365133326883673034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809137533544101979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e795d92af7fc070428234018b4f726ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
