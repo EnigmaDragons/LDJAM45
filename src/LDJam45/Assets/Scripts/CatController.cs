@@ -5,31 +5,24 @@ using UnityEngine;
 public class CatController : MonoBehaviour
 {
     [SerializeField] private float Speed = 3.0f;
-    [SerializeField] private float DashForce = 1.5f;
+    [SerializeField] private float DashForce = 7.0f;
     [SerializeField] private float JumpForce = 5.0f;
+    [SerializeField] private float Cooldown = 1.0f;
 
     private bool Jumping = false;
     private bool Dashing = false;
-
-    private float TransitionSpeed;
-    private float MovementSpeed;
+        
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start() {
-        rb = GetComponent<Rigidbody>();
-        MovementSpeed = Speed;
-        TransitionSpeed = 0;        
+        rb = GetComponent<Rigidbody>();   
     }
 
     // Update is called once per frame
     void FixedUpdate() {   
         float MoveVertical = Input.GetAxis("Vertical");
         float MoveHorizontal = Input.GetAxis("Horizontal");
-
-        //Debug.Log("Vertical" + MoveVertical);
-        //Debug.Log("Horizontal" + MoveHorizontal);
-
         Vector3 Movement = new Vector3(MoveHorizontal, 0.0f, MoveVertical).normalized;
 
         // Dashing
@@ -41,6 +34,7 @@ public class CatController : MonoBehaviour
             }
         }
 
+        // Jumping
         if (!Jumping && !Dashing) {            
             if (Input.GetButton("Jump")) {
                 Jumping = true;
@@ -50,21 +44,22 @@ public class CatController : MonoBehaviour
             }
         }
 
+        // Rotate Cat to moving position
         Vector3 CatRotation = Vector3.Normalize(new Vector3(MoveVertical, 0f, -MoveHorizontal));
         if (CatRotation != Vector3.zero) {
             transform.forward = CatRotation;
         }
 
-        rb.MovePosition(transform.position + Movement * MovementSpeed * Time.deltaTime);                 
+        rb.MovePosition(transform.position + Movement * Speed * Time.deltaTime);                 
     }    
 
     IEnumerator CatJump() {        
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(Cooldown);
         Jumping = false;
     }
 
     IEnumerator CatDash() {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(Cooldown);
         Dashing = false;
     }
 }
