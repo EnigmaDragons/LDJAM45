@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireInterval: 0.6
   NumProjectiles: 1
-  ProjectilePrototype: {fileID: 0}
+  ProjectilePrototype: {fileID: 1699459221867030, guid: e61bba166591d2c4ea9992b096d6d696,
+    type: 3}
   Damage: 0
   DelayBetweenShots: 0.18
