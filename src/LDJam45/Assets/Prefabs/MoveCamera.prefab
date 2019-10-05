@@ -66,6 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846191def67749d4c9fa2c34aa97404c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 0}
+  shared: {fileID: 11400000, guid: bbb4cc2a3fffc6740bbeb64ca5d4a7db, type: 2}
   newPosition: {fileID: 0}
   speed: 90

@@ -21,8 +21,6 @@ public class MenuObject : MonoBehaviour {
         {
             //If we do, select the specified object
             SetFirstSelected();
-        }
-        
+        }        
     }
-
 }

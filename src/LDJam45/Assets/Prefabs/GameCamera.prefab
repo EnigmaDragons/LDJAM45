@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 354017171199740310}
   - component: {fileID: 354017171199740311}
   - component: {fileID: -8564262640728553425}
+  - component: {fileID: 3414127911392690560}
   m_Layer: 0
   m_Name: GameCamera
   m_TagString: MainCamera
@@ -100,3 +101,17 @@ MonoBehaviour:
   BlurAmount: 0
   FadeAmount: 0.4
   material: {fileID: 2100000, guid: 6ced9dc3165b9bd439f57ddcee8abac6, type: 2}
+--- !u!114 &3414127911392690560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354017171199740308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cececffb17d2ad49a91a40b6bfc7966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shared: {fileID: 11400000, guid: bbb4cc2a3fffc6740bbeb64ca5d4a7db, type: 2}
+  gameCamera: {fileID: 354017171199740310}
