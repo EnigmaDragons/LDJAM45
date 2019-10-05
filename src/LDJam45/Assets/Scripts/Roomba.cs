@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class Roomba : MonoBehaviour
 {
+    [SerializeField] private float Speed = 20.0f;
+    [SerializeField] private float SpeedIncrease = 0.25f;
+    [SerializeField] private float DistanceToPlayer = 25.0f;
     [SerializeField] Transform[] Waypoints;
     [SerializeField] States CurrentState;
 
@@ -32,7 +35,7 @@ public class Roomba : MonoBehaviour
     void Update()
     {
         // Chase Player if close
-        if (Vector3.Distance(transform.position, player.transform.position) < 25f) {
+        if (Vector3.Distance(transform.position, player.transform.position) < DistanceToPlayer) {
             CurrentState = States.Chasing;
         }
 
@@ -44,16 +47,18 @@ public class Roomba : MonoBehaviour
         if (CurrentState == States.Cleaning) {
             Agent.SetDestination(Waypoints[CurrentWaypoint].position);            
 
+            // HACK: 1.6f is a magic number based on the roomba mesh radius
             if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 1.6f) {                                
-                CurrentWaypoint++;
+                CurrentWaypoint++; // Set next waypoint
                 if (CurrentWaypoint == Waypoints.Length) {
-                    CurrentWaypoint = 0;
+                    CurrentWaypoint = 0; // Reset Waypoints
                 }
             }
         }                        
 
-        if (Agent.speed < 15) {
-            Agent.speed += 0.25f * Time.deltaTime;
+        // Speed increase
+        if (Agent.speed < Speed) {
+            Agent.speed += SpeedIncrease * Time.deltaTime;
         }                       
     }
 }
