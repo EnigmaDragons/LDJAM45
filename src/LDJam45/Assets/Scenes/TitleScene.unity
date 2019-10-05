@@ -477,5 +477,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6405272033036953332, guid: 59abdcf157c4898498607ed357ddbf28,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1458572143462536965, guid: 89dac19d5760f4d41a6c53b77ddeb4a5,
+        type: 2}
+    - target: {fileID: 6405272033680864035, guid: 59abdcf157c4898498607ed357ddbf28,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405272033680864035, guid: 59abdcf157c4898498607ed357ddbf28,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NavigateToGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405272033680864035, guid: 59abdcf157c4898498607ed357ddbf28,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59abdcf157c4898498607ed357ddbf28, type: 3}
