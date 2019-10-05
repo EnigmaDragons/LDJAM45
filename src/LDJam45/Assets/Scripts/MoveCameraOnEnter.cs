@@ -2,7 +2,7 @@
 
 public class MoveCameraOnEnter : MonoBehaviour
 {
-    [SerializeField] private Camera sceneCamera;
+    [SerializeField] private GameSceneSharedObjects shared;
     [SerializeField] private GameObject newPosition;
     [SerializeField] private float speed = 90f;
 
@@ -24,12 +24,13 @@ public class MoveCameraOnEnter : MonoBehaviour
         if (!_isStarted || _isFinished)
             return;
 
-        if (sceneCamera.transform.position.Equals(newPosition.transform.position))
+        var c = shared.gameCamera;
+        if (c.transform.position.Equals(newPosition.transform.position))
         {
             _isFinished = true;
             return;
         }
 
-        sceneCamera.transform.position = Vector3.MoveTowards(sceneCamera.transform.position, newPosition.transform.position, speed * Time.deltaTime);
+        c.transform.position = Vector3.MoveTowards(c.transform.position, newPosition.transform.position, speed * Time.deltaTime);
     }
 }
