@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Dash : MonoBehaviour
@@ -27,7 +28,7 @@ public class Dash : MonoBehaviour
             }
         }
         DashCooldownRemaining = Mathf.Max(0, DashCooldownRemaining - Time.deltaTime);
-        if (DashCooldownRemaining <= 0 && Input.GetButtonDown("Dash") && new Vector2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")).normalized != Vector2.zero)
+        if (DashCooldownRemaining <= 0 && Input.GetButtonDown("Dash") && new Vector2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")).normalized != Vector2.zero && Math.Abs(Time.timeScale) > 0.01)
         {
             _isDashing = true;
             _dashTime = DashLength;

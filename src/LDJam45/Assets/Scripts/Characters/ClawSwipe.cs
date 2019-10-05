@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ClawSwipe : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class ClawSwipe : MonoBehaviour
     private void Update()
     {
         SwipeCooldownRemaining = Mathf.Max(0, SwipeCooldownRemaining - Time.deltaTime);
-        if (!_isSwiping && !_isDashing && SwipeCooldownRemaining <= 0 && Input.GetButtonDown("Fire1"))
+        if (!_isSwiping && !_isDashing && SwipeCooldownRemaining <= 0 && Input.GetButtonDown("Fire1") && Math.Abs(Time.timeScale) > 0.01)
         {
             SwipeCooldownRemaining = SwipeCooldown;
             _isSwiping = true;
