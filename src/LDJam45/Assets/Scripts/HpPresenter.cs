@@ -13,6 +13,7 @@ public class HpPresenter : MonoBehaviour
         onHealthGained.Subscribe(IncrementHealth, this);
         onHealthLost.Subscribe(DecrementHealth, this);
         hpIcons = new GameObject[transform.childCount];
+        currentHealth = hpIcons.Length;
         for (int i = 0; i < hpIcons.Length; ++i)
             hpIcons[i] = transform.GetChild(i).gameObject;
     }
@@ -29,6 +30,7 @@ public class HpPresenter : MonoBehaviour
     void UpdateHealth(int amount)
     {
         currentHealth += amount;
+        Debug.Log($"Health is now {currentHealth}");
         for (int i = 0; i < hpIcons.Length; ++i)
             hpIcons[i].SetActive(i < currentHealth);
     }
