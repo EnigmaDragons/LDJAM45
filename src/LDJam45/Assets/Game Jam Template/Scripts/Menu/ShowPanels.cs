@@ -19,7 +19,6 @@ public class ShowPanels : MonoBehaviour {
 
     private void SetSelection(GameObject panelToSetSelected)
     {
-        //activePanel = panelToSetSelected;
         activePanelMenuObject = activePanel.GetComponent<MenuObject>();
 
         if (activePanelMenuObject != null)
@@ -45,8 +44,8 @@ public class ShowPanels : MonoBehaviour {
         menuPanel.SetActive(false);
 
 	    activePanel = optionsPanel;
-	    //SetSelection(optionsPanel);
-	}
+	    menuSelected = false;
+    }
 
 	//Call this function to deactivate and hide the Options panel during the main menu
 	public void HideOptionsPanel()
@@ -56,7 +55,8 @@ public class ShowPanels : MonoBehaviour {
 		optionsTint.SetActive(false);
 
 	    activePanel = menuPanel;
-	}
+	    menuSelected = false;
+    }
 
     //Call this function to activate and display the Options panel during the main menu
     public void ShowCreditsPanel()
@@ -66,7 +66,7 @@ public class ShowPanels : MonoBehaviour {
         menuPanel.SetActive(false);
 
         activePanel = creditsPanel;
-        //SetSelection(creditsPanel);
+        menuSelected = false;
     }
 
     //Call this function to deactivate and hide the Options panel during the main menu
@@ -77,6 +77,7 @@ public class ShowPanels : MonoBehaviour {
         creditsTint.SetActive(false);
 
         activePanel = menuPanel;
+        menuSelected = false;
     }
 
     //Call this function to activate and display the main menu panel during the main menu
@@ -85,7 +86,7 @@ public class ShowPanels : MonoBehaviour {
 		menuPanel.SetActive(true);
 
 	    activePanel = menuPanel;
-        //SetSelection(menuPanel);
+	    menuSelected = false;
     }
 
 	//Call this function to deactivate and hide the main menu panel during the main menu
@@ -101,7 +102,7 @@ public class ShowPanels : MonoBehaviour {
 		optionsTint.SetActive(true);
 
 	    activePanel = pausePanel;
-        //SetSelection(pausePanel);
+	    menuSelected = false;
     }
 
 	//Call this function to deactivate and hide the Pause panel during game play
@@ -109,7 +110,9 @@ public class ShowPanels : MonoBehaviour {
 	{
 		pausePanel.SetActive(false);
 		optionsTint.SetActive(false);
-	}
+
+        menuSelected = false;
+    }
 
     private bool menuSelected = false;
 

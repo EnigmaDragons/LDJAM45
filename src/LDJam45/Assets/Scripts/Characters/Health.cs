@@ -36,8 +36,13 @@ public class Health : MonoBehaviour
 
     private void OnDisable()
     {
-        OnPlayerDashing.Unsubscribe(this);
-        OnPlayerStopDashing.Unsubscribe(this);
+        if (OnPlayerDashing != null) {
+            OnPlayerDashing.Unsubscribe(this);
+        }      
+        
+        if (OnPlayerStopDashing != null) {
+            OnPlayerStopDashing.Unsubscribe(this);
+        }        
     }
 
     private void Update()
