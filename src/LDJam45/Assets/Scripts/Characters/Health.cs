@@ -7,21 +7,19 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject OnDeathVfx;
     [SerializeField] private GameEvent OnHealthGained;
     [SerializeField] private GameEvent OnHealthLost;
-    [SerializeField] private GameEvent OnPlayerDashing;
-    [SerializeField] private GameEvent OnPlayerStopDashing;
     [SerializeField] private float IFrames;
     [SerializeField] private Collider Collider;
     [SerializeField] private GameEvent OnDeathEvent;
 
     public bool JustGotHit { get; private set; } = false;
-    private bool _isDashing = false;
+    public bool IsDashing = false;
     private bool _isDead = false;
     private float _secondsLeftOfInvincibility;
 
     public Role Role;
     public int MaxHealth;
     public int CurrentHealth { get; set; }
-    public bool IsInvincible => _isDashing || JustGotHit;
+    public bool IsInvincible => IsDashing || JustGotHit;
     public Action OnDamage { private get; set; } = () => {};
 
     private void Start()
@@ -29,15 +27,7 @@ public class Health : MonoBehaviour
         CurrentHealth = MaxHealth;
         if (Role == Role.Friendly)
         {
-            OnPlayerDashing.Subscribe(() => _isDashing = true, this);
-            OnPlayerStopDashing.Subscribe(() => _isDashing = false, this);
         }
-    }
-
-    private void OnDisable()
-    {
-        OnPlayerDashing.Unsubscribe(this);
-        OnPlayerStopDashing.Unsubscribe(this);
     }
 
     private void Update()
