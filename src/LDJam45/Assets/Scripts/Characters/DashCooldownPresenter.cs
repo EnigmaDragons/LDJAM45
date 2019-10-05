@@ -6,12 +6,18 @@ public class DashCooldownPresenter : MonoBehaviour
 {
     [SerializeField] private Image DashOnCooldown;
     [SerializeField] private Text CooldownText;
-    [SerializeField] private Dash Dash;
+
+    private Dash _dash;
+
+    private void Start()
+    {
+        _dash = FindObjectOfType<Dash>();
+    }
 
     private void Update()
     {
-        DashOnCooldown.enabled = Dash.DashCooldownRemaining > 0;
-        CooldownText.enabled = Dash.DashCooldownRemaining > 0;
-        CooldownText.text = Dash.DashCooldownRemaining.ToString("0.0");
+        DashOnCooldown.enabled = _dash.DashCooldownRemaining > 0;
+        CooldownText.enabled = _dash.DashCooldownRemaining > 0;
+        CooldownText.text = _dash.DashCooldownRemaining.ToString("0.0");
     }
 }

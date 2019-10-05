@@ -38,6 +38,7 @@ public class AlternateCatController : MonoBehaviour
 
     private void Update()
     {
+        
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis("Horizontal");
         _inputs.z = Input.GetAxis("Vertical");
@@ -62,7 +63,7 @@ public class AlternateCatController : MonoBehaviour
             //    CatBody.velocity = new Vector3((transform.forward * Speed).x, CatBody.velocity.y, (transform.forward * Speed).z); ;
         }
 
-        if (rotation  != Vector3.zero) {
+        if (rotation  != Vector3.zero && !_isSwiping) {
             transform.forward = rotation;
         }        
     }
