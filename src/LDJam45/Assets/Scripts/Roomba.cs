@@ -54,10 +54,11 @@ public class Roomba : MonoBehaviour
 
         // Patrol Waypoints
         if (CurrentState == States.Cleaning) {
-            Agent.SetDestination(Waypoints[CurrentWaypoint].position);            
+            Agent.SetDestination(Waypoints[CurrentWaypoint].position);
 
-            // HACK: 1.6f is a magic number based on the roomba mesh radius
-            if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 1.6f) {                                
+            // HACK: 5.0f is a magic number based on the roomba mesh radius
+            Debug.Log("Distance to waypoint: " + Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position));
+            if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 5.0f) {                                
                 CurrentWaypoint++; // Set next waypoint
                 if (CurrentWaypoint == Waypoints.Length) {
                     CurrentWaypoint = 0; // Reset Waypoints
