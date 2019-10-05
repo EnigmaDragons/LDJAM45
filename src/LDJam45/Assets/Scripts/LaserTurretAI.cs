@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserTurretAI : MonoBehaviour
 {
-    [SerializeField] private WeaponBehaviour LaserGun;
+    [SerializeField] private GunBehaviour LaserGun;
     [SerializeField] private TurnTowardsTarget Turning;
 
     private LaserAIState _state = LaserAIState.Seeking;

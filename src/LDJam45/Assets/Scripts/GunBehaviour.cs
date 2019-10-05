@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class WeaponBehaviour : MonoBehaviour
+public class GunBehaviour : MonoBehaviour
 {
-    [SerializeField] private Weapon Weapon;
+    [SerializeField] private Gun Gun;
     [SerializeField] private Vector3 ProjectileOffset;
     [SerializeField] private Role Role;
 
@@ -34,19 +34,19 @@ public class WeaponBehaviour : MonoBehaviour
         if (_msBeforeFire > 0)
             return;
 
-        _msBeforeFire = Weapon.FireInterval;
+        _msBeforeFire = Gun.FireInterval;
         StartCoroutine(LaunchProjectiles(rotation));
     }
 
     private IEnumerator LaunchProjectiles(Quaternion rotation)
     {
-        for (var i = 0; i < Weapon.NumProjectiles; i++)
+        for (var i = 0; i < Gun.NumProjectiles; i++)
         {
             var spawnPos = transform.position + transform.forward * ProjectileOffset.z + transform.up * ProjectileOffset.y + transform.right * ProjectileOffset.x;
-            var p = Instantiate(Weapon.ProjectilePrototype, spawnPos, rotation);
+            var p = Instantiate(Gun.ProjectilePrototype, spawnPos, rotation);
             var projectile = p.GetComponent<ParticleCollisionInstance>();
             projectile.OwnedBy = Role;
-            yield return new WaitForSeconds(Weapon.DelayBetweenShots);
+            yield return new WaitForSeconds(Gun.DelayBetweenShots);
         }
     }
 }

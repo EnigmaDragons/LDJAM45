@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "WeaponName", menuName = "Weapon", order = 1)]
-class Weapon : ScriptableObject
+[CreateAssetMenu(fileName = "WeaponName", menuName = "Gun", order = 1)]
+class Gun : ScriptableObject
 {
     [SerializeField] public float FireInterval = 0.6f;
     [SerializeField] public int NumProjectiles = 1;
