@@ -6,9 +6,10 @@ using UnityEngine.AI;
 public class Roomba : MonoBehaviour
 {
     [SerializeField] private GameEvent HealthLostEvent;
-    [SerializeField] private float MaxSpeed = 20.0f;
+    [SerializeField] private float MaxSpeed = 25.0f;
     [SerializeField] private float SpeedIncrease = 0.5f;
-    [SerializeField] private float DistanceToPlayer = 25.0f;
+    [SerializeField] private float ChaseDistance = 20.0f;
+    [SerializeField] private float ForgetDistance = 40.0f;
     [SerializeField] Transform[] Waypoints;
     [SerializeField] States CurrentState;
 
@@ -35,9 +36,16 @@ public class Roomba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float DistanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
+        // Debug.Log("Distance to player: " + DistanceFromPlayer.ToString());
+
         // Chase Player if close
-        if (Vector3.Distance(transform.position, player.transform.position) < DistanceToPlayer) {
+        if (DistanceFromPlayer < ChaseDistance && CurrentState != States.Chasing) {
+            Debug.Log("The Roomba is Chasing You!");
             CurrentState = States.Chasing;
+        } else if (DistanceFromPlayer > ForgetDistance && CurrentState != States.Cleaning) {
+            Debug.Log("The Roomba is cleaning");
+            CurrentState = States.Cleaning;
         }
 
         if (CurrentState == States.Chasing) {
