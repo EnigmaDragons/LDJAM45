@@ -57,9 +57,9 @@ public class AlternateCatController : MonoBehaviour
                 transform.forward = rotation;
 
             if (new Vector2(verticalInput, horizontalInput).normalized == Vector2.zero)
-                CatBody.velocity = Vector3.zero;
+                CatBody.velocity = new Vector3(0, CatBody.velocity.y, 0);
             else
-                CatBody.velocity = transform.forward * Speed;
+                CatBody.velocity = new Vector3((transform.forward * Speed).x, CatBody.velocity.y, (transform.forward * Speed).z); ;
         }
     }
 }

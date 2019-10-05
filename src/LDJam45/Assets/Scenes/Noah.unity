@@ -407,7 +407,8 @@ PrefabInstance:
       propertyPath: ClawSwipe
       value: 
       objectReference: {fileID: 2056327433}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3165441098318688606, guid: 0265f4e32e6e1e247abf6ebc73ebb920, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0265f4e32e6e1e247abf6ebc73ebb920, type: 3}
 --- !u!1001 &166688373
 PrefabInstance:
