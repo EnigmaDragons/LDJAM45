@@ -9,6 +9,7 @@ public class OnCollisionEvent : MonoBehaviour
     private bool _isOnCooldown = false;
 
     private void OnCollisionEnter(Collision other) => Trigger();
+    private void OnTriggerEnter(Collider other) => Trigger();
     private void OnParticleCollision(GameObject other) => Trigger();
 
     private void Trigger()
