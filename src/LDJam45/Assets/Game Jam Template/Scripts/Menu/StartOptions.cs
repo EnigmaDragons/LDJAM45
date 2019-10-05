@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -54,7 +55,7 @@ public class StartOptions : MonoBehaviour {
 		if (menuSettingsData.nextSceneIndex != 0) 
 		{
 			//Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
-			Invoke ("LoadDelayed", menuSettingsData.menuFadeTime);
+			Invoke("LoadDelayed", menuSettingsData.menuFadeTime);
 
             StartCoroutine(FadeCanvasGroupAlpha(0f, 1f, fadeOutImageCanvasGroup));
         } 
@@ -65,7 +66,6 @@ public class StartOptions : MonoBehaviour {
 			//Call the StartGameInScene function to start game without loading a new scene.
 			StartGameInScene();
 		}
-
 	}
 
     void OnEnable()
@@ -99,7 +99,9 @@ public class StartOptions : MonoBehaviour {
 
 		//Load the selected scene, by scene index number in build settings
 	    navigator.NavigateToGameScene();
-	}
+
+	    StartCoroutine(FadeCanvasGroupAlpha(1f, 0f, fadeOutImageCanvasGroup));
+    }
 
 	public void HideDelayed()
 	{
@@ -119,12 +121,11 @@ public class StartOptions : MonoBehaviour {
 			Invoke ("PlayNewMusic", menuSettingsData.menuFadeTime);
 		}
         
-        StartCoroutine(FadeCanvasGroupAlpha(1f,0f, menuCanvasGroup));
+        StartCoroutine(FadeCanvasGroupAlpha(1f, 0f, menuCanvasGroup));
 	}
 
     public IEnumerator FadeCanvasGroupAlpha(float startAlpha, float endAlpha, CanvasGroup canvasGroupToFadeAlpha)
     {
-
         float elapsedTime = 0f;
         float totalDuration = menuSettingsData.menuFadeTime;
 
@@ -137,6 +138,12 @@ public class StartOptions : MonoBehaviour {
         }
 
         HideDelayed();
+
+        if (Math.Abs(endAlpha) < 0.01)
+        {
+            fadeImage.gameObject.SetActive(false);
+        }
+        
         Debug.Log("Coroutine done. Game started in same scene! Put your game starting stuff here.");
     }
 
