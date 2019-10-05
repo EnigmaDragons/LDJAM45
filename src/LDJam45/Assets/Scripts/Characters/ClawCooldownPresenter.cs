@@ -3,7 +3,7 @@
 
 public class ClawCooldownPresenter : MonoBehaviour
 {
-    [SerializeField] private Image DashOnCooldown;
+    [SerializeField] private Image OnCooldownImage;
     [SerializeField] private Text CooldownText;
 
     private ClawSwipe ClawSwipe;
@@ -15,7 +15,7 @@ public class ClawCooldownPresenter : MonoBehaviour
 
     private void Update()
     {
-        DashOnCooldown.enabled = ClawSwipe.SwipeCooldownRemaining > 0;
+        OnCooldownImage.enabled = ClawSwipe.SwipeCooldownRemaining > 0;
         CooldownText.enabled = ClawSwipe.SwipeCooldownRemaining > 0;
         CooldownText.text = ClawSwipe.SwipeCooldownRemaining.ToString("0.0");
     }
