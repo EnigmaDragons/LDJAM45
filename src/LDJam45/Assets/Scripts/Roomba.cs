@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public class Roomba : MonoBehaviour
 {
+    [SerializeField] private GameObject OpenDoor;
+    [SerializeField] private GameObject CloseDoor;
     [SerializeField] private GameEvent HealthLostEvent;
-    [SerializeField] private float MaxSpeed = 25.0f;
+    [SerializeField] private float MaxSpeed = 25.0f; 
     [SerializeField] private float SpeedIncrease = 0.5f;
     [SerializeField] private float ChaseDistance = 20.0f;
     [SerializeField] private float ForgetDistance = 40.0f;
@@ -57,9 +59,16 @@ public class Roomba : MonoBehaviour
             Agent.SetDestination(Waypoints[CurrentWaypoint].position);
 
             // HACK: 5.0f is a magic number based on the roomba mesh radius
-            Debug.Log("Distance to waypoint: " + Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position));
-            if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 5.0f) {                                
+            // Debug.Log("Distance to waypoint: " + Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position));
+            if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 5.0f) {                         
                 CurrentWaypoint++; // Set next waypoint
+
+                // Close door
+                if (OpenDoor.gameObject.activeSelf) {
+                    OpenDoor.SetActive(false);
+                    CloseDoor.SetActive(true);
+                }
+
                 if (CurrentWaypoint == Waypoints.Length) {
                     CurrentWaypoint = 0; // Reset Waypoints
                 }
@@ -76,5 +85,10 @@ public class Roomba : MonoBehaviour
         if (collision.gameObject.tag == "Player") {
             HealthLostEvent.Publish();
         }
+    }
+
+    private void OnDestroy() {
+        CloseDoor.SetActive(false);
+        OpenDoor.SetActive(true);
     }
 }

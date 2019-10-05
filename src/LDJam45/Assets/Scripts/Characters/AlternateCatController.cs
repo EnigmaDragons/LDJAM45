@@ -54,7 +54,8 @@ public class AlternateCatController : MonoBehaviour
         _inputs.z = Input.GetAxis("Vertical");
         rotation = Vector3.Normalize(new Vector3(_inputs.x, 0f, _inputs.z));
 
-        
+        // _inputs = Vector3.ClampMagnitude(_inputs, 1f);
+
         if (_isDashing)
         {
             Vector3 dashVelocity = Vector3.Scale(transform.forward, DashSpeed * new Vector3(
