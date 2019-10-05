@@ -31,6 +31,10 @@ public class ShowPanels : MonoBehaviour {
     public void Start()
     {
         SetSelection(menuPanel);
+
+        HideCreditsPanel();
+        HideOptionsPanel();
+        HidePausePanel();
     }
 
     //Call this function to activate and display the Options panel during the main menu

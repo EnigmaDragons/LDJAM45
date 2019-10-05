@@ -23,8 +23,16 @@ public class AlternateCatController : MonoBehaviour
         CatBody = GetComponent<Rigidbody>();
         Animator = GetComponent<Animator>();
 
-        OnPlayerDashing.Subscribe(() => _isDashing = true, this);
-        OnPlayerStopDashing.Subscribe(() => _isDashing = false, this);
+        OnPlayerDashing.Subscribe(() =>
+        {
+            _isDashing = true;
+            CatBody.useGravity = false;
+        }, this);
+        OnPlayerStopDashing.Subscribe(() =>
+        {
+            _isDashing = false;
+            CatBody.useGravity = true;
+        }, this);
 
         OnSwipingStarted.Subscribe(() => _isSwiping = true, this);
         OnSwipingFinished.Subscribe(() => _isSwiping = false, this);
@@ -56,21 +64,18 @@ public class AlternateCatController : MonoBehaviour
             CatBody.AddForce(dashVelocity, ForceMode.VelocityChange);
         }        
 
-        if (rotation  != Vector3.zero && !_isSwiping) {
-            transform.forward = rotation;
-        }        
+        if (rotation != Vector3.zero && !_isSwiping && _inputs != Vector3.zero)
+            transform.forward = rotation;   
     }
 
     private void FixedUpdate() {
-        if (_isSwiping) {
+        if (_isSwiping || _inputs == Vector3.zero) {
             Animator.SetBool("IsWalking", false);
-            CatBody.velocity = Vector3.zero;
-        } else if (_inputs == Vector3.zero) {
-            Animator.SetBool("IsWalking", false);
-            CatBody.velocity = Vector3.zero;
-        } else {
+            CatBody.velocity = new Vector3(0, CatBody.velocity.y, 0);
+        }
+        else {
             Animator.SetBool("IsWalking", true);
             CatBody.MovePosition(CatBody.position + _inputs * Speed * Time.fixedDeltaTime);
-        } 
+        }
     }
 }
