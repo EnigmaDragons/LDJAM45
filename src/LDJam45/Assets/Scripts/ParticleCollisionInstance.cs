@@ -10,7 +10,6 @@ public class ParticleCollisionInstance : MonoBehaviour
     public bool UseWorldSpacePosition;
     public bool UseFirePointRotation;
 
-    public int Damage { private get; set; } = 10;
     public Role OwnedBy { private get; set; } = Role.All;
 
 
@@ -27,12 +26,11 @@ public class ParticleCollisionInstance : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        var health = other.GetComponent<Health>();
         Debug.Log($"Particle Collided with {other.name}");
+        var health = other.GetComponent<Health>();
         if (health != null && health.Role.Equals(OwnedBy))
             return;
-        Debug.Log($"Particle Collided with {other.name}");
-        health.CurrentHealth -= Damage;
+        
 
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
         for (int i = 0; i < numCollisionEvents; i++)
