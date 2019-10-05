@@ -9944,11 +9944,12 @@ MonoBehaviour:
   Claw: {fileID: 7319797693489135801}
   Animator: {fileID: 7319797692740844610}
   SwipeCooldown: 2
-  OnSwipingStarted: {fileID: 11400000, guid: e8d1b0a9326b3b94ab67bd14834190b0, type: 2}
-  OnSwipingFinished: {fileID: 11400000, guid: 522aa9f835e5b9b47802aa0273f2dbde, type: 2}
-  OnPlayerDashing: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
-  OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
+  PlayerActionStarted: {fileID: 11400000, guid: 75593d0e29e5e8d45886e18553dc6a68,
     type: 2}
+  PlayerActionFinished: {fileID: 11400000, guid: 5de53ff08b43a4e4eb791c0918466804,
+    type: 2}
+  SwipingStarted: {fileID: 11400000, guid: e8d1b0a9326b3b94ab67bd14834190b0, type: 2}
+  SwipingFinished: {fileID: 11400000, guid: 522aa9f835e5b9b47802aa0273f2dbde, type: 2}
   SwipeCooldownRemaining: 0
 --- !u!1 &7319797692756229459
 GameObject:
@@ -9965,6 +9966,8 @@ GameObject:
   - component: {fileID: 7319797692756229468}
   - component: {fileID: 7319797692756229469}
   - component: {fileID: 7319797692756229466}
+  - component: {fileID: 7933903113536995716}
+  - component: {fileID: 6180752846020179419}
   m_Layer: 0
   m_Name: PlayerCat
   m_TagString: Player
@@ -10039,7 +10042,7 @@ MonoBehaviour:
   OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
     type: 2}
   IFrames: 3
-  Collider: {fileID: 0}
+  Collider: {fileID: 7319797692756229471}
   OnDeathEvent: {fileID: 0}
   Role: 1
   MaxHealth: 3
@@ -10090,12 +10093,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DashLength: 0.1
   DashCooldown: 5
-  OnPlayerDashing: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
-  OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
+  PlayerActionStarted: {fileID: 11400000, guid: 75593d0e29e5e8d45886e18553dc6a68,
     type: 2}
+  PlayerActionFinished: {fileID: 11400000, guid: 5de53ff08b43a4e4eb791c0918466804,
+    type: 2}
+  DashingStarted: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
+  DashingFinished: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109, type: 2}
   DashTrail: {fileID: 7319797692733601213}
   PostEmitTime: 0.2
   DashCooldownRemaining: 0
+--- !u!114 &7933903113536995716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319797692756229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ebce89a2f6f674b85ca1ef8b46b1e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gun: {fileID: 11400000, guid: 31d0e797042f4b24cb4d6941d3654d2f, type: 2}
+  ProjectileOffset: {x: 0, y: 0, z: 3}
+  Role: 1
+--- !u!114 &6180752846020179419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319797692756229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7ec89527170a248a268b14d2963690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eyes: {fileID: 7933903113536995716}
+  PlayerActionStarted: {fileID: 11400000, guid: 75593d0e29e5e8d45886e18553dc6a68,
+    type: 2}
+  PlayerActionFinished: {fileID: 11400000, guid: 5de53ff08b43a4e4eb791c0918466804,
+    type: 2}
+  LaserEyesCooldown: 3
+  LaserEyesCooldownRemaining: 0
 --- !u!1 &7319797693489135801
 GameObject:
   m_ObjectHideFlags: 0

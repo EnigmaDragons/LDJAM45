@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class DashCooldownPresenter : MonoBehaviour
 {
-    [SerializeField] private Image DashOnCooldown;
+    [SerializeField] private Image OnCooldownImage;
     [SerializeField] private Text CooldownText;
 
     private Dash _dash;
@@ -16,7 +16,7 @@ public class DashCooldownPresenter : MonoBehaviour
 
     private void Update()
     {
-        DashOnCooldown.enabled = _dash.DashCooldownRemaining > 0;
+        OnCooldownImage.enabled = _dash.DashCooldownRemaining > 0;
         CooldownText.enabled = _dash.DashCooldownRemaining > 0;
         CooldownText.text = _dash.DashCooldownRemaining.ToString("0.0");
     }
