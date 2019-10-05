@@ -13,4 +13,9 @@ public class Navigator : ScriptableObject
     {
         SceneManager.LoadScene("TitleScene");
     }
+
+    public static void NavigateToVictoryScene()
+    {
+        SceneManager.LoadScene("VictoryScene");
+    }
 }
