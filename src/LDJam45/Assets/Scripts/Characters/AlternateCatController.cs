@@ -70,8 +70,10 @@ public class AlternateCatController : MonoBehaviour
     private void FixedUpdate() {
         if (_isSwiping) {
             CatBody.velocity = Vector3.zero;
+        } else if (_inputs == Vector3.zero) {
+            CatBody.velocity = Vector3.zero;
         } else {
             CatBody.MovePosition(CatBody.position + _inputs * Speed * Time.fixedDeltaTime);
-        }        
+        } 
     }
 }

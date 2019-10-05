@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7879885746451446980}
   - component: {fileID: 7879885746451447033}
+  - component: {fileID: 7879885746436900071}
   - component: {fileID: 7879885746451446983}
   - component: {fileID: 7879885746451446982}
+  - component: {fileID: 7879885746436900070}
   m_Layer: 0
   m_Name: Roomba
   m_TagString: Untagged
@@ -47,6 +49,44 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &7879885746436900071
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879885746451447032}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!195 &7879885746451446983
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -58,9 +98,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 5
-  m_Acceleration: 10
+  m_Acceleration: 15
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 240
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -82,15 +122,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthLostEvent: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
-  MaxSpeed: 20
-  SpeedIncrease: 0.5
-  DistanceToPlayer: 25
+  MaxSpeed: 30
+  SpeedIncrease: 0.25
+  ChaseDistance: 25
+  ForgetDistance: 40
   Waypoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   CurrentState: 0
+--- !u!114 &7879885746436900070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879885746451447032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ca53e923a280441abefe0cff95101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
+    type: 3}
+  OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
+  OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
+  OnPlayerDashing: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
+  OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
+    type: 2}
+  IFrames: 3
+  Renderer: {fileID: 7879885746436900071}
+  Role: 2
+  MaxHealth: 2
 --- !u!1001 &5553256112352479780
 PrefabInstance:
   m_ObjectHideFlags: 0
