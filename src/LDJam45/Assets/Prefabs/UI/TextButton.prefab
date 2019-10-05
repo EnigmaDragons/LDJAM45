@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 629839999911021008}
   - component: {fileID: 629839999911021015}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: TextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,8 +191,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 89dac19d5760f4d41a6c53b77ddeb4a5, type: 2}
+  m_sharedMaterial: {fileID: -1458572143462536965, guid: 89dac19d5760f4d41a6c53b77ddeb4a5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

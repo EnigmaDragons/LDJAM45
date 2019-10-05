@@ -4,17 +4,17 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu]
 public class Navigator : ScriptableObject
 {
-    public static void NavigateToGameScene()
+    public void NavigateToGameScene()
     {
         SceneManager.LoadScene("GameScene");
     }
 
-    public static void NavigateToMainMenu()
+    public void NavigateToMainMenu()
     {
         SceneManager.LoadScene("TitleScene");
     }
 
-    public static void NavigateToVictoryScene()
+    public void NavigateToVictoryScene()
     {
         SceneManager.LoadScene("VictoryScene");
     }
