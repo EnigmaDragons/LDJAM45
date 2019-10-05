@@ -9,11 +9,11 @@ public class FlashWhileInvincible : MonoBehaviour
 
     private void Update()
     {
-        if (Health.IsInvincible && !Flashing.activeSelf)
+        if (Health.JustGotHit && !Flashing.activeSelf)
         {
             Flashing.SetActive(true);
         }
-        else if (!Health.IsInvincible && Flashing.activeSelf)
+        else if (!Health.JustGotHit && Flashing.activeSelf)
         {
             Flashing.SetActive(false);
         }

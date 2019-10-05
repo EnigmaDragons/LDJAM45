@@ -7,30 +7,45 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject OnDeathVfx;
     [SerializeField] private GameEvent OnHealthGained;
     [SerializeField] private GameEvent OnHealthLost;
+    [SerializeField] private GameEvent OnPlayerDashing;
+    [SerializeField] private GameEvent OnPlayerStopDashing;
     [SerializeField] private float IFrames;
+    [SerializeField] private Renderer Renderer;
 
+    public bool JustGotHit { get; private set; } = false;
+    private bool _isDashing = false;
     private bool _isDead = false;
     private float _secondsLeftOfInvincibility;
 
     public Role Role;
     public int MaxHealth;
     public int CurrentHealth { get; set; }
-    public bool IsInvincible { get; set; } = false;
+    public bool IsInvincible => _isDashing || JustGotHit;
     public Action OnDamage { private get; set; } = () => {};
 
     private void Start()
     {
         CurrentHealth = MaxHealth;
-        IsInvincible = false;
+        if (Role == Role.Friendly)
+        {
+            OnPlayerDashing.Subscribe(() => _isDashing = true, this);
+            OnPlayerStopDashing.Subscribe(() => _isDashing = false, this);
+        }
+    }
+
+    private void OnDisable()
+    {
+        OnPlayerDashing.Unsubscribe(this);
+        OnPlayerStopDashing.Unsubscribe(this);
     }
 
     private void Update()
     {
-        if (IsInvincible)
+        if (JustGotHit)
         {
             _secondsLeftOfInvincibility -= Time.deltaTime;
             if (_secondsLeftOfInvincibility <= 0)
-                IsInvincible = false;
+                JustGotHit = false;
         }
     }
 
@@ -50,7 +65,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            IsInvincible = true;
+            JustGotHit = true;
             _secondsLeftOfInvincibility = IFrames;
             OnDamage();
             if (Role == Role.Friendly)
@@ -61,7 +76,7 @@ public class Health : MonoBehaviour
     private void PlayExplosion()
     {
         var explosion = Instantiate(OnDeathVfx, transform.position, transform.rotation);
-        explosion.transform.localScale = GetComponent<Renderer>().bounds.size;
+        explosion.transform.localScale = Renderer.bounds.size;
         var explosionRigidBody = explosion.GetComponent<Rigidbody>();
         var rigidBody = GetComponent<Rigidbody>();
         if (rigidBody != null && explosionRigidBody != null)
