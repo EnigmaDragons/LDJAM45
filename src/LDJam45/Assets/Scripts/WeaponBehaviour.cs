@@ -42,7 +42,7 @@ public class WeaponBehaviour : MonoBehaviour
     {
         for (var i = 0; i < Weapon.NumProjectiles; i++)
         {
-            var spawnPos = transform.position + ProjectileOffset;
+            var spawnPos = transform.position + transform.forward * ProjectileOffset.z + transform.up * ProjectileOffset.y + transform.right * ProjectileOffset.x;
             var p = Instantiate(Weapon.ProjectilePrototype, spawnPos, rotation);
             var projectile = p.GetComponent<ParticleCollisionInstance>();
             projectile.Damage = Weapon.Damage;

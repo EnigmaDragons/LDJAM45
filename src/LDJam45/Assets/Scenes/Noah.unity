@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 11400000, guid: 31d0e797042f4b24cb4d6941d3654d2f, type: 2}
-  ProjectileOffset: {x: 0, y: 0, z: 1}
+  ProjectileOffset: {x: 0, y: 0, z: 0.7}
   Role: 2
 --- !u!114 &1482857059
 MonoBehaviour:
