@@ -4,29 +4,44 @@ using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
-    [SerializeField] private bool ForceMovement = false;
+    [SerializeField] private float Speed = 3.0f;    
+    [SerializeField] private float MaxSpeed = 5.0f;
+
+    private float TransitionSpeed;
+    private float MovementSpeed;
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        MovementSpeed = Speed;
+        TransitionSpeed = 0;
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+    {   
+        float MoveVertical = Input.GetAxis("Vertical");
+        float MoveHorizontal = Input.GetAxis("Horizontal");        
+        Vector3 Movement = new Vector3(MoveHorizontal, 0.0f, MoveVertical).normalized;        
 
-        if (ForceMovement) {
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-            rb.AddForce(movement * speed);
+        // Sprinting 
+        if (Input.GetKey(KeyCode.LeftShift)) {            
+            if (TransitionSpeed < 1) {
+                TransitionSpeed += 1.0f * Time.deltaTime;
+                MovementSpeed = Mathf.Lerp(Speed, MaxSpeed, TransitionSpeed);                
+            }            
         } else {
-            Vector3 tempVect = new Vector3(moveHorizontal, 0, moveVertical);
-            tempVect = tempVect.normalized * speed * Time.deltaTime;
-            rb.MovePosition(transform.position + tempVect); ;
-        }               
+            if (TransitionSpeed >= 1.0f) {
+                TransitionSpeed = 0;
+            }
+            if (TransitionSpeed < 1 && MovementSpeed > Speed) {               
+                TransitionSpeed += 1.0f * Time.deltaTime;
+                MovementSpeed = Mathf.Lerp(MovementSpeed, Speed, TransitionSpeed);                
+            }
+        }
+
+        rb.MovePosition(transform.position + Movement * MovementSpeed * Time.deltaTime);                 
     }
 }
