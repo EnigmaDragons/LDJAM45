@@ -28,9 +28,9 @@ public class ParticleCollisionInstance : MonoBehaviour
     {
         Debug.Log($"Particle Collided with {other.name}");
         var health = other.GetComponent<Health>();
-        if (health != null && health.Role.Equals(OwnedBy))
+        if (health == null || health.Role.Equals(OwnedBy))
             return;
-        
+        health.ApplyDamage();
 
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
         for (int i = 0; i < numCollisionEvents; i++)

@@ -7,8 +7,9 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject OnDeathVfx;
     [SerializeField] private GameEvent OnHealthGained;
     [SerializeField] private GameEvent OnHealthLost;
+    [SerializeField] private float IFrames;
 
-    private bool _isDead;
+    private bool _isDead = false;
     private float _secondsLeftOfInvincibility;
 
     public Role Role;
@@ -50,7 +51,7 @@ public class Health : MonoBehaviour
         else
         {
             IsInvincible = true;
-            _secondsLeftOfInvincibility = 3f;
+            _secondsLeftOfInvincibility = IFrames;
             OnDamage();
             if (Role == Role.Friendly)
                 OnHealthLost.Publish();

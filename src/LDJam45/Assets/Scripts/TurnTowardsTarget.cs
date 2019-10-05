@@ -7,9 +7,14 @@ public class TurnTowardsTarget : MonoBehaviour
 
     void Update()
     {
+        if (Target == null)
+            return;
         var targetDir = Target.position - transform.position;
         var step = RotationSpeed * Time.deltaTime;
         var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        transform.rotation = Quaternion.LookRotation(newDir);
+        var rotation = Quaternion.LookRotation(newDir);
+        rotation.x = 0;
+        rotation.z = 0;
+        transform.rotation = rotation;
     }
 }
