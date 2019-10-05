@@ -25,7 +25,11 @@ public class CatController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate() {   
         float MoveVertical = Input.GetAxis("Vertical");
-        float MoveHorizontal = Input.GetAxis("Horizontal");        
+        float MoveHorizontal = Input.GetAxis("Horizontal");
+
+        //Debug.Log("Vertical" + MoveVertical);
+        //Debug.Log("Horizontal" + MoveHorizontal);
+
         Vector3 Movement = new Vector3(MoveHorizontal, 0.0f, MoveVertical).normalized;
 
         // Dashing
@@ -44,7 +48,12 @@ public class CatController : MonoBehaviour
                 rb.AddForce(Movement, ForceMode.Impulse);                                
                 StartCoroutine(CatJump());
             }
-        }        
+        }
+
+        Vector3 CatRotation = Vector3.Normalize(new Vector3(MoveVertical, 0f, -MoveHorizontal));
+        if (CatRotation != Vector3.zero) {
+            transform.forward = CatRotation;
+        }
 
         rb.MovePosition(transform.position + Movement * MovementSpeed * Time.deltaTime);                 
     }    
