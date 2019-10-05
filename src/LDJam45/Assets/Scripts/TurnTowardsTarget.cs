@@ -3,7 +3,7 @@
 public class TurnTowardsTarget : MonoBehaviour
 {
     [SerializeField] private Transform Target;
-    [SerializeField] private float RotationSpeed;
+    [SerializeField] public float RotationSpeed;
 
     void Update()
     {

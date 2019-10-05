@@ -10039,7 +10039,8 @@ MonoBehaviour:
   OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
     type: 2}
   IFrames: 3
-  Renderer: {fileID: 7319797692159232779}
+  Collider: {fileID: 0}
+  OnDeathEvent: {fileID: 0}
   Role: 1
   MaxHealth: 3
 --- !u!114 &7319797692756229468

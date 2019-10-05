@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06414d2b4ac9a4042a913467f60c996b, type: 3}
-  m_Name: LaserGun
+  m_Script: {fileID: 11500000, guid: fd0609a855a25f541b0b11fed27f3e2b, type: 3}
+  m_Name: Boss1Finished
   m_EditorClassIdentifier: 
-  FireInterval: 0
-  NumProjectiles: 1
-  ProjectilePrototype: {fileID: 7616183187413875136, guid: e61bba166591d2c4ea9992b096d6d696,
-    type: 3}
-  DelayBetweenShots: 0
