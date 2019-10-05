@@ -26,7 +26,6 @@ public class ParticleCollisionInstance : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        Debug.Log($"Particle Collided with {other.name}");
         var health = other.GetComponent<Health>();
         if (health == null || health.Role.Equals(OwnedBy))
             return;

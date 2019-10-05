@@ -10,7 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField] private GameEvent OnPlayerDashing;
     [SerializeField] private GameEvent OnPlayerStopDashing;
     [SerializeField] private float IFrames;
-    [SerializeField] private Renderer Renderer;
+    [SerializeField] private Collider Collider;
+    [SerializeField] private GameEvent OnDeathEvent;
 
     public bool JustGotHit { get; private set; } = false;
     private bool _isDashing = false;
@@ -76,7 +77,7 @@ public class Health : MonoBehaviour
     private void PlayExplosion()
     {
         var explosion = Instantiate(OnDeathVfx, transform.position, transform.rotation);
-        explosion.transform.localScale = Renderer.bounds.size;
+        explosion.transform.localScale = Collider.bounds.size;
         var explosionRigidBody = explosion.GetComponent<Rigidbody>();
         var rigidBody = GetComponent<Rigidbody>();
         if (rigidBody != null && explosionRigidBody != null)
@@ -86,9 +87,7 @@ public class Health : MonoBehaviour
     private IEnumerator ResolveDestruction()
     {
         yield return new WaitForSeconds(0.3f);
-        if (Role.Equals(Role.Friendly))
-        //do a game over here
-        {}
+        OnDeathEvent?.Publish();
         Destroy(gameObject);
     }
 }

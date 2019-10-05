@@ -4,6 +4,7 @@ public class Door : MonoBehaviour
 {
     [SerializeField, ReadOnly] private bool isOpen = false;
     [SerializeField] private GameEvent openDoorTrigger;
+    [SerializeField] private GameEvent closeDoorTrigger;
     [SerializeField] private GameObject openDoor;
     [SerializeField] private GameObject closedDoor;
     [SerializeField] private bool startsOpen = false;
@@ -17,16 +18,24 @@ public class Door : MonoBehaviour
     private void OnEnable()
     {
         openDoorTrigger?.Subscribe(OpenDoor, this);
+        closeDoorTrigger?.Subscribe(CloseDoor, this);
     }
 
     private void OnDisable()
     {
         openDoorTrigger?.Unsubscribe(this);
+        closeDoorTrigger?.Unsubscribe(this);
     }
 
     public void OpenDoor()
     {
         isOpen = true;
+        UpdateDoorState();
+    }
+
+    public void CloseDoor()
+    {
+        isOpen = false;
         UpdateDoorState();
     }
 

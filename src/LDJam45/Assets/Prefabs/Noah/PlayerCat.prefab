@@ -9966,7 +9966,7 @@ GameObject:
   - component: {fileID: 7319797692756229469}
   - component: {fileID: 7319797692756229466}
   m_Layer: 0
-  m_Name: PlayerCat 1
+  m_Name: PlayerCat
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10039,7 +10039,8 @@ MonoBehaviour:
   OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
     type: 2}
   IFrames: 3
-  Renderer: {fileID: 7319797692159232779}
+  Collider: {fileID: 0}
+  OnDeathEvent: {fileID: 0}
   Role: 1
   MaxHealth: 3
 --- !u!114 &7319797692756229468
