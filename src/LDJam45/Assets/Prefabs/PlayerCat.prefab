@@ -10015,7 +10015,7 @@ MonoBehaviour:
   OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
     type: 2}
   IFrames: 3
-  Collider: {fileID: 7319797692756229471}
+  Collider: {fileID: 2746726730563005847}
   OnDeathEvent: {fileID: 0}
   Role: 1
   MaxHealth: 3
@@ -19856,21 +19856,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 6c750c67cdd022c4bb4016d479343e6b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 6c750c67cdd022c4bb4016d479343e6b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 6c750c67cdd022c4bb4016d479343e6b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 6c750c67cdd022c4bb4016d479343e6b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19881,8 +19866,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 232b70b7f9d14a34da44714bae1dd10b, type: 2}
-    m_RemovedComponents:
-    - {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c750c67cdd022c4bb4016d479343e6b, type: 3}
 --- !u!4 &6362486179521946866 stripped
 Transform:
