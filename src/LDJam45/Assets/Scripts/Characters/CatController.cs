@@ -39,16 +39,16 @@ public class CatController : MonoBehaviour
         if (!Jumping && !Dashing) {            
             if (Input.GetButtonDown("Jump")) {
                 Jumping = true;
-                Movement.y += JumpForce;
-                //rb.AddForce(Movement, ForceMode.Impulse);            
-                rb.velocity = Vector3.up * JumpForce;
+                Movement.y += Mathf.Sqrt(JumpForce * -2f * Physics.gravity.y);
+                rb.AddForce(Movement, ForceMode.VelocityChange);
+                // rb.velocity = Vector3.up * JumpForce;
                 StartCoroutine(CatJump());                
             }
         }
 
         // Fall faster during jumps
         if (rb.velocity.y < 0) {
-            rb.velocity += Vector3.up * Physics.gravity.y * FallForce * Time.deltaTime;
+            // rb.velocity += Vector3.up * Physics.gravity.y * FallForce * Time.deltaTime;
         }
 
         // Rotate Cat to moving position
