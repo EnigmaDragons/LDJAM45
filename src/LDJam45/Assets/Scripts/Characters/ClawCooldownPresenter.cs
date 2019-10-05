@@ -5,7 +5,13 @@ public class ClawCooldownPresenter : MonoBehaviour
 {
     [SerializeField] private Image DashOnCooldown;
     [SerializeField] private Text CooldownText;
-    [SerializeField] private ClawSwipe ClawSwipe;
+
+    private ClawSwipe ClawSwipe;
+
+    private void Start()
+    {
+        ClawSwipe = FindObjectOfType<ClawSwipe>();
+    }
 
     private void Update()
     {

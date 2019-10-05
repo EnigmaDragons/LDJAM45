@@ -14,12 +14,14 @@ public class AlternateCatController : MonoBehaviour
     private bool _isSwiping;
     
     private Rigidbody CatBody;
+    private Animator Animator;
     private Vector3 rotation;
     private Vector3 _inputs = Vector3.zero;
 
     private void Start()
     {
         CatBody = GetComponent<Rigidbody>();
+        Animator = GetComponent<Animator>();
 
         OnPlayerDashing.Subscribe(() => _isDashing = true, this);
         OnPlayerStopDashing.Subscribe(() => _isDashing = false, this);
@@ -38,6 +40,7 @@ public class AlternateCatController : MonoBehaviour
 
     private void Update()
     {
+        
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis("Horizontal");
         _inputs.z = Input.GetAxis("Vertical");
@@ -46,33 +49,27 @@ public class AlternateCatController : MonoBehaviour
         
         if (_isDashing)
         {
-            // CatBody.velocity = transform.forward * DashSpeed;
             Vector3 dashVelocity = Vector3.Scale(transform.forward, DashSpeed * new Vector3(
                 (Mathf.Log(1f / (Time.deltaTime * CatBody.drag + 1)) / -Time.deltaTime),
                 0,
                 (Mathf.Log(1f / (Time.deltaTime * CatBody.drag + 1)) / -Time.deltaTime)));
             CatBody.AddForce(dashVelocity, ForceMode.VelocityChange);
-        }
-        else
-        {
-            //if (new Vector2(verticalInput, horizontalInput).normalized == Vector2.zero) {                
-            //    CatBody.velocity = new Vector3(0, CatBody.velocity.y, 0);
-            //}                
-            //else
-            //    CatBody.velocity = new Vector3((transform.forward * Speed).x, CatBody.velocity.y, (transform.forward * Speed).z); ;
-        }
+        }        
 
-        if (rotation  != Vector3.zero) {
+        if (rotation  != Vector3.zero && !_isSwiping) {
             transform.forward = rotation;
         }        
     }
 
     private void FixedUpdate() {
         if (_isSwiping) {
+            Animator.SetBool("IsWalking", false);
             CatBody.velocity = Vector3.zero;
         } else if (_inputs == Vector3.zero) {
+            Animator.SetBool("IsWalking", false);
             CatBody.velocity = Vector3.zero;
         } else {
+            Animator.SetBool("IsWalking", true);
             CatBody.MovePosition(CatBody.position + _inputs * Speed * Time.fixedDeltaTime);
         } 
     }
