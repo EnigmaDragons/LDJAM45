@@ -1615,6 +1615,21 @@ PrefabInstance:
       propertyPath: ClawSwipe
       value: 
       objectReference: {fileID: 114373560}
+    - target: {fileID: 6383821405831146337, guid: 0265f4e32e6e1e247abf6ebc73ebb920,
+        type: 3}
+      propertyPath: PlayerHealth
+      value: 
+      objectReference: {fileID: 1708959319}
+    - target: {fileID: 4374144533235186821, guid: 0265f4e32e6e1e247abf6ebc73ebb920,
+        type: 3}
+      propertyPath: ClawSwipe
+      value: 
+      objectReference: {fileID: 114373560}
+    - target: {fileID: 7842532404694516464, guid: 0265f4e32e6e1e247abf6ebc73ebb920,
+        type: 3}
+      propertyPath: Dash
+      value: 
+      objectReference: {fileID: 1052487895}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0265f4e32e6e1e247abf6ebc73ebb920, type: 3}
 --- !u!1001 &547627081
@@ -4550,7 +4565,7 @@ PrefabInstance:
     - target: {fileID: 5016095953786133723, guid: 78faa0f855dcc0b4d8638e97da7f69c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5016095953786133723, guid: 78faa0f855dcc0b4d8638e97da7f69c8,
         type: 3}
@@ -4854,7 +4869,7 @@ PrefabInstance:
     - target: {fileID: 354017171199740305, guid: 7b196aab2a8de3845893f631dd8f9dbc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 354017171199740305, guid: 7b196aab2a8de3845893f631dd8f9dbc,
         type: 3}
