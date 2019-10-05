@@ -5,8 +5,9 @@ using UnityEngine.AI;
 
 public class Roomba : MonoBehaviour
 {
-    [SerializeField] private float Speed = 20.0f;
-    [SerializeField] private float SpeedIncrease = 0.25f;
+    [SerializeField] private GameEvent HealthLostEvent;
+    [SerializeField] private float MaxSpeed = 20.0f;
+    [SerializeField] private float SpeedIncrease = 0.5f;
     [SerializeField] private float DistanceToPlayer = 25.0f;
     [SerializeField] Transform[] Waypoints;
     [SerializeField] States CurrentState;
@@ -57,8 +58,14 @@ public class Roomba : MonoBehaviour
         }                        
 
         // Speed increase
-        if (Agent.speed < Speed) {
+        if (Agent.speed < MaxSpeed) {
             Agent.speed += SpeedIncrease * Time.deltaTime;
         }                       
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "Player") {
+            HealthLostEvent.Publish();
+        }
     }
 }
