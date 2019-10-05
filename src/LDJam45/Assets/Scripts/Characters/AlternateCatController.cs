@@ -2,28 +2,28 @@
 
 public class AlternateCatController : MonoBehaviour
 {
-    [SerializeField] private float Speed = 3;
-    [SerializeField] private Rigidbody CatBody;
-    [SerializeField] private float DashSpeed = 2;
+    [SerializeField] private float Speed = 5.0f;    
+    [SerializeField] private float DashSpeed = 5.0f;
+
     [SerializeField] private GameEvent OnPlayerDashing;
     [SerializeField] private GameEvent OnPlayerStopDashing;
     [SerializeField] private GameEvent OnSwipingStarted;
     [SerializeField] private GameEvent OnSwipingFinished;
 
     private bool _isDashing;
-    private Vector3 _dashingRotation;
     private bool _isSwiping;
+    
+    private Rigidbody CatBody;
+    private Vector3 rotation;
+    private Vector3 _inputs = Vector3.zero;
 
     private void Start()
     {
-        OnPlayerDashing.Subscribe(() =>
-        {
-            _isDashing = true;
-            var verticalInput = Input.GetAxis("Vertical");
-            var horizontalInput = Input.GetAxis("Horizontal");
-            _dashingRotation = Vector3.Normalize(new Vector3(horizontalInput, 0f, verticalInput));
-        }, this);
+        CatBody = GetComponent<Rigidbody>();
+
+        OnPlayerDashing.Subscribe(() => _isDashing = true, this);
         OnPlayerStopDashing.Subscribe(() => _isDashing = false, this);
+
         OnSwipingStarted.Subscribe(() => _isSwiping = true, this);
         OnSwipingFinished.Subscribe(() => _isSwiping = false, this);
     }
@@ -36,30 +36,42 @@ public class AlternateCatController : MonoBehaviour
         OnSwipingFinished.Unsubscribe(this);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (_isSwiping)
+        _inputs = Vector3.zero;
+        _inputs.x = Input.GetAxis("Horizontal");
+        _inputs.z = Input.GetAxis("Vertical");
+        rotation = Vector3.Normalize(new Vector3(_inputs.x, 0f, _inputs.z));
+
+        
+        if (_isDashing)
         {
-            CatBody.velocity = Vector3.zero;
-        }
-        else if (_isDashing)
-        {
-            transform.forward = _dashingRotation;
-            CatBody.velocity = transform.forward * DashSpeed;
+            // CatBody.velocity = transform.forward * DashSpeed;
+            Vector3 dashVelocity = Vector3.Scale(transform.forward, DashSpeed * new Vector3(
+                (Mathf.Log(1f / (Time.deltaTime * CatBody.drag + 1)) / -Time.deltaTime),
+                0,
+                (Mathf.Log(1f / (Time.deltaTime * CatBody.drag + 1)) / -Time.deltaTime)));
+            CatBody.AddForce(dashVelocity, ForceMode.VelocityChange);
         }
         else
         {
-            var verticalInput = Input.GetAxis("Vertical");
-            var horizontalInput = Input.GetAxis("Horizontal");
-
-            var rotation = Vector3.Normalize(new Vector3(horizontalInput, 0f, verticalInput));
-            if (rotation != Vector3.zero)
-                transform.forward = rotation;
-
-            if (new Vector2(verticalInput, horizontalInput).normalized == Vector2.zero)
-                CatBody.velocity = new Vector3(0, CatBody.velocity.y, 0);
-            else
-                CatBody.velocity = new Vector3((transform.forward * Speed).x, CatBody.velocity.y, (transform.forward * Speed).z); ;
+            //if (new Vector2(verticalInput, horizontalInput).normalized == Vector2.zero) {                
+            //    CatBody.velocity = new Vector3(0, CatBody.velocity.y, 0);
+            //}                
+            //else
+            //    CatBody.velocity = new Vector3((transform.forward * Speed).x, CatBody.velocity.y, (transform.forward * Speed).z); ;
         }
+
+        if (rotation  != Vector3.zero) {
+            transform.forward = rotation;
+        }        
+    }
+
+    private void FixedUpdate() {
+        if (_isSwiping) {
+            CatBody.velocity = Vector3.zero;
+        } else {
+            CatBody.MovePosition(CatBody.position + _inputs * Speed * Time.fixedDeltaTime);
+        }        
     }
 }
