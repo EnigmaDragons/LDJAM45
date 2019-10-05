@@ -536,7 +536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
-  MaxSpeed: 5
+  DashForce: 7
+  JumpForce: 5
 --- !u!1 &1419986215
 GameObject:
   m_ObjectHideFlags: 0
