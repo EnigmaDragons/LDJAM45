@@ -24,6 +24,7 @@ public class CatMovement : MonoBehaviour
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis("Horizontal");
         _inputs.z = Input.GetAxis("Vertical");
+        _inputs = Vector3.ClampMagnitude(_inputs, 1f);
         _rotation = Vector3.Normalize(new Vector3(_inputs.x, 0f, _inputs.z));
 
         if (_inputs != Vector3.zero)
