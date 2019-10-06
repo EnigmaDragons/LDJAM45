@@ -5,50 +5,50 @@ using UnityEngine;
 public class MouseScurry : MonoBehaviour
 {
     public float Speed = 5.0f;
-    [SerializeField] float WallDistance = 25.0f;
+    [SerializeField] float WallDistance = 35.0f;
 
-    private float DistanceToWall;
-    private GameObject TargetWall;
+    private float DirectionToTarget;
+    private GameObject _target;
 
     // Start is called before the first frame update
     void Start()
     {
-        SelectRandomWall();
+        SelectRandomTarget();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (TargetWall == null) {
+        if (_target == null) {
             Destroy(this.gameObject);
         } else {
-            DistanceToWall = Vector3.Distance(transform.position, TargetWall.transform.position);
+            DirectionToTarget = Vector3.Distance(transform.position, _target.transform.position);
 
-            if (DistanceToWall > 1) {
-                transform.position = Vector3.MoveTowards(transform.position, TargetWall.transform.position, Speed * Time.deltaTime);
-                transform.LookAt(TargetWall.transform);
+            if (DirectionToTarget > 1) {
+                transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, Speed * Time.deltaTime);
+                transform.LookAt(_target.transform);
             } else {
                 Destroy(this.gameObject);
             }
         }        
     }
 
-    void SelectRandomWall() {
-        GameObject[] Walls = GameObject.FindGameObjectsWithTag("Wall");
+    void SelectRandomTarget() {
+        GameObject[] Targets = GameObject.FindGameObjectsWithTag("MouseSpawner");
         try {
-            TargetWall = Walls[Random.Range(0, Walls.Length + 1)];
-            DistanceToWall = Vector3.Distance(transform.position, TargetWall.transform.position);
+            _target = Targets[Random.Range(0, Targets.Length)];
+            DirectionToTarget = Vector3.Distance(transform.position, _target.transform.position);
 
-            var renderer = TargetWall.transform.GetChild(0).GetComponent<MeshRenderer>();
+            var renderer = _target.transform.GetChild(0).GetComponent<MeshRenderer>();
             if (!renderer.isVisible) {
                 Debug.Log("Cannot see TargetWall, reselecting");
-                SelectRandomWall();
+                SelectRandomTarget();
             }
 
 
-            if (DistanceToWall < WallDistance) {
+            if (DirectionToTarget < WallDistance) {
                 Debug.Log("TargetWall too close");
-                SelectRandomWall();
+                SelectRandomTarget();
             }
         } catch {
             

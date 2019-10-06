@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 15
-  WallDistance: 25
+  WallDistance: 35
 --- !u!114 &6362947326988101142
 MonoBehaviour:
   m_ObjectHideFlags: 0

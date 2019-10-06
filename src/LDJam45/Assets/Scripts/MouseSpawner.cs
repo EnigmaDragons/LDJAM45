@@ -6,11 +6,9 @@ public class MouseSpawner : MonoBehaviour
 {
 
     [SerializeField] GameObject MousePrefab;
-    [SerializeField] float SpeedIncrease = 0.25f;
     [SerializeField] float SpawnTimer = 1.0f;
-    [SerializeField] float SpawnDuration = 60.0f;
+    [SerializeField] float SpawnDuration = 15.0f;
 
-    private int MiceSpawned = 0;
     private bool StopSpawning = false;
     private bool HasSpawned = false;
 
@@ -30,11 +28,7 @@ public class MouseSpawner : MonoBehaviour
 
     IEnumerator SpawnMouse() {
         HasSpawned = true;
-        GameObject Mouse = Instantiate(MousePrefab, this.transform);
-        //MouseScurry Scurry = Mouse.GetComponent<MouseScurry>();
-        //Scurry.Speed = MiceSpawned * SpeedIncrease;
-        //Debug.Log(Scurry.Speed.ToString());
-        MiceSpawned++;
+        Instantiate(MousePrefab, this.transform);
         yield return new WaitForSeconds(SpawnTimer);
         HasSpawned = false;
     }
