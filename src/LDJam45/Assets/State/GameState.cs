@@ -10,6 +10,7 @@ public class GameState : ScriptableObject
     public bool SlashUnlocked;
     public bool RendUnlocked;
     public bool LaserEyesUnlocked;
+    public Vector3 LastCheckpoint;
 
     public void Reset()
     {
@@ -19,5 +20,6 @@ public class GameState : ScriptableObject
         SlashUnlocked = false;
         RendUnlocked = false;
         LaserEyesUnlocked = false;
+        LastCheckpoint = Vector3.zero;
     }
 }
