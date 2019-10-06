@@ -6,7 +6,7 @@ using System.Linq;
 [CreateAssetMenu(fileName = "New Game Event", menuName = "Game Event")]
 public class GameEvent : ScriptableObject
 {
-    private IEnumerable<GameEventSubscription> listeners = Array.Empty<GameEventSubscription>();
+    private List<GameEventSubscription> listeners = new List<GameEventSubscription>();
 
     public void Publish()
     {
@@ -19,11 +19,11 @@ public class GameEvent : ScriptableObject
 
     public void Subscribe(GameEventSubscription e)
     {
-        listeners = listeners.Concat(e);
+        listeners = listeners.Concat(e).ToList();
     }
 
     public void Unsubscribe(object owner)
     {
-        listeners = listeners.Where(l => !ReferenceEquals(l.Owner, owner));
+        listeners = listeners.Where(l => !ReferenceEquals(l.Owner, owner)).ToList();
     }
 }
