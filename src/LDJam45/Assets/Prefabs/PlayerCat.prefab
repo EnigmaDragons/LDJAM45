@@ -10016,7 +10016,7 @@ MonoBehaviour:
     type: 2}
   IFrames: 3
   Collider: {fileID: 2746726730563005847}
-  OnDeathEvent: {fileID: 0}
+  OnDeathEvent: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
   Role: 1
   MaxHealth: 3
 --- !u!114 &7319797692756229468
@@ -19801,6 +19801,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9bbf98a9ada54d14fbbc08f085af6830, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c750c67cdd022c4bb4016d479343e6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19855,16 +19865,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9bbf98a9ada54d14fbbc08f085af6830, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 6c750c67cdd022c4bb4016d479343e6b,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 6c750c67cdd022c4bb4016d479343e6b,
         type: 3}
