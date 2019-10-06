@@ -89,8 +89,8 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
 --- !u!114 &1450914992510573803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -181,12 +176,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 620
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -196,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -206,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -237,11 +232,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -301,12 +291,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 420
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -316,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -326,7 +316,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -357,11 +347,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -421,12 +406,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 380
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -436,7 +421,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -446,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -593,11 +578,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatHpIcon (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -656,12 +636,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -671,7 +651,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -681,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -712,11 +692,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -776,12 +751,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 260
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -791,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -801,7 +776,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -832,11 +807,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -896,12 +866,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 660
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -911,7 +881,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -921,7 +891,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -952,11 +922,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1016,12 +981,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 220
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1031,7 +996,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1041,7 +1006,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1072,11 +1037,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1136,12 +1096,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1151,7 +1111,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1161,7 +1121,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1308,11 +1268,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatHpIcon (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1371,12 +1326,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1386,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1396,7 +1351,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1427,11 +1382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1491,12 +1441,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 580
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1506,7 +1456,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1516,7 +1466,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1547,11 +1497,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1611,12 +1556,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 740
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1626,7 +1571,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1636,7 +1581,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1667,11 +1612,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1731,12 +1671,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1746,7 +1686,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1756,7 +1696,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1787,11 +1727,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1851,12 +1786,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 140
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1866,7 +1801,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1876,7 +1811,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1917,31 +1852,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -1993,16 +1903,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc437f43175cdb4cbe53a61634cf5ff, type: 3}
 --- !u!224 &1603469874239707044 stripped
@@ -2022,11 +1922,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2086,12 +1981,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2101,7 +1996,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2111,7 +2006,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2142,11 +2037,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2206,12 +2096,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 780
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2221,7 +2111,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2231,7 +2121,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2262,11 +2152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2326,12 +2211,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 700
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2341,7 +2226,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2351,7 +2236,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2382,11 +2267,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHpIcon (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6354839635274620064, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2446,12 +2326,12 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 460
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2461,7 +2341,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
@@ -2471,7 +2351,7 @@ PrefabInstance:
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9150059486572097840, guid: 7cc437f43175cdb4cbe53a61634cf5ff,
         type: 3}

@@ -45,6 +45,8 @@ public class Pause : MonoBehaviour {
 		Time.timeScale = 0;
 		//call the ShowPausePanel function of the ShowPanels script
 		showPanels.ShowPausePanel ();
+
+        Cursor.visible = true;
 	}
 
 
@@ -56,5 +58,7 @@ public class Pause : MonoBehaviour {
 		Time.timeScale = 1;
 		//call the HidePausePanel function of the ShowPanels script
 		showPanels.HidePausePanel ();
-	}
+
+	    Cursor.visible = false;
+    }
 }
