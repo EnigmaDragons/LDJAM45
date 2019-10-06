@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Characters;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
@@ -81,6 +82,7 @@ public class InputController : MonoBehaviour
 
     private Dictionary<CatAction, Func<Vector3, Action>> _actions;
 
+    [SerializeField] private CatBodyAnimator Animator;
     [SerializeField] private CatMovement Movement;
     [SerializeField] private CatDash Dash;
     [SerializeField] private CatAttack StandingSlash;
@@ -179,6 +181,12 @@ public class InputController : MonoBehaviour
     {
         Movement.IsActive = false;
         yield return new WaitForSeconds(delay);
+        if (_currentAction.Action == CatAction.StandingSlash || _currentAction.Action == CatAction.MovingSlash)
+            Animator.AttackRight();
+        if (_currentAction.Action == CatAction.StandingDoubleSlash || _currentAction.Action == CatAction.MovingDoubleSlash || _currentAction.Action == CatAction.DashSlash)
+            Animator.AttackLeft();
+        if (_currentAction.Action == CatAction.StandingRend || _currentAction.Action == CatAction.MovingRend || _currentAction.Action == CatAction.DashRend)
+            Animator.AttackBoth();
         action();
     }
 }
