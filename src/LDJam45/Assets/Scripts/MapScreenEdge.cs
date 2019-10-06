@@ -54,6 +54,8 @@ public class MapScreenEdge : MonoBehaviour
         _targetPosition = shared.gameCamera.transform.position + _positionDelta;
         state.IsTravelling = true;
         isTravelling = true;
+
+        permablock.SetActive(true);
     }
 
     private void FinishedTravel(GameObject other)
