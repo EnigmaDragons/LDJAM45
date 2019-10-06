@@ -10,6 +10,7 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject pausePanel;                           //Store a reference to the Game Object PausePanel 
     public GameObject creditsPanel;
     public GameObject creditsTint;
+    public GameObject menuButtons;
 
     private GameObject activePanel;                         
     private MenuObject activePanelMenuObject;
@@ -41,16 +42,16 @@ public class ShowPanels : MonoBehaviour {
 	{
 		optionsPanel.SetActive(true);
 		optionsTint.SetActive(true);
-        menuPanel.SetActive(false);
+        menuButtons.SetActive(false);
 
-	    activePanel = optionsPanel;
+        activePanel = optionsPanel;
 	    menuSelected = false;
     }
 
 	//Call this function to deactivate and hide the Options panel during the main menu
 	public void HideOptionsPanel()
 	{
-        menuPanel.SetActive(true);
+	    menuButtons.SetActive(true);
         optionsPanel.SetActive(false);
 		optionsTint.SetActive(false);
 
@@ -63,7 +64,7 @@ public class ShowPanels : MonoBehaviour {
     {
         creditsPanel.SetActive(true);
         creditsTint.SetActive(true);
-        menuPanel.SetActive(false);
+        menuButtons.SetActive(false);
 
         activePanel = creditsPanel;
         menuSelected = false;
@@ -72,7 +73,7 @@ public class ShowPanels : MonoBehaviour {
     //Call this function to deactivate and hide the Options panel during the main menu
     public void HideCreditsPanel()
     {
-        menuPanel.SetActive(true);
+        menuButtons.SetActive(true);
         creditsPanel.SetActive(false);
         creditsTint.SetActive(false);
 
