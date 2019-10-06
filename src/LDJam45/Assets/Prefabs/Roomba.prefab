@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7879885746451447032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20, y: 1, z: -10}
-  m_LocalScale: {x: 7, y: 1, z: 7}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 5553256112352874700}
   m_Father: {fileID: 0}
@@ -121,12 +121,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986e705acb281e4a9c3e1b5c6dfb301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoorToClose: {fileID: 0}
   HealthLostEvent: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   MaxSpeed: 30
   SpeedIncrease: 0.25
   ChaseDistance: 25
   ForgetDistance: 40
   Waypoints:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

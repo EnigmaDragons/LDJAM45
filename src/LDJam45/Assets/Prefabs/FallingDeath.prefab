@@ -88,10 +88,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7026261175866181678}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &7026261175866181673
@@ -109,5 +109,5 @@ MonoBehaviour:
   onCollide: {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
   cooldown:
     UseConstant: 1
-    ConstantValue: 0.1
+    ConstantValue: 999
     Variable: {fileID: 0}

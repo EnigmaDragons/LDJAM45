@@ -21,7 +21,7 @@ public class AlternateCatController : MonoBehaviour
     private void Start()
     {
         CatBody = GetComponent<Rigidbody>();
-        Animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();        
 
         OnPlayerDashing.Subscribe(() =>
         {
@@ -54,7 +54,8 @@ public class AlternateCatController : MonoBehaviour
         _inputs.z = Input.GetAxis("Vertical");
         rotation = Vector3.Normalize(new Vector3(_inputs.x, 0f, _inputs.z));
 
-        
+        // _inputs = Vector3.ClampMagnitude(_inputs, 1f);
+
         if (_isDashing)
         {
             Vector3 dashVelocity = Vector3.Scale(transform.forward, DashSpeed * new Vector3(
@@ -69,13 +70,48 @@ public class AlternateCatController : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        // Attack animation Booleans
+        // AttackLeft - Left Paw
+        // AttackRight - Right Paw
+        // AttackBoth - Both Paws
         if (_isSwiping || _inputs == Vector3.zero) {
-            Animator.SetBool("IsWalking", false);
+            if (_isSwiping) {
+                // Swipe
+                int randomAnim = Random.Range(0, 3);                
+                switch (randomAnim) {
+                    case 0:
+                        Animator.SetBool("AttackLeft", true);
+                        break;
+                    case 1:
+                        Animator.SetBool("AttackRight", true);
+                        break;
+                    case 2:
+                        Animator.SetBool("AttackBoth", true);
+                        break;
+                }                                    
+            } else {
+                // Idle
+                Animator.SetBool("IsWalking", false);
+            }            
             CatBody.velocity = new Vector3(0, CatBody.velocity.y, 0);
         }
         else {
+            // Walking
             Animator.SetBool("IsWalking", true);
             CatBody.MovePosition(CatBody.position + _inputs * Speed * Time.fixedDeltaTime);
+        }
+
+        // Stop any swiping animation after swipe
+        if (!_isSwiping && Animator.GetBool("AttackLeft")) {
+            Animator.SetBool("AttackLeft", false);
+        }
+
+        if (!_isSwiping && Animator.GetBool("AttackRight")) {
+            Animator.SetBool("AttackRight", false);
+        }
+
+        if (!_isSwiping && Animator.GetBool("AttackBoth")) {
+            Animator.SetBool("AttackBoth", false);
         }
     }
 }

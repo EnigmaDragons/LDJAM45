@@ -17,6 +17,7 @@ public class InputController : MonoBehaviour
         { CatAction.MovingRend, new DictionaryWithDefault<CatAction, float>(0) },
         { CatAction.DashSlash, new DictionaryWithDefault<CatAction, float>(0) },
         { CatAction.DashRend, new DictionaryWithDefault<CatAction, float>(0) },
+        { CatAction.Laser, new DictionaryWithDefault<CatAction, float>(0) },
     };
 
     private Dictionary<CatAction, Func<Vector3, Action>> _actions;
@@ -31,6 +32,7 @@ public class InputController : MonoBehaviour
     [SerializeField] private CatAttack MovingRend;
     [SerializeField] private CatAttack DashSlash;
     [SerializeField] private CatAttack DashRend;
+    [SerializeField] private CatLaser Laser;
 
     private DirectionalCatAction _currentAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
     private DirectionalCatAction _queuedAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
@@ -50,6 +52,7 @@ public class InputController : MonoBehaviour
             { CatAction.MovingRend, dir => () => MovingRend.Attack(dir) },
             { CatAction.DashSlash, dir => () => DashSlash.Attack(dir) },
             { CatAction.DashRend, dir => () => DashRend.Attack(dir) },
+            { CatAction.Laser, dir => () => Laser.Fire() },
         };
 
         Dash.OnFinished = OnFinishedWithCurrentAction;
@@ -61,6 +64,7 @@ public class InputController : MonoBehaviour
         MovingRend.OnFinished = OnFinishedWithCurrentAction;
         DashSlash.OnFinished = OnFinishedWithCurrentAction;
         DashRend.OnFinished = OnFinishedWithCurrentAction;
+        Laser.OnFinished = OnFinishedWithCurrentAction;
     }
 
     private void Update()
@@ -69,6 +73,8 @@ public class InputController : MonoBehaviour
 
         if (Input.GetButtonDown("Dash"))
             _queuedAction = new DirectionalCatAction(CatAction.Dash, direction);
+        else if (Input.GetButtonDown("FireLaser"))
+            _queuedAction = new DirectionalCatAction(CatAction.Laser, direction);
         else if (Input.GetButtonDown("Fire1"))
         {
             if (_currentAction.Action == CatAction.Dash)
@@ -92,7 +98,6 @@ public class InputController : MonoBehaviour
 
     private void OnFinishedWithCurrentAction()
     {
-        Debug.Log("Queued Action is: " + _queuedAction.Action);
         StartCoroutine(TransitionToNextAction(_delays[_currentAction.Action][_queuedAction.Action], _actions[_queuedAction.Action](_queuedAction.Direction)));
         _currentAction = _queuedAction;
         _queuedAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
@@ -130,5 +135,6 @@ public enum CatAction
     MovingRend,
     DashSlash,
     DashRend,
-    Moving
+    Moving,
+    Laser
 }

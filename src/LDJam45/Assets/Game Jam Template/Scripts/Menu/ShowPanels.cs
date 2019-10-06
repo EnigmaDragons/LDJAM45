@@ -19,19 +19,18 @@ public class ShowPanels : MonoBehaviour {
 
     private void SetSelection(GameObject panelToSetSelected)
     {
-        activePanel = panelToSetSelected;
         activePanelMenuObject = activePanel.GetComponent<MenuObject>();
 
         if (activePanelMenuObject != null)
         {
             activePanelMenuObject.SetFirstSelected();
         }
+
+        menuSelected = true;
     }
 
     public void Start()
-    {
-        SetSelection(menuPanel);
-
+    {       
         HideCreditsPanel();
         HideOptionsPanel();
         HidePausePanel();
@@ -43,7 +42,9 @@ public class ShowPanels : MonoBehaviour {
 		optionsPanel.SetActive(true);
 		optionsTint.SetActive(true);
         menuPanel.SetActive(false);
-        SetSelection(optionsPanel);
+
+	    activePanel = optionsPanel;
+	    menuSelected = false;
     }
 
 	//Call this function to deactivate and hide the Options panel during the main menu
@@ -52,7 +53,10 @@ public class ShowPanels : MonoBehaviour {
         menuPanel.SetActive(true);
         optionsPanel.SetActive(false);
 		optionsTint.SetActive(false);
-	}
+
+	    activePanel = menuPanel;
+	    menuSelected = false;
+    }
 
     //Call this function to activate and display the Options panel during the main menu
     public void ShowCreditsPanel()
@@ -60,7 +64,9 @@ public class ShowPanels : MonoBehaviour {
         creditsPanel.SetActive(true);
         creditsTint.SetActive(true);
         menuPanel.SetActive(false);
-        SetSelection(creditsPanel);
+
+        activePanel = creditsPanel;
+        menuSelected = false;
     }
 
     //Call this function to deactivate and hide the Options panel during the main menu
@@ -69,33 +75,58 @@ public class ShowPanels : MonoBehaviour {
         menuPanel.SetActive(true);
         creditsPanel.SetActive(false);
         creditsTint.SetActive(false);
+
+        activePanel = menuPanel;
+        menuSelected = false;
     }
 
     //Call this function to activate and display the main menu panel during the main menu
     public void ShowMenu()
 	{
-		menuPanel.SetActive (true);
-        SetSelection(menuPanel);
+		menuPanel.SetActive(true);
+
+	    activePanel = menuPanel;
+	    menuSelected = false;
     }
 
 	//Call this function to deactivate and hide the main menu panel during the main menu
 	public void HideMenu()
 	{
-		menuPanel.SetActive (false);
+		menuPanel.SetActive(false);
 	}
 	
 	//Call this function to activate and display the Pause panel during game play
 	public void ShowPausePanel()
 	{
-		pausePanel.SetActive (true);
+		pausePanel.SetActive(true);
 		optionsTint.SetActive(true);
-        SetSelection(pausePanel);
+
+	    activePanel = pausePanel;
+	    menuSelected = false;
     }
 
 	//Call this function to deactivate and hide the Pause panel during game play
 	public void HidePausePanel()
 	{
-		pausePanel.SetActive (false);
+		pausePanel.SetActive(false);
 		optionsTint.SetActive(false);
-	}
+
+        menuSelected = false;
+    }
+
+    private bool menuSelected = false;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+        {
+            menuSelected = false;
+            return; //ignore mouse click
+        }        
+
+        if (Input.anyKeyDown && !menuSelected)
+        {
+            SetSelection(activePanel);
+        }
+    }
 }
