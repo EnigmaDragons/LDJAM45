@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
+    [SerializeField] private GameState state;
+
     private readonly Dictionary<CatAction, DictionaryWithDefault<CatAction, float>> _delays = new Dictionary<CatAction, DictionaryWithDefault<CatAction, float>>
     {
         { CatAction.Moving, new DictionaryWithDefault<CatAction, float>(0) },
@@ -71,11 +73,11 @@ public class InputController : MonoBehaviour
     {
         var direction = Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
 
-        if (Input.GetButtonDown("Dash"))
+        if (state.DashUnlocked && Input.GetButtonDown("Dash"))
             _queuedAction = new DirectionalCatAction(CatAction.Dash, direction);
-        else if (Input.GetButtonDown("FireLaser"))
+        else if (state.LaserEyesUnlocked && Input.GetButtonDown("FireLaser"))
             _queuedAction = new DirectionalCatAction(CatAction.Laser, direction);
-        else if (Input.GetButtonDown("Fire1"))
+        else if (state.SlashUnlocked && Input.GetButtonDown("Fire1"))
         {
             if (_currentAction.Action == CatAction.Dash)
                 _queuedAction = new DirectionalCatAction(CatAction.DashSlash, _currentAction.Direction);
@@ -84,7 +86,7 @@ public class InputController : MonoBehaviour
             else
                 _queuedAction = new DirectionalCatAction(direction == Vector3.zero ? CatAction.StandingSlash : CatAction.MovingSlash, direction);
         }
-        else if (Input.GetButtonDown("Fire2"))
+        else if (state.RendUnlocked && Input.GetButtonDown("Fire2"))
         {
             if (_currentAction.Action == CatAction.Dash)
                 _queuedAction = new DirectionalCatAction(CatAction.DashRend, _currentAction.Direction);

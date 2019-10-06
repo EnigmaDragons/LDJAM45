@@ -40,7 +40,11 @@ public class CatAttack : MonoBehaviour
             else if (direction.z < 0)
                 CatBody.transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        StartCoroutine(AnimateMovement());
+        _index = 0;
+        _origin = CatBody.transform.position;
+        _t = 0;
+        if (_index != Offsets.Count)
+            _timeToMove = Timing[_index];
         Weapons.ForEach(x => x.SetActive(true));
         Animator.SetBool("IsAttacking", true);
     }
@@ -52,21 +56,29 @@ public class CatAttack : MonoBehaviour
         OnFinished();
     }
 
-    private IEnumerator AnimateMovement()
-    {
-        for (var i = 0; i < Offsets.Count; i++)
-            yield return MoveByOffset(Offsets[i], Timing[i]);
-    }
+    private Vector3 _origin;
+    private int _index = 99;
+    private float _timeToMove;
+    private float _t;
 
-    private IEnumerator MoveByOffset(Vector3 offset, float timeToMove)
+
+    private void Update()
     {
-        var start = CatBody.transform.position;
-        var t = 0f;
-        while (t < 1)
+        if (_index == Offsets.Count)
+            return;
+
+        _t += Time.deltaTime / _timeToMove;
+        if (_t < 1)
         {
-            t += Time.deltaTime / timeToMove;
-            CatBody.transform.position = Vector3.Lerp(start, start + CatBody.transform.rotation * offset, t);
-            yield return null;
+            CatBody.MovePosition(Vector3.Lerp(_origin, _origin + CatBody.transform.rotation * Offsets[_index], _t));
+        }
+        else
+        {
+            _index++;
+            _origin = CatBody.transform.position;
+            _t = 0;
+            if (_index < Offsets.Count)
+                _timeToMove = Timing[_index];
         }
     }
 }
