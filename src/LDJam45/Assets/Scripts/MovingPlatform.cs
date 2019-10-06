@@ -8,12 +8,14 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] private float Speed = 1.0f;
 
     private Vector3 StartPosition;
+    private Rigidbody rb;
     private float startTime;
     private float Length;    
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         StartPosition = this.transform.position;
         startTime = Time.time;
     }
@@ -22,6 +24,7 @@ public class MovingPlatform : MonoBehaviour
     void Update()
     {
         float time = Mathf.PingPong(Time.time * Speed, 1);
-        transform.position = Vector3.Lerp(StartPosition, EndPosition, time);
+        // transform.position = Vector3.Lerp(StartPosition, EndPosition, time);
+        rb.MovePosition(Vector3.Lerp(StartPosition, EndPosition, time));
     }
 }

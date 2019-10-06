@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: GameState
   m_EditorClassIdentifier: 
   IsTravelling: 0
-  CurrentHp: 5
-  MaxHp: 5
-  DashUnlocked: 0
+  CurrentHp: 9
+  MaxHp: 9
+  DashUnlocked: 1
   SlashUnlocked: 0
   RendUnlocked: 0
   LaserEyesUnlocked: 0
