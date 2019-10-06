@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 447045749419193041}
   m_Layer: 0
-  m_Name: BossRoom
+  m_Name: LaserTurretRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
