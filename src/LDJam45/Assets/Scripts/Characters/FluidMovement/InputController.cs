@@ -14,34 +14,46 @@ public class InputController : MonoBehaviour
         { CatAction.StandingSlash, new DictionaryWithDefault<CatAction, float>(0.2f)
             {
                 { CatAction.Dash, 0 },
-                { CatAction.StandingDoubleSlash, 0.1f },
-                { CatAction.MovingDoubleSlash, 0.1f },
+                { CatAction.StandingDoubleSlash, 0f },
+                { CatAction.MovingDoubleSlash, 0f },
+                { CatAction.StandingRend, 0.3f },
+                { CatAction.MovingRend, 0.3f },
             } },
         { CatAction.StandingDoubleSlash, new DictionaryWithDefault<CatAction, float>(0.2f)
             {
                 { CatAction.Dash, 0 },
                 { CatAction.StandingRend, 0.1f },
-                { CatAction.MovingRend, 0.1f }
+                { CatAction.MovingRend, 0.1f },
+                { CatAction.StandingSlash, 0.3f },
+                { CatAction.MovingSlash, 0.3f }
             } },
         { CatAction.StandingRend, new DictionaryWithDefault<CatAction, float>(0.4f)
             {
-                { CatAction.Dash, 0.1f }
+                { CatAction.Dash, 0.1f },
+                { CatAction.StandingSlash, 0.5f },
+                { CatAction.MovingSlash, 0.5f }
             } },
         { CatAction.MovingSlash, new DictionaryWithDefault<CatAction, float>(0.2f)
             {
                 { CatAction.Dash, 0 },
-                { CatAction.StandingDoubleSlash, 0.1f },
-                { CatAction.MovingDoubleSlash, 0.1f },
+                { CatAction.StandingDoubleSlash, 0f },
+                { CatAction.MovingDoubleSlash, 0f },
+                { CatAction.StandingRend, 0.3f },
+                { CatAction.MovingRend, 0.3f },
             } },
         { CatAction.MovingDoubleSlash, new DictionaryWithDefault<CatAction, float>(0.2f)
             {
                 { CatAction.Dash, 0 },
                 { CatAction.StandingRend, 0.1f },
-                { CatAction.MovingRend, 0.1f }
+                { CatAction.MovingRend, 0.1f },
+                { CatAction.StandingSlash, 0.3f },
+                { CatAction.MovingSlash, 0.3f }
             } },
         { CatAction.MovingRend, new DictionaryWithDefault<CatAction, float>(0.4f)
             {
-                { CatAction.Dash, 0.1f }
+                { CatAction.Dash, 0.1f },
+                { CatAction.StandingSlash, 0.5f },
+                { CatAction.MovingSlash, 0.5f }
             } },
         { CatAction.DashSlash, new DictionaryWithDefault<CatAction, float>(0.2f)
             {
@@ -51,7 +63,9 @@ public class InputController : MonoBehaviour
             } },
         { CatAction.DashRend, new DictionaryWithDefault<CatAction, float>(0.4f)
             {
-                { CatAction.Dash, 0.1f }
+                { CatAction.Dash, 0.1f },
+                { CatAction.StandingSlash, 0.5f },
+                { CatAction.MovingSlash, 0.5f }
             } },
         { CatAction.Laser, new DictionaryWithDefault<CatAction, float>(0.1f)
             {
