@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3996937605751924505}
   - component: {fileID: 5117508799411690853}
   - component: {fileID: 8365133326883673034}
+  - component: {fileID: 3284468227651859663}
   m_Layer: 0
   m_Name: GameRules
   m_TagString: Untagged
@@ -62,3 +63,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+--- !u!114 &3284468227651859663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809137533544101979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428f8a5bfda3854ba142af778636c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  unlockDash: {fileID: 11400000, guid: a7857f41c0c53d444b00099a2f6f96bb, type: 2}
+  unlockSlash: {fileID: 11400000, guid: b875716884453bf4697059fe334f9990, type: 2}
+  unlockRend: {fileID: 11400000, guid: a21c3cfd52234ec43b1c0c20e13e30bb, type: 2}
+  unlockLaser: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}

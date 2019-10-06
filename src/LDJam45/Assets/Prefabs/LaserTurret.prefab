@@ -14460,6 +14460,7 @@ GameObject:
   - component: {fileID: 7111162615321918719}
   - component: {fileID: 7111162615321918718}
   - component: {fileID: 7111162615321918709}
+  - component: {fileID: 2894232748605168018}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -14513,12 +14514,10 @@ MonoBehaviour:
     type: 3}
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
-  OnPlayerDashing: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
-  OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
-    type: 2}
   IFrames: 3
   Collider: {fileID: 7111162615321918718}
   OnDeathEvent: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
+  IsDashing: 0
   Role: 2
   MaxHealth: 3
 --- !u!114 &7111162615321918705
@@ -14606,6 +14605,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 94
   m_CollisionDetection: 0
+--- !u!114 &2894232748605168018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111162615321918717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d10dcb2009afdf4292eb797b90b781c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStepsCompleted: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}
+  RequiredEvents:
+  - {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
+  _isFinished: 0
+  _finishedEvents: []
 --- !u!1001 &7111162614907622825
 PrefabInstance:
   m_ObjectHideFlags: 0

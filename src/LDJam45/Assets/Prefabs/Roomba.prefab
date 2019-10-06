@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986e705acb281e4a9c3e1b5c6dfb301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorToClose: {fileID: 0}
+  OpenDoor: {fileID: 0}
+  CloseDoor: {fileID: 0}
   HealthLostEvent: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   MaxSpeed: 30
   SpeedIncrease: 0.25
@@ -134,6 +135,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   CurrentState: 0
+  ShouldChase: 1
 --- !u!114 &7879885746436900070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,12 +152,10 @@ MonoBehaviour:
     type: 3}
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
-  OnPlayerDashing: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
-  OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
-    type: 2}
   IFrames: 3
   Collider: {fileID: 7879885746451447033}
-  OnDeathEvent: {fileID: 0}
+  OnDeathEvent: {fileID: 11400000, guid: a7857f41c0c53d444b00099a2f6f96bb, type: 2}
+  IsDashing: 0
   Role: 2
   MaxHealth: 2
 --- !u!1001 &5553256112352479780
