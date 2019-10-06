@@ -114,4 +114,14 @@ public class AlternateCatController : MonoBehaviour
             Animator.SetBool("AttackBoth", false);
         }
     }
+
+    private void OnMouseEnter()
+    {
+        Debug.Log("Purrrrr...");
+    }
+
+    private void OnMouseExit()
+    {
+        Debug.Log("Stop purring.");
+    }
 }
