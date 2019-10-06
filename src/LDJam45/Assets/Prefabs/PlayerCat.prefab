@@ -11479,7 +11479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee34b94c950244c919442306a70706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purrAudioSource: {fileID: 0}
+  purrAudioSource: {fileID: 2892197035707363741}
 --- !u!82 &2892197035707363741
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11491,7 +11491,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a5a540cc0ad540849a1a84530499a805, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
