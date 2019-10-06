@@ -11267,7 +11267,6 @@ GameObject:
   - component: {fileID: 7319797692756229465}
   - component: {fileID: 7319797692756229464}
   - component: {fileID: 6589930768010418438}
-  - component: {fileID: 2746726730563005847}
   - component: {fileID: 7319797692756229470}
   - component: {fileID: 7319797692756229468}
   - component: {fileID: 7933903113536995716}
@@ -11277,6 +11276,7 @@ GameObject:
   - component: {fileID: 4891370469780675536}
   - component: {fileID: 5837382062186835492}
   - component: {fileID: 2892197035707363741}
+  - component: {fileID: 4443046246461775642}
   m_Layer: 0
   m_Name: PlayerCat
   m_TagString: Player
@@ -11292,7 +11292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319797692756229459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.75, y: 3, z: 0}
+  m_LocalPosition: {x: -7.75, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7319797692070369631}
@@ -11344,19 +11344,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &2746726730563005847
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319797692756229459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7319797692756229470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11374,7 +11361,7 @@ MonoBehaviour:
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   IFrames: 3
-  Collider: {fileID: 2746726730563005847}
+  Collider: {fileID: 0}
   OnDeathEvent: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
   IsDashing: 0
   Role: 1
@@ -11590,6 +11577,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &4443046246461775642
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319797692756229459}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91596603, y: 2.9603848, z: 2.4861138}
+  m_Center: {x: 0.006002426, y: -0.48019242, z: 0.0374676}
 --- !u!1 &7319797693884221694
 GameObject:
   m_ObjectHideFlags: 0
