@@ -7,6 +7,7 @@ public class PlayCatWalkingSounds : MonoBehaviour
     [SerializeField] private GameEvent onStartedMoving;
     [SerializeField] private GameEvent onStoppedMoving;
     [SerializeField] private AudioClip[] steps;
+    [SerializeField] private float[] volumes;
     [SerializeField] private float timeBetweenSteps = 0.3f;
 
     private float _cooldownRemaining;
@@ -25,16 +26,17 @@ public class PlayCatWalkingSounds : MonoBehaviour
         onStoppedMoving.Unsubscribe(this);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         _cooldownRemaining = Mathf.Max(0, _cooldownRemaining - Time.deltaTime);
-        if (!_isWalking)
+        if (!_isWalking || _cooldownRemaining > 0)
             return;
-
+        
         _cooldownRemaining = timeBetweenSteps;
         index = (index + 1) % steps.Length;
         var stepSound = steps[index];
-        shared.catAudioSource.PlayOneShot(stepSound);       
+        var volume = volumes.Length < index ? volumes[index] : 0.5f;
+        shared.catAudioSource.PlayOneShot(stepSound, volume);       
     }
 
 }

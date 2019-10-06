@@ -13,6 +13,7 @@ public class GameState : ScriptableObject
     public Vector3 LastCheckpoint;
     public Dictionary<int, int> HealthMap;
     public Dictionary<int, bool> IsInvincibleMap;
+    public bool DebugMuteMusic;        
 
     private void Awake()
     {
