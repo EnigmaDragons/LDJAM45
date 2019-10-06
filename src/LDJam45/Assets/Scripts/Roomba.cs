@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class Roomba : MonoBehaviour
@@ -14,6 +12,7 @@ public class Roomba : MonoBehaviour
     [SerializeField] private float ForgetDistance = 40.0f;
     [SerializeField] Transform[] Waypoints;
     [SerializeField] States CurrentState;
+    [SerializeField] private bool ShouldChase = true;
 
     private GameObject player;
     private NavMeshAgent Agent;
@@ -42,7 +41,7 @@ public class Roomba : MonoBehaviour
         // Debug.Log("Distance to player: " + DistanceFromPlayer.ToString());
 
         // Chase Player if close
-        if (DistanceFromPlayer < ChaseDistance && CurrentState != States.Chasing) {
+        if (ShouldChase && DistanceFromPlayer < ChaseDistance && CurrentState != States.Chasing) {
             Debug.Log("The Roomba is Chasing You!");
             CurrentState = States.Chasing;
         } else if (DistanceFromPlayer > ForgetDistance && CurrentState != States.Cleaning) {
@@ -64,9 +63,9 @@ public class Roomba : MonoBehaviour
                 CurrentWaypoint++; // Set next waypoint
 
                 // Close door
-                if (OpenDoor.gameObject.activeSelf) {
-                    OpenDoor.SetActive(false);
-                    CloseDoor.SetActive(true);
+                if (OpenDoor != null && OpenDoor.gameObject.activeSelf) {
+                    OpenDoor?.SetActive(false);
+                    CloseDoor?.SetActive(true);
                 }
 
                 if (CurrentWaypoint == Waypoints.Length) {
@@ -88,7 +87,7 @@ public class Roomba : MonoBehaviour
     }
 
     private void OnDestroy() {
-        CloseDoor.SetActive(false);
-        OpenDoor.SetActive(true);
+        CloseDoor?.SetActive(false);
+        OpenDoor?.SetActive(true);
     }
 }
