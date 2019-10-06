@@ -29,6 +29,7 @@ public class CatDash : MonoBehaviour
             Health.IsInvincible = true;
             _dashTime = DashLength;
             DashTrail.emitting = true;
+            CatBody.useGravity = false;
             _direction = direction;
             DashCooldownRemaining = DashCooldown;
             OnStarted.Publish();
@@ -52,6 +53,7 @@ public class CatDash : MonoBehaviour
         {
             _isDashing = false;
             Health.IsInvincible = false;
+            CatBody.useGravity = true;
             StartCoroutine(TurnOffEmissionsAfterDelay());
             OnFinished();
         }
