@@ -1,5 +1,98 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &478886813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 478886814}
+  - component: {fileID: 478886816}
+  - component: {fileID: 478886815}
+  m_Layer: 0
+  m_Name: StartRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &478886814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478886813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1252245281}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478886816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478886813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b96039ff9dbae448aad6cc00791017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollide: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
+  cooldown:
+    UseConstant: 1
+    ConstantValue: 999
+    Variable: {fileID: 0}
+--- !u!65 &478886815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478886813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1252245280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252245281}
+  m_Layer: 0
+  m_Name: Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1252245281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252245280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 478886814}
+  m_Father: {fileID: 6790349080837067894}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535488467483504576
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -300,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -471,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -593,6 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -771,6 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -893,6 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -941,6 +1040,7 @@ Transform:
   - {fileID: 6790349080625108996}
   - {fileID: 6790349081694889714}
   - {fileID: 6542663279864514594}
+  - {fileID: 1252245281}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1050,6 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1172,6 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1294,6 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1416,6 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1538,6 +1642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1660,6 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1814,6 +1920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -1936,6 +2043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -2058,6 +2166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -2180,6 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -2302,6 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -2424,6 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1
@@ -2546,6 +2658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseRoomStarted: {fileID: 11400000, guid: cfa2cd8af758e7a439a06568276ec737, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimer: 1

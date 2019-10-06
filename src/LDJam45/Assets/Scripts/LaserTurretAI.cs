@@ -14,7 +14,7 @@ public class LaserTurretAI : MonoBehaviour
     [SerializeField] private List<LaserTurretAttack> Stage3Attacks;
 
     private bool _bossStarted = false;
-    private int _stage = 0;
+    private int _stage = 99;
     private List<LaserTurretAttack> _currentAttackPattern;
     private int _attackIndex;
     private LaserTurretAttack _currentAttack;

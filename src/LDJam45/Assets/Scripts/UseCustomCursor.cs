@@ -8,7 +8,7 @@ public class UseCustomCursor : MonoBehaviour
     [SerializeField]
     private Texture2D cursorClick;
 
-    private readonly Vector2 hotSpot = new Vector2(4, 5);
+    private readonly Vector2 hotSpot = new Vector2(0, 0);
 
     private void Awake()
     {
