@@ -19,6 +19,9 @@ public class CatOnMovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         _platform = collision.gameObject.GetComponentInParent<MovingPlatform>();
+    }
+
+    private void OnCollisionStay(Collision collision) {
         if (_platform != null) {
             transform.parent = collision.transform.parent.transform;
         }
@@ -26,6 +29,7 @@ public class CatOnMovingPlatform : MonoBehaviour
 
     private void OnCollisionExit(Collision collision) {
         if (_platform != null) {
+            Debug.Log("Leaving Collosion");
             transform.parent = null;
         }        
     }
