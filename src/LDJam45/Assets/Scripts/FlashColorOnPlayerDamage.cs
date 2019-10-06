@@ -31,7 +31,7 @@ public class FlashColorOnPlayerDamage : MonoBehaviour
         else
             image.color = Color.Lerp(image.color, targetTransparent, 20 * Time.deltaTime);
 
-        if (image.color.a >= 0.6)
+        if (image.color.a >= 0.3)
             wasFreshlyDamaged = false;
     }
 }
