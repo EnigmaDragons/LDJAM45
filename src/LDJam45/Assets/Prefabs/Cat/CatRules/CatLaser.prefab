@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eyes: {fileID: 6275200603605179142}
   LaserEyesCooldown: 9
+  OnFired: {fileID: 11400000, guid: f2d154d1b4e8ef04a83a200add0c951e, type: 2}
   LaserEyesCooldownRemaining: 0
 --- !u!114 &6275200603605179142
 MonoBehaviour:

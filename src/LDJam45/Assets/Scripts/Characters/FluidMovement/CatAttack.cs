@@ -13,6 +13,7 @@ public class CatAttack : MonoBehaviour
     [SerializeField] private Rigidbody CatBody;
     [SerializeField] private List<Vector3> Forces;
     [SerializeField] private List<float> Timing;
+    [SerializeField] private GameEvent OnAttack;
 
     private int _index = 99;
     private float _timeRemaing;
@@ -67,6 +68,7 @@ public class CatAttack : MonoBehaviour
         Weapons.ForEach(x => x.enabled = true);
         WeaponParticles.ForEach(x => x.Play());
         Animator.SetBool("IsAttacking", true);
+        OnAttack.Publish();
     }
 
     public void AttackStarted()
