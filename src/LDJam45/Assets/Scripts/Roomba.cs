@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class Roomba : MonoBehaviour
@@ -18,6 +19,8 @@ public class Roomba : MonoBehaviour
     private NavMeshAgent Agent;
     private int CurrentWaypoint = 0;
 
+    private bool Dashed = false;
+
     enum States {
         Cleaning,
         Chasing
@@ -26,17 +29,17 @@ public class Roomba : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         CurrentState = States.Cleaning;
-
         Agent = GetComponent<NavMeshAgent>();
+
         player = GameObject.FindGameObjectWithTag("Player");        
         if (!player) {
             Debug.LogError("Player is not tagged");
         }
-    }
+    }   
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         if (ShouldChase)
         {
             float DistanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
@@ -79,12 +82,16 @@ public class Roomba : MonoBehaviour
                     CurrentWaypoint = 0; // Reset Waypoints
                 }
             }
-        }                        
+        }
 
         // Speed increase
-        if (Agent.speed < MaxSpeed) {
-            Agent.speed += SpeedIncrease * Time.deltaTime;
-        }                       
+        //if (Agent.speed < MaxSpeed) {
+        //    Agent.speed += SpeedIncrease * Time.deltaTime;
+        //}                       
+
+        if (!Dashed) {
+            StartCoroutine(QueueDash());
+        }
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -99,5 +106,12 @@ public class Roomba : MonoBehaviour
 
         CloseDoor.SetActive(false);
         OpenDoor.SetActive(true);
+    }
+
+    IEnumerator QueueDash() {
+        Dashed = true;
+        yield return new WaitForSeconds(10.0f);        
+        Agent.velocity = transform.forward * 20.0f;
+        Dashed = false;
     }
 }
