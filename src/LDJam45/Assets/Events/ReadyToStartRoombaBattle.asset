@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c52e87842f9394a9d99fe5f5c8b7bd, type: 3}
-  m_Name: GameState
+  m_Script: {fileID: 11500000, guid: fd0609a855a25f541b0b11fed27f3e2b, type: 3}
+  m_Name: ReadyToStartRoombaBattle
   m_EditorClassIdentifier: 
-  IsTravelling: 0
-  CurrentHp: 5
-  MaxHp: 5
-  DashUnlocked: 0
-  SlashUnlocked: 0
-  RendUnlocked: 0
-  LaserEyesUnlocked: 0
