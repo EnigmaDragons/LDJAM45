@@ -6,13 +6,13 @@ public class CatPurring : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        purrAudioSource?.Play();
+        //purrAudioSource.Play();
         Debug.Log("Cat purrs.");
     }
 
     private void OnMouseExit()
     {
-        purrAudioSource?.Stop();
+        //purrAudioSource.Stop();
         Debug.Log("Cat stops purring.");
     }
 }
