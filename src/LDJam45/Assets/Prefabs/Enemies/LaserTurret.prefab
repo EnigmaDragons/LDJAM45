@@ -106,6 +106,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f97fa9c3cabaa884f8cdffb0866d5302, type: 2}
   - {fileID: 11400000, guid: f97fa9c3cabaa884f8cdffb0866d5302, type: 2}
   - {fileID: 11400000, guid: f97fa9c3cabaa884f8cdffb0866d5302, type: 2}
+  Stage2Threshhold: 2
+  Stage3Threshhold: 1
 --- !u!114 &7111162615321918704
 MonoBehaviour:
   m_ObjectHideFlags: 0
