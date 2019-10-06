@@ -94,12 +94,6 @@ public class Roomba : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Player") {
-            HealthLostEvent.Publish();
-        }
-    }
-
     private void OnDestroy() {
         if (CloseDoor == null)
             return;

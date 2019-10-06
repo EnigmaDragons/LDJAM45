@@ -13,7 +13,7 @@ public class UpdatePlayerHealth : MonoBehaviour
         var health = state.HealthMap[PlayerID.ID];
         if (health != state.CurrentPlayerHp)
         {
-            if (health > state.CurrentPlayerHp)
+            if (health < state.CurrentPlayerHp)
             {
                 state.CurrentPlayerHp = health;
                 onPlayerHealthLost.Publish();
