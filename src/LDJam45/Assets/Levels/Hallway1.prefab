@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6923831345269723809}
   m_Layer: 0
   m_Name: Floors
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -330,11 +330,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675031188567838902}
     m_Modifications:
-    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Patrol (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,6 +384,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Patrol (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37edc8a8eed79f41b6a4e5a38597f91, type: 3}
@@ -915,11 +915,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675031188567838902}
     m_Modifications:
-    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Patrol (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,6 +970,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Patrol (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37edc8a8eed79f41b6a4e5a38597f91, type: 3}
 --- !u!4 &7602469928651551355 stripped
@@ -990,11 +990,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675031188567838902}
     m_Modifications:
-    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Patrol
-      objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1049,6 +1044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Patrol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37edc8a8eed79f41b6a4e5a38597f91, type: 3}
@@ -7185,12 +7185,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8812633485363997271, guid: f45f4070c37951f4f83133d93300732a,
+    - target: {fileID: 6487125399522691177, guid: f45f4070c37951f4f83133d93300732a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 6487125399522691177, guid: f45f4070c37951f4f83133d93300732a,
+    - target: {fileID: 8812633485363997271, guid: f45f4070c37951f4f83133d93300732a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -7295,11 +7295,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675031188567838902}
     m_Modifications:
-    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Patrol (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7354,6 +7349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Patrol (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37edc8a8eed79f41b6a4e5a38597f91, type: 3}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CatMovement : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class CatMovement : MonoBehaviour
 
     [SerializeField] private float MoveSpeed = 5.0f;
 
+
+    private CatIsOnGround _catIsOnGround;
     private Rigidbody _catBody;
     private Animator _animator;
     private Vector3 _rotation;
@@ -13,6 +16,7 @@ public class CatMovement : MonoBehaviour
 
     private void Start()
     {
+        _catIsOnGround = GetComponent<CatIsOnGround>();
         _catBody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
     }
@@ -34,11 +38,8 @@ public class CatMovement : MonoBehaviour
     {
         if (!IsActive)
             return;
-        if (_inputs == Vector3.zero)
-        {
+        if (_inputs == Vector3.zero || !_catIsOnGround.IsOnGround)
             _animator.SetBool("IsWalking", false);
-            _catBody.velocity = new Vector3(0, _catBody.velocity.y, 0);
-        }
         else
         {
             _animator.SetBool("IsWalking", true);
