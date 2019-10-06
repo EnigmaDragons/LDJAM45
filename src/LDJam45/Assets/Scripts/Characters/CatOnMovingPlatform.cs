@@ -13,19 +13,20 @@ public class CatOnMovingPlatform : MonoBehaviour
     {        
     }
 
-    // Update is called once per frame
-    void LateUpdate() {        
-    }
-
-    private void OnCollisionEnter(Collision collision) {
-        _platform = collision.gameObject.GetComponentInParent<MovingPlatform>();
-        if (_platform != null) {
-            transform.parent = collision.transform.parent.transform;
+    void CheckCollision(Collision collision) {
+        if (collision.gameObject.tag == "MovingPlatform" && transform.parent == null) {
+            transform.parent = collision.transform;
+        } else if (transform.parent != null && collision.gameObject.tag != "MovingPlatform") {
+            transform.parent = null;
         }
     }
 
+    private void OnCollisionEnter(Collision collision) {        
+        CheckCollision(collision);
+    }
+
     private void OnCollisionStay(Collision collision) {
-        
+        CheckCollision(collision);
     }
 
     private void OnCollisionExit(Collision collision) {
