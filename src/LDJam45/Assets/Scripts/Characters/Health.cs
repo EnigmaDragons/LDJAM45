@@ -5,49 +5,41 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private GameObject OnDeathVfx;
-    [SerializeField] private GameEvent OnHealthGained;
-    [SerializeField] private GameEvent OnHealthLost;
     [SerializeField] private float IFrames;
     [SerializeField] private Collider Collider;
     [SerializeField] private GameEvent OnDeathEvent;
-
-    public bool JustGotHit { get; private set; } = false;
-    public bool IsDashing = false;
-    private bool _isDead = false;
-    private float _secondsLeftOfInvincibility;
+    [SerializeField] private GameState GameState;
+    [SerializeField] private CharacterID ID;
 
     public Role Role;
     public int MaxHealth;
-    public int CurrentHealth { get; set; }
-    public bool IsInvincible => IsDashing || JustGotHit;
-    public Action OnDamage { private get; set; } = () => {};
+    public Action OnDamage { private get; set; } = () => { };
+    public float SecondsOfInvincibility;
+    public bool IsInvincible;
+
+    private bool _isDead = false;
 
     private void Start()
     {
-        CurrentHealth = MaxHealth;
+        GameState.HealthMap[ID.ID] = MaxHealth;
+        GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
         if (Role == Role.Friendly)
-        {
-        }
+            GameState.CurrentPlayerHp = MaxHealth;
     }
 
     private void Update()
     {
-        if (JustGotHit)
-        {
-            _secondsLeftOfInvincibility -= Time.deltaTime;
-            if (_secondsLeftOfInvincibility <= 0)
-                JustGotHit = false;
-        }
+        SecondsOfInvincibility = Mathf.Max(0, SecondsOfInvincibility - Time.deltaTime);
+        GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
     }
 
     public void ApplyDamage()
     {
-        if (_isDead || IsInvincible)
+        if (_isDead || GameState.IsInvincibleMap[ID.ID])
             return;
 
-        CurrentHealth -= 1;
-        Debug.Log($"Health is now {CurrentHealth}");
-        if (CurrentHealth <= 0)
+        GameState.HealthMap[ID.ID]--;
+        if (GameState.HealthMap[ID.ID] <= 0)
         {
             _isDead = true;
             Debug.Log($"{name} is destroyed");
@@ -56,11 +48,8 @@ public class Health : MonoBehaviour
         }
         else
         {
-            JustGotHit = true;
-            _secondsLeftOfInvincibility = IFrames;
+            SecondsOfInvincibility = IFrames;
             OnDamage();
-            if (Role == Role.Friendly)
-                OnHealthLost.Publish();
         }
     }
 

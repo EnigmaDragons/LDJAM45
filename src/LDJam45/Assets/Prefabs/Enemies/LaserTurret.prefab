@@ -14461,6 +14461,7 @@ GameObject:
   - component: {fileID: 7111162615321918718}
   - component: {fileID: 7111162615321918709}
   - component: {fileID: 2894232748605168018}
+  - component: {fileID: -624152312658737001}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -14512,14 +14513,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
-  OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
-  OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   IFrames: 3
   Collider: {fileID: 7111162615321918718}
   OnDeathEvent: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
-  IsDashing: 0
+  GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  ID: {fileID: -624152312658737001}
   Role: 2
   MaxHealth: 3
+  SecondsOfInvincibility: 0
+  IsInvincible: 0
 --- !u!114 &7111162615321918705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14536,7 +14538,8 @@ MonoBehaviour:
   LaserGun: {fileID: 7111162615321918704}
   Turning: {fileID: 7111162615321918707}
   LaserTurretBody: {fileID: 7111162615321918709}
-  Health: {fileID: 7111162615321918706}
+  ID: {fileID: -624152312658737001}
+  GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   Stage1Attacks:
   - {fileID: 11400000, guid: 83809519629abfa4688c65f9f45f11f0, type: 2}
   Stage2Attacks:
@@ -14574,7 +14577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d479d20fbb022b4da1c4d08cc58afc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: {fileID: 7111162615321918706}
+  GameState: {fileID: 0}
+  ID: {fileID: 0}
   Flashing: {fileID: 7111162614140584500}
 --- !u!65 &7111162615321918718
 BoxCollider:
@@ -14620,8 +14624,22 @@ MonoBehaviour:
   OnStepsCompleted: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}
   RequiredEvents:
   - {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
+  IsReoccuring: 0
   _isFinished: 0
   _finishedEvents: []
+--- !u!114 &-624152312658737001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111162615321918717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdafcffa066ca24f8a8b6aa53e3b4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
 --- !u!1001 &7111162614907622825
 PrefabInstance:
   m_ObjectHideFlags: 0

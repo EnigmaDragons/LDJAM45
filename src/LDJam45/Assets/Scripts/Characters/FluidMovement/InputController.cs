@@ -95,7 +95,6 @@ public class InputController : MonoBehaviour
 
     private DirectionalCatAction _currentAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
     private DirectionalCatAction _queuedAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
-    private bool _doingAction = false;
 
     private void Start()
     {
@@ -159,8 +158,11 @@ public class InputController : MonoBehaviour
                 _queuedAction = new DirectionalCatAction(direction == Vector3.zero ? CatAction.StandingRend : CatAction.MovingRend, direction);
         }
 
-        if (!_doingAction && _queuedAction.Action != CatAction.Moving)
-                OnFinishedWithCurrentAction();
+        if (_currentAction.Action == CatAction.Moving && _queuedAction.Action != CatAction.Moving)
+        {
+            Movement.Stop();
+            OnFinishedWithCurrentAction();
+        }
     }
 
     private void OnFinishedWithCurrentAction()
@@ -171,7 +173,6 @@ public class InputController : MonoBehaviour
         StartCoroutine(TransitionToNextAction(_delays[_currentAction.Action][_queuedAction.Action], _actions[_queuedAction.Action](_queuedAction.Direction)));
         _currentAction = _queuedAction;
         _queuedAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
-        _doingAction = _currentAction.Action != CatAction.Moving;
     }
 
     private IEnumerator TransitionToNextAction(float delay, Action action)

@@ -7,7 +7,8 @@ public class LaserTurretAI : MonoBehaviour
     [SerializeField] private GunBehaviour LaserGun;
     [SerializeField] private TurnTowardsTarget Turning;
     [SerializeField] private Rigidbody LaserTurretBody;
-    [SerializeField] private Health Health;
+    [SerializeField] private CharacterID ID;
+    [SerializeField] private GameState GameState;
     [SerializeField] private List<LaserTurretAttack> Stage1Attacks;
     [SerializeField] private List<LaserTurretAttack> Stage2Attacks;
     [SerializeField] private List<LaserTurretAttack> Stage3Attacks;
@@ -32,9 +33,9 @@ public class LaserTurretAI : MonoBehaviour
     {
         if (!_bossStarted)
             return;
-        if (_stage != 4 - Health.CurrentHealth)
+        if (_stage != 4 - GameState.HealthMap[ID.ID])
         {
-            _stage = 4 - Health.CurrentHealth;
+            _stage = 4 - GameState.HealthMap[ID.ID];
             if (_stage == 1)
                 _currentAttackPattern = Stage1Attacks;
             else if (_stage == 2)

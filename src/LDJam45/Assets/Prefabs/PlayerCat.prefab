@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 863764196747629492}
   - component: {fileID: 5513228514965521403}
   - component: {fileID: 4443046246461775642}
+  - component: {fileID: 1205667276312560101}
   m_Layer: 0
   m_Name: PlayerCat
   m_TagString: Player
@@ -160,14 +161,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
-  OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
-  OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   IFrames: 3
-  Collider: {fileID: 0}
+  Collider: {fileID: 4443046246461775642}
   OnDeathEvent: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
-  IsDashing: 0
+  GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  ID: {fileID: 1205667276312560101}
   Role: 1
   MaxHealth: 3
+  SecondsOfInvincibility: 0
+  IsInvincible: 0
 --- !u!114 &863764196747629492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +220,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.91596603, y: 2.9603848, z: 2.4861138}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1205667276312560101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319797692756229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdafcffa066ca24f8a8b6aa53e3b4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
 --- !u!1001 &79277415773321144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1186,6 +1201,18 @@ PrefabInstance:
       propertyPath: Animator
       value: 
       objectReference: {fileID: 6589930768010418438}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: WalkingStarted
+      value: 
+      objectReference: {fileID: 11400000, guid: e44d85d44b5d55041a9ed1b7c68e09b5,
+        type: 2}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: WalkingStopped
+      value: 
+      objectReference: {fileID: 11400000, guid: c4f7642b8cd043044bd9ca1862276729,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72f730f99cfb8444b0ec531333c4e30, type: 3}
 --- !u!4 &3640316216595085034 stripped

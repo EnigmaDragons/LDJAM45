@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class CatMovement : MonoBehaviour
@@ -9,9 +9,17 @@ public class CatMovement : MonoBehaviour
     [SerializeField] private CatIsOnGround CatIsOnGround;
     [SerializeField] private Rigidbody CatBody;
     [SerializeField] private Animator Animator;
+    [SerializeField] private GameEvent WalkingStarted;
+    [SerializeField] private GameEvent WalkingStopped;
 
     private Vector3 _rotation;
     private Vector3 _inputs = Vector3.zero;
+
+    public void Stop()
+    {
+        Animator.SetBool("IsWalking", false);
+        WalkingStopped.Publish();
+    }
 
     private void Update()
     {
@@ -31,10 +39,11 @@ public class CatMovement : MonoBehaviour
         if (!IsActive)
             return;
         if (_inputs == Vector3.zero || !CatIsOnGround.IsOnGround)
-            Animator.SetBool("IsWalking", false);
+            Stop();
         else
         {
             Animator.SetBool("IsWalking", true);
+            WalkingStarted.Publish();
             CatBody.AddForce(_inputs * MoveSpeed * Time.fixedDeltaTime, ForceMode.Force);
         }
     }

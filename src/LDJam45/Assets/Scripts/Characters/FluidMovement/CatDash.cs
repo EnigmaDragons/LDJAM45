@@ -26,7 +26,7 @@ public class CatDash : MonoBehaviour
         if (DashCooldownRemaining <= 0)
         {
             _isDashing = true;
-            Health.IsDashing = true;
+            Health.IsInvincible = true;
             _dashTime = DashLength;
             DashTrail.emitting = true;
             _direction = direction;
@@ -51,7 +51,7 @@ public class CatDash : MonoBehaviour
         if (_dashTime <= 0)
         {
             _isDashing = false;
-            Health.IsDashing = false;
+            Health.IsInvincible = false;
             StartCoroutine(TurnOffEmissionsAfterDelay());
             OnFinished();
         }

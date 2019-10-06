@@ -31,6 +31,6 @@ public class HpPresenter : MonoBehaviour
     void UpdateHealth()
     {
         for (int i = 0; i < hpIcons.Length; ++i)
-            hpIcons[i].SetActive(i < state.CurrentHp);
+            hpIcons[i].SetActive(i < state.CurrentPlayerHp);
     }
 }

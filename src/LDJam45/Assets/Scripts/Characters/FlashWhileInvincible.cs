@@ -2,20 +2,15 @@
 
 public class FlashWhileInvincible : MonoBehaviour
 {
-    [SerializeField] private Health Health;
+    [SerializeField] private GameState GameState;
+    [SerializeField] private CharacterID ID;
     [SerializeField] private GameObject Flashing;
-
-    private float _secondsTilChange;
 
     private void Update()
     {
-        if (Health.JustGotHit && !Flashing.activeSelf)
-        {
+        if (GameState.IsInvincibleMap[ID.ID] && !Flashing.activeSelf)
             Flashing.SetActive(true);
-        }
-        else if (!Health.JustGotHit && Flashing.activeSelf)
-        {
+        else if (!GameState.IsInvincibleMap[ID.ID] && Flashing.activeSelf)
             Flashing.SetActive(false);
-        }
     }
 }
