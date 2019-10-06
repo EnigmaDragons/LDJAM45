@@ -1469,7 +1469,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.76862746, g: 0.45882353, b: 0.7490196, a: 1}
+  m_BackGroundColor: {r: 0.27058825, g: 0.25490198, b: 0.7882353, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -6192,6 +6192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: 0ac7fb39e445048d89688f69c2a1839a, type: 2}
+  musicVolSlider: {fileID: 1633660204}
+  sfxVolSlider: {fileID: 1548789770}
 --- !u!114 &1538678715027703831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6358,6 +6360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: 0ac7fb39e445048d89688f69c2a1839a, type: 2}
+  musicVolSlider: {fileID: 1538678715027758929}
+  sfxVolSlider: {fileID: 68484215}
 --- !u!114 &1538678715027747291
 MonoBehaviour:
   m_ObjectHideFlags: 0
