@@ -4,7 +4,7 @@ public class HpPresenter : MonoBehaviour
 {
     [SerializeField] private GameEvent onHealthLost;
     [SerializeField] private GameEvent onHealthGained;
-    [SerializeField] private Health PlayerHealth;
+    [SerializeField] private GameState state;
 
     private GameObject[] hpIcons;
 
@@ -29,6 +29,6 @@ public class HpPresenter : MonoBehaviour
     void UpdateHealth(int amount)
     {
         for (int i = 0; i < hpIcons.Length; ++i)
-            hpIcons[i].SetActive(i < PlayerHealth.CurrentHealth);
+            hpIcons[i].SetActive(i < state.CurrentHp);
     }
 }

@@ -5,6 +5,12 @@ public class TurnTowardsTarget : MonoBehaviour
     [SerializeField] private Transform Target;
     [SerializeField] public float RotationSpeed;
 
+    private void OnEnable()
+    {
+        if (Target == null)
+            Target = GameObject.Find("PlayerCat").transform;
+    }
+
     void Update()
     {
         if (Target == null)
