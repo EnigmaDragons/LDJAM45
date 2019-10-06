@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class CatOnMovingPlatform : MonoBehaviour
 {
+    private Rigidbody rb;
     private MovingPlatform _platform;
     private GameObject target = null;
     private Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
+        rb = GetComponent<Rigidbody>();
     }
 
-    void CheckCollision(Collision collision) {
+    private void OnCollisionEnter(Collision collision) {
+        Debug.Log(collision.gameObject.tag.ToString());
         if (collision.gameObject.tag == "MovingPlatform" && transform.parent == null) {
             transform.parent = collision.transform;
         } else if (transform.parent != null && collision.gameObject.tag != "MovingPlatform") {
@@ -21,17 +24,11 @@ public class CatOnMovingPlatform : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {        
-        CheckCollision(collision);
-    }
-
     private void OnCollisionStay(Collision collision) {
-        CheckCollision(collision);
+        
     }
 
-    private void OnCollisionExit(Collision collision) {
-        if (_platform != null) {
-            transform.parent = null;
-        }        
+    private void OnCollisionExit(Collision collision) {    
+        transform.parent = null;
     }
 }
