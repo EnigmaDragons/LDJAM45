@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class CatPurring : MonoBehaviour
 {
-    public AudioSource purrAudioSource;
+    private AudioSource purrAudioSource;
+
+    private void Start()
+    {
+        purrAudioSource = GetComponent<AudioSource>();
+    }
 
     private void OnMouseEnter()
     {
