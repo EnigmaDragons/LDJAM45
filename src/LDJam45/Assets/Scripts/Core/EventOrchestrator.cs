@@ -6,7 +6,8 @@ public class EventOrchestrator : MonoBehaviour
 {
     [SerializeField] private GameEvent OnStepsCompleted;
     [SerializeField] private List<GameEvent> RequiredEvents;
-    
+    [SerializeField] private bool IsReoccuring = false;
+
     [ReadOnly] [SerializeField] private bool _isFinished = false;
     [ReadOnly] [SerializeField] private List<GameEvent> _finishedEvents = new List<GameEvent>();
     
@@ -33,7 +34,7 @@ public class EventOrchestrator : MonoBehaviour
     {
         if (RequiredEvents.Except(_finishedEvents).None())
         {
-            _isFinished = true;
+            _isFinished = !IsReoccuring;
             OnStepsCompleted.Publish();
         }
     }

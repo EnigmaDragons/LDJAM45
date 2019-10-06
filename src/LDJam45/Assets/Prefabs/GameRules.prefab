@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3996937605751924505}
-  - component: {fileID: 5117508799411690853}
   - component: {fileID: 8365133326883673034}
   - component: {fileID: 3284468227651859663}
+  - component: {fileID: 3288639991404655676}
+  - component: {fileID: 5334395557189622832}
   m_Layer: 0
   m_Name: GameRules
   m_TagString: Untagged
@@ -33,23 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5117508799411690853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809137533544101979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d10dcb2009afdf4292eb797b90b781c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnStepsCompleted: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
-  RequiredEvents:
-  - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
-  _isFinished: 0
-  _finishedEvents: []
 --- !u!114 &8365133326883673034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,3 +64,37 @@ MonoBehaviour:
   unlockSlash: {fileID: 11400000, guid: b875716884453bf4697059fe334f9990, type: 2}
   unlockRend: {fileID: 11400000, guid: a21c3cfd52234ec43b1c0c20e13e30bb, type: 2}
   unlockLaser: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}
+--- !u!114 &3288639991404655676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809137533544101979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d10dcb2009afdf4292eb797b90b781c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStepsCompleted: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
+  RequiredEvents:
+  - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
+  _isFinished: 0
+  _finishedEvents: []
+--- !u!114 &5334395557189622832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809137533544101979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d10dcb2009afdf4292eb797b90b781c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStepsCompleted: {fileID: 11400000, guid: 8171a896aac4ba54b910496589d186e5, type: 2}
+  RequiredEvents:
+  - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
+  _isFinished: 0
+  _finishedEvents: []
