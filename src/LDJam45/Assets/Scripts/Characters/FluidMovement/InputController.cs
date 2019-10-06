@@ -71,7 +71,15 @@ public class InputController : MonoBehaviour
 
     private void Update()
     {
-        var direction = Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
+        if (Input.GetKey("z") && Input.GetKey("v") && Input.GetKey("x"))
+        {
+            state.DashUnlocked = true;
+            state.SlashUnlocked = true;
+            state.RendUnlocked = true;
+            state.LaserEyesUnlocked = true;
+        }
+
+        var direction = Vector3.ClampMagnitude(Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))), 1f);
 
         if (state.DashUnlocked && Input.GetButtonDown("Dash"))
             _queuedAction = new DirectionalCatAction(CatAction.Dash, direction);

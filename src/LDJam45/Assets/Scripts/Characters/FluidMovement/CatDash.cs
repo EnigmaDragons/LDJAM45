@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CatDash : MonoBehaviour
 {
-    public Action OnFinished = () => {};
+    public Action OnFinished;
 
     [SerializeField] private float DashSpeed;
     [SerializeField] private float DashLength = 2;
@@ -37,6 +37,8 @@ public class CatDash : MonoBehaviour
             _direction = direction;
             DashCooldownRemaining = DashCooldown;
         }
+        else
+            OnFinished();
     }
 
     void Update()
@@ -47,16 +49,13 @@ public class CatDash : MonoBehaviour
 
         if (_direction != Vector3.zero)
             transform.forward = _direction;
-        var dashVelocity = Vector3.Scale(transform.forward, DashSpeed * new Vector3(
-            (Mathf.Log(1f / (Time.deltaTime * _catBody.drag + 1)) / -Time.deltaTime),
-            0,
-            (Mathf.Log(1f / (Time.deltaTime * _catBody.drag + 1)) / -Time.deltaTime)));
-        _catBody.AddForce(dashVelocity, ForceMode.VelocityChange);
+        _catBody.AddForce(_direction * DashSpeed * Time.fixedDeltaTime, ForceMode.Force);
 
         _dashTime -= Time.deltaTime;
         if (_dashTime <= 0)
         {
             _isDashing = false;
+            Health.IsDashing = false;
             StartCoroutine(TurnOffEmissionsAfterDelay());
             OnFinished();
         }

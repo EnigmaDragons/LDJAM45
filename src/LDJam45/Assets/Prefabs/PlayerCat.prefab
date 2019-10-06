@@ -72,12 +72,12 @@ MonoBehaviour:
   - {fileID: 9204054685844440109}
   Animator: {fileID: 5165501702750406465}
   CatBody: {fileID: 7319797692756229464}
-  Offsets:
-  - {x: 0, y: 3, z: 4}
-  - {x: 0, y: -3, z: 2}
+  Forces:
+  - {x: 0, y: 10000, z: 50000}
+  - {x: 0, y: 0, z: 50000}
   Timing:
   - 0.2
-  - 0.1
+  - 0.2
 --- !u!33 &8383747734001760480
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   - {fileID: 9186952443748641318}
   Animator: {fileID: 6576618419419027302}
   CatBody: {fileID: 7319797692756229464}
-  Offsets: []
+  Forces: []
   Timing: []
 --- !u!33 &8789004901468377370
 MeshFilter:
@@ -526,8 +526,8 @@ MonoBehaviour:
   - {fileID: 1220223824200103678}
   Animator: {fileID: 5266499848111247705}
   CatBody: {fileID: 7319797692756229464}
-  Offsets:
-  - {x: 0, y: 0, z: 3}
+  Forces:
+  - {x: 0, y: 0, z: 50000}
   Timing:
   - 0.2
 --- !u!33 &5016116166691199456
@@ -860,10 +860,10 @@ MonoBehaviour:
   - {fileID: 7974010252305799246}
   Animator: {fileID: 6334181047745206446}
   CatBody: {fileID: 7319797692756229464}
-  Offsets:
-  - {x: 0, y: 0, z: 3}
+  Forces:
+  - {x: 0, y: 0, z: 50000}
   Timing:
-  - 0.2
+  - 0.3
 --- !u!33 &1515230457206676532
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1332,8 +1332,8 @@ MonoBehaviour:
   - {fileID: 5521214900379186931}
   Animator: {fileID: 8262286725697404287}
   CatBody: {fileID: 7319797692756229464}
-  Offsets:
-  - {x: 0, y: 0, z: 5}
+  Forces:
+  - {x: 0, y: 0, z: 80000}
   Timing:
   - 0.2
 --- !u!33 &304001193583834884
@@ -11301,12 +11301,12 @@ Rigidbody:
   m_GameObject: {fileID: 7319797692756229459}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 8
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 2
 --- !u!95 &6589930768010418438
 Animator:
@@ -11428,7 +11428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 1
-  MoveSpeed: 15
+  MoveSpeed: 40000
 --- !u!114 &363331686258895192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11441,7 +11441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6137b82b8009a0a4b8b6fd83248f0ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DashSpeed: 10
+  DashSpeed: 40000
   DashLength: 0.1
   PostEmitTime: 0.1
   Health: {fileID: 7319797692756229470}
@@ -16367,12 +16367,11 @@ MonoBehaviour:
   - {fileID: 6189903638219576373}
   Animator: {fileID: 5770338560466793994}
   CatBody: {fileID: 7319797692756229464}
-  Offsets:
-  - {x: 0, y: 3, z: 0}
-  - {x: 0, y: -3, z: 0}
+  Forces:
+  - {x: 0, y: 10000, z: 0}
+  - {x: 0, y: 0, z: 0}
   Timing:
   - 0.2
-  - 0.1
 --- !u!33 &492550844932095572
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16489,7 +16488,7 @@ MonoBehaviour:
   - {fileID: 5906245329777871267}
   Animator: {fileID: 6320863826912870454}
   CatBody: {fileID: 7319797692756229464}
-  Offsets: []
+  Forces: []
   Timing: []
 --- !u!33 &5361588515714845330
 MeshFilter:
@@ -16716,12 +16715,12 @@ MonoBehaviour:
   - {fileID: 5948970073875333677}
   Animator: {fileID: 7694617768278886017}
   CatBody: {fileID: 7319797692756229464}
-  Offsets:
-  - {x: 0, y: 3, z: 6}
-  - {x: 0, y: -3, z: 3}
+  Forces:
+  - {x: 0, y: 10000, z: 80000}
+  - {x: 0, y: 0, z: 80000}
   Timing:
   - 0.2
-  - 0.1
+  - 0.2
 --- !u!33 &7101464365770863337
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16989,6 +16988,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4618465766568436356}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17043,11 +17047,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17149,6 +17148,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 722860390025578589}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17203,11 +17207,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820731, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
@@ -17229,6 +17228,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4135316150434899738}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17283,11 +17287,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17304,6 +17303,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8436656418310715789}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17358,11 +17362,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17379,6 +17378,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1416491232406564824}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17433,11 +17437,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17454,6 +17453,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4519445453076482672}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17508,11 +17512,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17529,6 +17528,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2055985002702380538}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17583,11 +17587,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17604,6 +17603,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486491501042997729}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17658,11 +17662,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17679,6 +17678,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1704461167796545677}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17733,11 +17737,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17754,6 +17753,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5434412209459970576}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17808,11 +17812,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}
@@ -17829,6 +17828,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5400879270003969403}
     m_Modifications:
+    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
+        type: 3}
+      propertyPath: m_Name
+      value: CatSlashTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 2581234341402820725, guid: bfc92895d3659dd4fa4b94bd561b5102,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17883,11 +17887,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2581234341402820726, guid: bfc92895d3659dd4fa4b94bd561b5102,
-        type: 3}
-      propertyPath: m_Name
-      value: CatSlashTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc92895d3659dd4fa4b94bd561b5102, type: 3}

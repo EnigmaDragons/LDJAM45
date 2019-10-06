@@ -10,7 +10,7 @@ public class CatAttack : MonoBehaviour
     [SerializeField] private List<GameObject> Weapons;
     [SerializeField] private Animator Animator;
     [SerializeField] private Rigidbody CatBody;
-    [SerializeField] private List<Vector3> Offsets;
+    [SerializeField] private List<Vector3> Forces;
     [SerializeField] private List<float> Timing;
 
     public void Attack(Vector3 direction)
@@ -41,10 +41,8 @@ public class CatAttack : MonoBehaviour
                 CatBody.transform.eulerAngles = new Vector3(0, 180, 0);
         }
         _index = 0;
-        _origin = CatBody.transform.position;
-        _t = 0;
-        if (_index != Offsets.Count)
-            _timeToMove = Timing[_index];
+        if (_index < Forces.Count)
+            _timeRemaing = Timing[_index];
         Weapons.ForEach(x => x.SetActive(true));
         Animator.SetBool("IsAttacking", true);
     }
@@ -56,29 +54,23 @@ public class CatAttack : MonoBehaviour
         OnFinished();
     }
 
-    private Vector3 _origin;
     private int _index = 99;
-    private float _timeToMove;
-    private float _t;
+    private float _timeRemaing;
 
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (_index == Offsets.Count)
+        if (_index >= Forces.Count)
             return;
 
-        _t += Time.deltaTime / _timeToMove;
-        if (_t < 1)
-        {
-            CatBody.MovePosition(Vector3.Lerp(_origin, _origin + CatBody.transform.rotation * Offsets[_index], _t));
-        }
+        _timeRemaing -= Time.fixedDeltaTime;
+        if (_timeRemaing > 0)
+            CatBody.AddForce(CatBody.transform.rotation * Forces[_index] * Time.fixedDeltaTime);
         else
         {
             _index++;
-            _origin = CatBody.transform.position;
-            _t = 0;
-            if (_index < Offsets.Count)
-                _timeToMove = Timing[_index];
+            if (_index < Forces.Count)
+                _timeRemaing = Timing[_index];
         }
     }
 }
