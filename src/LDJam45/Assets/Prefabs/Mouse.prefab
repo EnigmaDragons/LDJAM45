@@ -45,8 +45,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5
-  m_Center: {x: -0.25, y: 0, z: 0}
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0.25}
 --- !u!114 &1561225696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,12 +77,10 @@ MonoBehaviour:
     type: 3}
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
-  OnPlayerDashing: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
-  OnPlayerStopDashing: {fileID: 11400000, guid: d45ecfabe59bf484ca93338849781109,
-    type: 2}
   IFrames: 3
   Collider: {fileID: 3955577626786466709}
   OnDeathEvent: {fileID: 0}
+  IsDashing: 0
   Role: 2
   MaxHealth: 1
 --- !u!1 &7149641921986450232
@@ -131,11 +129,10 @@ MonoBehaviour:
   OnDeathVfx: {fileID: 0}
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
-  OnPlayerDashing: {fileID: 0}
-  OnPlayerStopDashing: {fileID: 0}
   IFrames: 0
   Collider: {fileID: 3955577626786466709}
   OnDeathEvent: {fileID: 0}
+  IsDashing: 0
   Role: 0
   MaxHealth: 1
 --- !u!1001 &817249167141937113
