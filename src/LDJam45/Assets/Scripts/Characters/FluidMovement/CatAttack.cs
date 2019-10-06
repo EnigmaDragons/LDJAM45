@@ -7,11 +7,32 @@ public class CatAttack : MonoBehaviour
 {
     public Action OnFinished;
 
-    [SerializeField] private List<GameObject> Weapons;
+    [SerializeField] private List<BoxCollider> Weapons;
+    [SerializeField] private List<ParticleSystem> WeaponParticles;
     [SerializeField] private Animator Animator;
     [SerializeField] private Rigidbody CatBody;
     [SerializeField] private List<Vector3> Forces;
     [SerializeField] private List<float> Timing;
+
+    private int _index = 99;
+    private float _timeRemaing;
+
+
+    private void FixedUpdate()
+    {
+        if (_index >= Forces.Count)
+            return;
+
+        _timeRemaing -= Time.fixedDeltaTime;
+        if (_timeRemaing > 0)
+            CatBody.AddForce(CatBody.transform.rotation * Forces[_index] * Time.fixedDeltaTime);
+        else
+        {
+            _index++;
+            if (_index < Forces.Count)
+                _timeRemaing = Timing[_index];
+        }
+    }
 
     public void Attack(Vector3 direction)
     {
@@ -43,34 +64,19 @@ public class CatAttack : MonoBehaviour
         _index = 0;
         if (_index < Forces.Count)
             _timeRemaing = Timing[_index];
-        Weapons.ForEach(x => x.SetActive(true));
+        Weapons.ForEach(x => x.enabled = true);
+        WeaponParticles.ForEach(x => x.Play());
         Animator.SetBool("IsAttacking", true);
+    }
+
+    public void AttackStarted()
+    {
+        Animator.SetBool("IsAttacking", false);
     }
 
     public void AttackFinished()
     {
-        Weapons.ForEach(x => x.SetActive(false));
-        Animator.SetBool("IsAttacking", false);
+        Weapons.ForEach(x => x.enabled = false);
         OnFinished();
-    }
-
-    private int _index = 99;
-    private float _timeRemaing;
-
-
-    private void FixedUpdate()
-    {
-        if (_index >= Forces.Count)
-            return;
-
-        _timeRemaing -= Time.fixedDeltaTime;
-        if (_timeRemaing > 0)
-            CatBody.AddForce(CatBody.transform.rotation * Forces[_index] * Time.fixedDeltaTime);
-        else
-        {
-            _index++;
-            if (_index < Forces.Count)
-                _timeRemaing = Timing[_index];
-        }
     }
 }
