@@ -6,11 +6,11 @@ public class LaserEyesCooldownPresenter : MonoBehaviour
     [SerializeField] private Image OnCooldownImage;
     [SerializeField] private Text CooldownText;
 
-    private LaserEyes LaserEyes;
+    private CatLaser LaserEyes;
 
     private void Start()
     {
-        LaserEyes = FindObjectOfType<LaserEyes>();
+        LaserEyes = FindObjectOfType<CatLaser>();
     }
 
     private void Update()

@@ -7,11 +7,11 @@ public class DashCooldownPresenter : MonoBehaviour
     [SerializeField] private Image OnCooldownImage;
     [SerializeField] private Text CooldownText;
 
-    private Dash _dash;
+    private CatDash _dash;
 
     private void Start()
     {
-        _dash = FindObjectOfType<Dash>();
+        _dash = FindObjectOfType<CatDash>();
     }
 
     private void Update()
