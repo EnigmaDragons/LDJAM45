@@ -46,9 +46,11 @@ public class StartOptions : MonoBehaviour {
 	{
 		//If changeMusicOnStart is true, fade out volume of music group of AudioMixer by calling FadeDown function of PlayMusic
 		//To change fade time, change length of animation "FadeToColor"
-		if (menuSettingsData.musicLoopToChangeTo != null) 
+		if (menuSettingsData.musicLoopToChangeTo != null)
 		{
-			playMusic.FadeDown(menuSettingsData.menuFadeTime);
+		    StartCoroutine(FadeOut(playMusic.musicSource, 2f));
+
+            //playMusic.FadeDown(menuSettingsData.menuFadeTime);
 		}
 
 		//If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
@@ -67,6 +69,21 @@ public class StartOptions : MonoBehaviour {
 			StartGameInScene();
 		}
 	}
+
+    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;
+    }
 
     void OnEnable()
     {
