@@ -22,14 +22,16 @@ public class InputController : MonoBehaviour
         { CatAction.StandingDoubleSlash, new DictionaryWithDefault<CatAction, float>(0.2f)
             {
                 { CatAction.Dash, 0 },
-                { CatAction.StandingRend, 0.1f },
-                { CatAction.MovingRend, 0.1f },
+                { CatAction.StandingRend, 0f },
+                { CatAction.MovingRend, 0f },
                 { CatAction.StandingSlash, 0.3f },
                 { CatAction.MovingSlash, 0.3f }
             } },
-        { CatAction.StandingRend, new DictionaryWithDefault<CatAction, float>(0.4f)
+        { CatAction.StandingRend, new DictionaryWithDefault<CatAction, float>(0.3f)
             {
-                { CatAction.Dash, 0.1f },
+                { CatAction.Dash, 0f },
+                { CatAction.StandingRend, 0.5f },
+                { CatAction.MovingRend, 0.5f },
                 { CatAction.StandingSlash, 0.5f },
                 { CatAction.MovingSlash, 0.5f }
             } },
@@ -51,7 +53,9 @@ public class InputController : MonoBehaviour
             } },
         { CatAction.MovingRend, new DictionaryWithDefault<CatAction, float>(0.4f)
             {
-                { CatAction.Dash, 0.1f },
+                { CatAction.Dash, 0f },
+                { CatAction.StandingRend, 0.5f },
+                { CatAction.MovingRend, 0.5f },
                 { CatAction.StandingSlash, 0.5f },
                 { CatAction.MovingSlash, 0.5f }
             } },
@@ -63,7 +67,9 @@ public class InputController : MonoBehaviour
             } },
         { CatAction.DashRend, new DictionaryWithDefault<CatAction, float>(0.4f)
             {
-                { CatAction.Dash, 0.1f },
+                { CatAction.Dash, 0f },
+                { CatAction.StandingRend, 0.5f },
+                { CatAction.MovingRend, 0.5f },
                 { CatAction.StandingSlash, 0.5f },
                 { CatAction.MovingSlash, 0.5f }
             } },
@@ -159,6 +165,9 @@ public class InputController : MonoBehaviour
 
     private void OnFinishedWithCurrentAction()
     {
+        if ((_queuedAction.Action == CatAction.Dash && Dash.DashCooldownRemaining > 0)
+            || (_queuedAction.Action == CatAction.Laser && Laser.LaserEyesCooldownRemaining > 0))
+            _queuedAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);
         StartCoroutine(TransitionToNextAction(_delays[_currentAction.Action][_queuedAction.Action], _actions[_queuedAction.Action](_queuedAction.Direction)));
         _currentAction = _queuedAction;
         _queuedAction = new DirectionalCatAction(CatAction.Moving, Vector3.zero);

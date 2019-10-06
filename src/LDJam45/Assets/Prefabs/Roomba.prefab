@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7879885746451446980}
-  - component: {fileID: 7879885746451447033}
   - component: {fileID: 7879885746436900071}
   - component: {fileID: 7879885746451446983}
   - component: {fileID: 7879885746451446982}
   - component: {fileID: 7879885746436900070}
+  - component: {fileID: 4602719136287333816}
   m_Layer: 0
   m_Name: Roomba
   m_TagString: Untagged
@@ -36,19 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &7879885746451447033
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7879885746451447032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &7879885746436900071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -153,11 +140,25 @@ MonoBehaviour:
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   IFrames: 3
-  Collider: {fileID: 7879885746451447033}
+  Collider: {fileID: 4602719136287333816}
   OnDeathEvent: {fileID: 11400000, guid: a7857f41c0c53d444b00099a2f6f96bb, type: 2}
   IsDashing: 0
   Role: 2
   MaxHealth: 2
+--- !u!136 &4602719136287333816
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879885746451447032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.33
+  m_Height: 0
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5553256112352479780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 7de63a99e99d3b049bbaf916a311b10e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 7de63a99e99d3b049bbaf916a311b10e, type: 3}
       propertyPath: m_LocalPosition.z
