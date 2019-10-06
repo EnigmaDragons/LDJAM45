@@ -74,6 +74,7 @@ MonoBehaviour:
   CatBody: {fileID: 0}
   Forces: []
   Timing: []
+  OnAttack: {fileID: 11400000, guid: 2fef0346426f7014e943a29fe8f089b5, type: 2}
 --- !u!33 &2830583725410505032
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -76,6 +76,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 60000}
   Timing:
   - 0.15
+  OnAttack: {fileID: 11400000, guid: 2fef0346426f7014e943a29fe8f089b5, type: 2}
 --- !u!33 &3785809930576222868
 MeshFilter:
   m_ObjectHideFlags: 0
