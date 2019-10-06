@@ -23,12 +23,13 @@ public class Health : MonoBehaviour
     {
         GameState.HealthMap[ID.ID] = MaxHealth;
         GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
-        if (Role == Role.Friendly)
-            GameState.CurrentPlayerHp = MaxHealth;
     }
 
     private void Update()
     {
+        if (Role == Role.Friendly && Input.GetKey("o") && Input.GetKey("p") && (Input.GetKeyDown("o") || Input.GetKeyDown("p")))
+            GameState.HealthMap[ID.ID] += 5;
+
         SecondsOfInvincibility = Mathf.Max(0, SecondsOfInvincibility - Time.deltaTime);
         GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
     }
