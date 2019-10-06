@@ -15,6 +15,10 @@ public class HpPresenter : MonoBehaviour
         hpIcons = new GameObject[transform.childCount];
         for (int i = 0; i < hpIcons.Length; ++i)
             hpIcons[i] = transform.GetChild(i).gameObject;
+    }
+
+    private void Start()
+    {
         UpdateHealth();
     }
 

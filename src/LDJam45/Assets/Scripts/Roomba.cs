@@ -94,7 +94,10 @@ public class Roomba : MonoBehaviour
     }
 
     private void OnDestroy() {
-        CloseDoor?.SetActive(false);
-        OpenDoor?.SetActive(true);
+        if (CloseDoor == null)
+            return;
+
+        CloseDoor.SetActive(false);
+        OpenDoor.SetActive(true);
     }
 }
