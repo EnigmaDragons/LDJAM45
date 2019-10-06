@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7111162615321918706}
   - component: {fileID: 7111162615321918705}
   - component: {fileID: 7111162615321918704}
-  - component: {fileID: 7111162615321918718}
   - component: {fileID: 7111162615321918709}
   - component: {fileID: 2894232748605168018}
   - component: {fileID: -624152312658737001}
+  - component: {fileID: 3535055890503371687}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -68,7 +68,7 @@ MonoBehaviour:
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
   IFrames: 3
-  Collider: {fileID: 7111162615321918718}
+  Collider: {fileID: 3535055890503371687}
   OnDeathEvent: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: -624152312658737001}
@@ -119,19 +119,6 @@ MonoBehaviour:
   Gun: {fileID: 11400000, guid: 31d0e797042f4b24cb4d6941d3654d2f, type: 2}
   ProjectileOffset: {x: 0, y: 0, z: 3}
   Role: 2
---- !u!65 &7111162615321918718
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111162615321918717}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7111162615321918709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,6 +166,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+--- !u!136 &3535055890503371687
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111162615321918717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.1, y: 0, z: 0.01}
 --- !u!1001 &7111162614907622825
 PrefabInstance:
   m_ObjectHideFlags: 0
