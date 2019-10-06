@@ -7,6 +7,7 @@ public class CatLaser : MonoBehaviour
 
     [SerializeField] private GunBehaviour Eyes;
     [SerializeField] private float LaserEyesCooldown;
+    [SerializeField] private GameEvent OnFired;
 
     public float LaserEyesCooldownRemaining;
 
@@ -16,6 +17,7 @@ public class CatLaser : MonoBehaviour
         {
             LaserEyesCooldownRemaining = LaserEyesCooldown;
             Eyes.Fire();
+            OnFired.Publish();
         }
         OnFinished();
     }

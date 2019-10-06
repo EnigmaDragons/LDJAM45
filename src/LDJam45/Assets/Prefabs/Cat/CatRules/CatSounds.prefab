@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5103446747122226933}
   - component: {fileID: 611435727493543394}
   - component: {fileID: 4841944785546173512}
+  - component: {fileID: 6583293005876956307}
+  - component: {fileID: 8048672148136278351}
   m_Layer: 0
   m_Name: CatSounds
   m_TagString: Untagged
@@ -155,3 +157,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee34b94c950244c919442306a70706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6583293005876956307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7238039114136240688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be4196b313bce34f96e639de9f4ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shared: {fileID: 11400000, guid: bbb4cc2a3fffc6740bbeb64ca5d4a7db, type: 2}
+  trigger: {fileID: 11400000, guid: 9a6ad9d48ab585d4698b81f5f3c65f70, type: 2}
+  clip: {fileID: 8300000, guid: 400d3acbfb2053d4b8242a26b7ed712f, type: 3}
+  numTimesTriggered: 0
+--- !u!114 &8048672148136278351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7238039114136240688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be4196b313bce34f96e639de9f4ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shared: {fileID: 11400000, guid: bbb4cc2a3fffc6740bbeb64ca5d4a7db, type: 2}
+  trigger: {fileID: 11400000, guid: f2d154d1b4e8ef04a83a200add0c951e, type: 2}
+  clip: {fileID: 8300000, guid: 7e73c0eb313f6d745896783d828cec96, type: 3}
+  numTimesTriggered: 0
