@@ -129,28 +129,6 @@ Transform:
   m_Father: {fileID: 6677425690971091794}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &724470721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8680300016485910224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ca53e923a280441abefe0cff95101d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnDeathVfx: {fileID: 0}
-  IFrames: 0
-  Collider: {fileID: 3955577626786466709}
-  OnDeathEvent: {fileID: 0}
-  GameState: {fileID: 0}
-  ID: {fileID: 0}
-  Role: 0
-  MaxHealth: 1
-  SecondsOfInvincibility: 0
-  IsInvincible: 0
 --- !u!1001 &817249167141937113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,12 +198,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 952b0bdfca4f75e45a8b411d0438c0d0, type: 3}
---- !u!1 &8680300016485910224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 952b0bdfca4f75e45a8b411d0438c0d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 817249167141937113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5633377542290486467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 952b0bdfca4f75e45a8b411d0438c0d0,

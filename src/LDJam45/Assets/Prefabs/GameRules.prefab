@@ -79,6 +79,7 @@ MonoBehaviour:
   OnStepsCompleted: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   RequiredEvents:
   - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
+  IsReoccuring: 1
   _isFinished: 0
   _finishedEvents: []
 --- !u!114 &5334395557189622832
@@ -96,5 +97,6 @@ MonoBehaviour:
   OnStepsCompleted: {fileID: 11400000, guid: 8171a896aac4ba54b910496589d186e5, type: 2}
   RequiredEvents:
   - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
+  IsReoccuring: 1
   _isFinished: 0
   _finishedEvents: []

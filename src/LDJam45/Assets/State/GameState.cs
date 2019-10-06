@@ -14,6 +14,12 @@ public class GameState : ScriptableObject
     public Dictionary<int, int> HealthMap;
     public Dictionary<int, bool> IsInvincibleMap;
 
+    private void Awake()
+    {
+        HealthMap = new Dictionary<int, int>();
+        IsInvincibleMap = new Dictionary<int, bool>();
+    }
+
     public void Reset()
     {
         CurrentPlayerHp = 0;
