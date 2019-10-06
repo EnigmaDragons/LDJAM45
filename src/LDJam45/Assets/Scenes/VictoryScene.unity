@@ -489,5 +489,56 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1458572143462536965, guid: 89dac19d5760f4d41a6c53b77ddeb4a5,
         type: 2}
+    - target: {fileID: 6609324148034700011, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -227.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324148034700011, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 162.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324148034700013, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2946db646ccf89340b2e4de4074216af,
+        type: 3}
+    - target: {fileID: 6609324148034700013, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324149122467965, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324149122467965, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324149122467965, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324149122467965, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324149122467965, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609324149122467965, guid: dd22da00cd2ef6c4eae5d2ac44f7f726,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd22da00cd2ef6c4eae5d2ac44f7f726, type: 3}

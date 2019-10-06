@@ -1469,7 +1469,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.21226418, g: 0.5186058, b: 1, a: 1}
+  m_BackGroundColor: {r: 0.76862746, g: 0.45882353, b: 0.7490196, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2477,7 +2477,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000030518, y: 137.3}
-  m_SizeDelta: {x: 240.81, y: 42.49}
+  m_SizeDelta: {x: 288.67, y: 50.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906234170
 MonoBehaviour:
@@ -2592,7 +2592,7 @@ PrefabInstance:
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -118.89298
+      value: -133
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -2934,7 +2934,7 @@ PrefabInstance:
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -158.81299
+      value: -179.5
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -3089,17 +3089,17 @@ PrefabInstance:
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 105
+      value: 135.1
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 232.15
+      value: 206.48
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 45.39
+      value: 40.37
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -3383,7 +3383,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3623,7 +3623,7 @@ PrefabInstance:
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -69
+      value: -74.207016
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -3999,8 +3999,8 @@ RectTransform:
   m_Father: {fileID: 513745808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -1.449997, y: 0}
   m_SizeDelta: {x: 22.9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4178,7 +4178,7 @@ PrefabInstance:
     - target: {fileID: 7124176118663745294, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_Name
-      value: QuitButton
+      value: MainMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -4243,17 +4243,17 @@ PrefabInstance:
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 65.09799
+      value: 78.5
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 139.55
+      value: 120.47
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.41433
+      value: 57.868
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118677020368, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -4289,7 +4289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8f7b73eec99944145a41515d2634e312,
+      objectReference: {fileID: 21300000, guid: 2946db646ccf89340b2e4de4074216af,
         type: 3}
     - target: {fileID: 7124176118674500520, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -4305,11 +4305,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1538678715027750205}
+      objectReference: {fileID: 11400000, guid: 63f27014cddc28046848396d63d81e35,
+        type: 2}
     - target: {fileID: 7124176118674453634, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
+      value: NavigateToMainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7124176118674453634, guid: ea62531e21189ba449061df471ae5012,
         type: 3}
@@ -4643,7 +4644,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5340,8 +5341,8 @@ RectTransform:
   m_Father: {fileID: 1587577770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -1.449997, y: 0}
   m_SizeDelta: {x: 22.9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5965,7 +5966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1538678715024555143
 AudioSource:
   m_ObjectHideFlags: 0
