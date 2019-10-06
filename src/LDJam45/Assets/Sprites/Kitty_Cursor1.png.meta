@@ -1,20 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b0adbaf23aa4afc4db5e1ff21b8e3f7a
-=======
-guid: fdc153577e39311438b848d9e94c6655
->>>>>>> d3166f3a7714be260fa98aee191637d020970b13
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-<<<<<<< HEAD
-    enableMipMap: 1
-=======
     enableMipMap: 0
->>>>>>> d3166f3a7714be260fa98aee191637d020970b13
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -28,11 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-<<<<<<< HEAD
-  isReadable: 0
-=======
   isReadable: 1
->>>>>>> d3166f3a7714be260fa98aee191637d020970b13
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -43,15 +31,6 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
-  nPOTScale: 1
-=======
     filterMode: 0
     aniso: 1
     mipBias: -100
@@ -59,10 +38,9 @@ TextureImporter:
     wrapV: 1
     wrapW: -1
   nPOTScale: 0
->>>>>>> d3166f3a7714be260fa98aee191637d020970b13
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,15 +49,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-<<<<<<< HEAD
-  alphaIsTransparency: 0
-  spriteTessellationDetail: -1
-  textureType: 0
-=======
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 7
->>>>>>> d3166f3a7714be260fa98aee191637d020970b13
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -98,8 +70,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -136,14 +106,13 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> d3166f3a7714be260fa98aee191637d020970b13
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
