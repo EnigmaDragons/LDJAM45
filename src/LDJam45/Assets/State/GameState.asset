@@ -16,6 +16,6 @@ MonoBehaviour:
   CurrentHp: 3
   MaxHp: 3
   DashUnlocked: 1
-  SlashUnlocked: 0
-  RendUnlocked: 0
-  LaserEyesUnlocked: 0
+  SlashUnlocked: 1
+  RendUnlocked: 1
+  LaserEyesUnlocked: 1
