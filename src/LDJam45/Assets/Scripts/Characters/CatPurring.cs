@@ -12,8 +12,7 @@ public class CatPurring : MonoBehaviour
             return;
         }
 
-        //purrAudioSource.Play();
-        Debug.Log("Cat purrs.");
+        purrAudioSource.Play();
     }
 
     private void OnMouseExit()
@@ -23,7 +22,14 @@ public class CatPurring : MonoBehaviour
             return;
         }
 
-        //purrAudioSource.Stop();
-        Debug.Log("Cat stops purring.");
+        purrAudioSource.Stop();
+    }
+
+    private void Update()
+    {
+        if (Math.Abs(Time.timeScale) < 0.01 && purrAudioSource.isPlaying)
+        {
+            purrAudioSource.Stop();
+        }
     }
 }

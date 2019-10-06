@@ -3,13 +3,24 @@ using System.Collections;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SetAudioLevels : MonoBehaviour {
-
+public class SetAudioLevels : MonoBehaviour
+{
 	public AudioMixer mainMixer;					//Used to hold a reference to the AudioMixer mainMixer
 
+    public Slider musicVolSlider;
+    public Slider sfxVolSlider;
 
-	//Call this function and pass in the float parameter musicLvl to set the volume of the AudioMixerGroup Music in mainMixer
-	public void SetMusicLevel(float musicLvl)
+    private void OnEnable()
+    {
+        mainMixer.GetFloat("musicVol", out float musicValue);
+        musicVolSlider.value = musicValue;
+
+        mainMixer.GetFloat("sfxVol", out float sfxValue);
+        sfxVolSlider.value = sfxValue;
+    }
+
+    //Call this function and pass in the float parameter musicLvl to set the volume of the AudioMixerGroup Music in mainMixer
+    public void SetMusicLevel(float musicLvl)
 	{
 		mainMixer.SetFloat("musicVol", musicLvl);
 	}
