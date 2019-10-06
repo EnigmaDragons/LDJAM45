@@ -10,11 +10,12 @@ public class HpPresenter : MonoBehaviour
 
     private void OnEnable()
     {
-        onHealthGained.Subscribe(IncrementHealth, this);
-        onHealthLost.Subscribe(DecrementHealth, this);
+        onHealthGained.Subscribe(UpdateHealth, this);
+        onHealthLost.Subscribe(UpdateHealth, this);
         hpIcons = new GameObject[transform.childCount];
         for (int i = 0; i < hpIcons.Length; ++i)
             hpIcons[i] = transform.GetChild(i).gameObject;
+        UpdateHealth();
     }
 
     private void OnDisable()
@@ -23,10 +24,7 @@ public class HpPresenter : MonoBehaviour
         onHealthGained.Unsubscribe(this);
     }
 
-    void DecrementHealth() => UpdateHealth(-1);
-    void IncrementHealth() => UpdateHealth(1);
-
-    void UpdateHealth(int amount)
+    void UpdateHealth()
     {
         for (int i = 0; i < hpIcons.Length; ++i)
             hpIcons[i].SetActive(i < state.CurrentHp);
