@@ -3190,8 +3190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9e5505dd66a2041b7c077708be1d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorIdle: {fileID: 0}
-  cursorClick: {fileID: 0}
+  cursorIdle: {fileID: 2800000, guid: b0adbaf23aa4afc4db5e1ff21b8e3f7a, type: 3}
+  cursorClick: {fileID: 2800000, guid: 525a765057c24e64a9b110a237b255fb, type: 3}
 --- !u!1 &1372098153
 GameObject:
   m_ObjectHideFlags: 0
