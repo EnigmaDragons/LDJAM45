@@ -534,6 +534,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76640a6ecafb58b40abc57817bdab8cb, type: 3}
+--- !u!1 &1724426248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7974382708800539270, guid: f45a0be4855b7ce4180cc772e0c0a586,
+    type: 3}
+  m_PrefabInstance: {fileID: 1790714363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1724426249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724426248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a661b6ea5f0504498cdc0d77e7fd9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  onHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
+  onHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
+  gameOver: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
 --- !u!1001 &1738086473
 PrefabInstance:
   m_ObjectHideFlags: 0
