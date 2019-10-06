@@ -35,7 +35,7 @@ public class CatMovement : MonoBehaviour
         else
         {
             Animator.SetBool("IsWalking", true);
-            CatBody.AddForce(_inputs * MoveSpeed * Time.fixedDeltaTime, ForceMode.Force);
+            CatBody.AddForce(_inputs * MoveSpeed * Time.fixedDeltaTime, ForceMode.Acceleration);
         }
     }
 }
