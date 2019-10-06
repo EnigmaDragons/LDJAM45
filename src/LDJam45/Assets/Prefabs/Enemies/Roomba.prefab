@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
-  IFrames: 0
+  IFrames: 3
   Collider: {fileID: 3942863678088734695}
   OnDeathEvent: {fileID: 11400000, guid: a7857f41c0c53d444b00099a2f6f96bb, type: 2}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
