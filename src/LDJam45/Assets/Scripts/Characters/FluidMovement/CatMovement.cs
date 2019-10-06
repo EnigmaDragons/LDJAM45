@@ -29,19 +29,18 @@ public class CatMovement : MonoBehaviour
 
         if (_inputs != Vector3.zero)
             transform.forward = _rotation;
+
+        if (_inputs == Vector3.zero) {
+            _animator.SetBool("IsWalking", false);
+            _catBody.velocity = new Vector3(0, _catBody.velocity.y, 0);
+        } else {
+            _animator.SetBool("IsWalking", true);
+            _catBody.MovePosition(_catBody.position + _inputs * MoveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (_inputs == Vector3.zero)
-        {
-            _animator.SetBool("IsWalking", false);
-            _catBody.velocity = new Vector3(0, _catBody.velocity.y, 0);
-        }
-        else
-        {
-            _animator.SetBool("IsWalking", true);
-            _catBody.MovePosition(_catBody.position + _inputs * MoveSpeed * Time.fixedDeltaTime);
-        }
+        
     }
 }
