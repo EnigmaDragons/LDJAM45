@@ -12,6 +12,7 @@ public class CatDash : MonoBehaviour
     [SerializeField] private Health Health;
     [SerializeField] private TrailRenderer DashTrail;
     [SerializeField] private float DashCooldown;
+    [SerializeField] private GameEvent OnStarted;
 
     private Rigidbody _catBody;
 
@@ -36,6 +37,7 @@ public class CatDash : MonoBehaviour
             DashTrail.emitting = true;
             _direction = direction;
             DashCooldownRemaining = DashCooldown;
+            OnStarted.Publish();
         }
         else
             OnFinished();
@@ -49,7 +51,7 @@ public class CatDash : MonoBehaviour
 
         if (_direction != Vector3.zero)
             transform.forward = _direction;
-        _catBody.AddForce(_direction * DashSpeed * Time.fixedDeltaTime, ForceMode.Force);
+        _catBody.AddForce(transform.forward * DashSpeed * Time.fixedDeltaTime, ForceMode.Force);
 
         _dashTime -= Time.deltaTime;
         if (_dashTime <= 0)
