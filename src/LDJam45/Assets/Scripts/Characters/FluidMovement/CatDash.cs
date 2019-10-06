@@ -13,19 +13,13 @@ public class CatDash : MonoBehaviour
     [SerializeField] private TrailRenderer DashTrail;
     [SerializeField] private float DashCooldown;
     [SerializeField] private GameEvent OnStarted;
-
-    private Rigidbody _catBody;
+    [SerializeField] private Rigidbody CatBody;
 
     private bool _isDashing;
     private float _dashTime;
     private Vector3 _direction;
 
     public float DashCooldownRemaining;
-
-    private void Start()
-    {
-        _catBody = GetComponent<Rigidbody>();
-    }
 
     public void Dash(Vector3 direction)
     {
@@ -50,8 +44,8 @@ public class CatDash : MonoBehaviour
             return;
 
         if (_direction != Vector3.zero)
-            transform.forward = _direction;
-        _catBody.AddForce(transform.forward * DashSpeed * Time.fixedDeltaTime, ForceMode.Force);
+            CatBody.transform.forward = _direction;
+        CatBody.AddForce(CatBody.transform.forward * DashSpeed * Time.fixedDeltaTime, ForceMode.Force);
 
         _dashTime -= Time.deltaTime;
         if (_dashTime <= 0)
