@@ -14458,9 +14458,9 @@ GameObject:
   - component: {fileID: 7111162615321918705}
   - component: {fileID: 7111162615321918704}
   - component: {fileID: 7111162615321918719}
-  - component: {fileID: 7111162615321918718}
   - component: {fileID: 7111162615321918709}
   - component: {fileID: 2894232748605168018}
+  - component: {fileID: 4049669552848513914}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -14515,7 +14515,7 @@ MonoBehaviour:
   OnHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b, type: 2}
   OnHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
   IFrames: 3
-  Collider: {fileID: 7111162615321918718}
+  Collider: {fileID: 0}
   OnDeathEvent: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
   IsDashing: 0
   Role: 2
@@ -14576,19 +14576,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {fileID: 7111162615321918706}
   Flashing: {fileID: 7111162614140584500}
---- !u!65 &7111162615321918718
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111162615321918717}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7111162615321918709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14620,8 +14607,23 @@ MonoBehaviour:
   OnStepsCompleted: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}
   RequiredEvents:
   - {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
+  IsReoccuring: 0
   _isFinished: 0
   _finishedEvents: []
+--- !u!136 &4049669552848513914
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111162615321918717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: -0.12, y: -0.4, z: -0.055}
 --- !u!1001 &7111162614907622825
 PrefabInstance:
   m_ObjectHideFlags: 0
