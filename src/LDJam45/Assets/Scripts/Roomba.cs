@@ -37,20 +37,27 @@ public class Roomba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float DistanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
-        // Debug.Log("Distance to player: " + DistanceFromPlayer.ToString());
+        if (ShouldChase)
+        {
+            float DistanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
+            // Debug.Log("Distance to player: " + DistanceFromPlayer.ToString());
 
-        // Chase Player if close
-        if (ShouldChase && DistanceFromPlayer < ChaseDistance && CurrentState != States.Chasing) {
-            Debug.Log("The Roomba is Chasing You!");
-            CurrentState = States.Chasing;
-        } else if (DistanceFromPlayer > ForgetDistance && CurrentState != States.Cleaning) {
-            Debug.Log("The Roomba is cleaning");
-            CurrentState = States.Cleaning;
-        }
+            // Chase Player if close
+            if (DistanceFromPlayer < ChaseDistance && CurrentState != States.Chasing)
+            {
+                Debug.Log("The Roomba is Chasing You!");
+                CurrentState = States.Chasing;
+            }
+            else if (DistanceFromPlayer > ForgetDistance && CurrentState != States.Cleaning)
+            {
+                Debug.Log("The Roomba is cleaning");
+                CurrentState = States.Cleaning;
+            }
 
-        if (CurrentState == States.Chasing) {
-            Agent.SetDestination(player.transform.position);
+            if (CurrentState == States.Chasing)
+            {
+                Agent.SetDestination(player.transform.position);
+            }
         }
 
         // Patrol Waypoints
