@@ -8547,7 +8547,7 @@ PrefabInstance:
     - target: {fileID: 7769569194478882851, guid: bcba3fcd80487ea4f989bbe017f8fac1,
         type: 3}
       propertyPath: message
-      value: This door is locked, there must be another way
+      value: I can't open this door, there must be another way
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcba3fcd80487ea4f989bbe017f8fac1, type: 3}
