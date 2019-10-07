@@ -1,47 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MouseSpawner : MonoBehaviour
 {
-    [SerializeField] private GameEvent MouseRoomStarted;
     [SerializeField] GameObject MousePrefab;
-    [SerializeField] float SpawnTimer = 1.0f;
-    [SerializeField] float SpawnDuration = 15.0f;
+    [SerializeField] float SpawnTimeMin = 1.0f;
+    [SerializeField] private float SpawnTimeMax = 2.0f;
 
-    private bool StartSpawing = false;
-    private bool StopSpawning = false;
-    private bool HasSpawned = false;
+    private float _timeTilNextSpawn;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        MouseRoomStarted.Subscribe(() => StartCoroutine(SpawnCountdown()), this);
-    }
-
-    void OnDisable() => MouseRoomStarted.Unsubscribe(this);
-
-    // Update is called once per frame
     void Update()
     {
-        if (StartSpawing && !StopSpawning && !HasSpawned)
+        _timeTilNextSpawn -= Time.deltaTime;
+        if (_timeTilNextSpawn <= 0)
         {
-            StartCoroutine(SpawnMouse());
+            Instantiate(MousePrefab, transform.position, Quaternion.identity, transform);
+            _timeTilNextSpawn = Random.Range(SpawnTimeMin, SpawnTimeMax);
         }
-    }
-
-    IEnumerator SpawnMouse()
-    {
-        HasSpawned = true;
-        Instantiate(MousePrefab, this.transform);
-        yield return new WaitForSeconds(SpawnTimer);
-        HasSpawned = false;
-    }
-
-    IEnumerator SpawnCountdown()
-    {
-        StartSpawing = true;
-        yield return new WaitForSeconds(SpawnDuration);
-        StopSpawning = true;
     }
 }
