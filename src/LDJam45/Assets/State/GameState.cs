@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,4 +34,7 @@ public class GameState : ScriptableObject
         ThoughtsMessageQueue = new Queue<string>();
         CatId = -1;
     }
+
+    public void Gain1PlayerHealth() => HealthMap[CatId] = Math.Min(HealthMap[CatId] + 1, MaxHP);
+    public void Lose1PlayerHealth() => HealthMap[CatId] = Math.Min(HealthMap[CatId] - 1, MaxHP - 1);
 }
