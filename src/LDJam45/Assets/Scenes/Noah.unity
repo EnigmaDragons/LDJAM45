@@ -925,72 +925,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45a0be4855b7ce4180cc772e0c0a586, type: 3}
---- !u!1001 &2436762959228145668
+--- !u!1001 &857110115
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7473220341516613443, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193042, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_Name
-      value: MiniRoombaRoom2
+      value: LaserTurretRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2468176753419834426, guid: 1410a2e3fc90d2044a353341e6016de1,
+    - target: {fileID: 447045749419193041, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1410a2e3fc90d2044a353341e6016de1, type: 3}
+    - target: {fileID: 9080885563046639853, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
+        type: 3}
+      propertyPath: OnDeathEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080885563046639853, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
+        type: 3}
+      propertyPath: OnDeathEvents.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4,
+        type: 2}
+    - target: {fileID: 9080885563046639854, guid: dfeee9a1a019ccd4c92988e01cb7dcfc,
+        type: 3}
+      propertyPath: FightStarted
+      value: 
+      objectReference: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 3783099209444171149, guid: dfeee9a1a019ccd4c92988e01cb7dcfc, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: dfeee9a1a019ccd4c92988e01cb7dcfc, type: 3}

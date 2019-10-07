@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd0609a855a25f541b0b11fed27f3e2b, type: 3}
-  m_Name: Boss1Started
+  m_Name: LaserTurretBossFinished
   m_EditorClassIdentifier: 

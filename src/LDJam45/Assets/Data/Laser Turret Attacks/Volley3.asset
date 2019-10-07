@@ -15,9 +15,9 @@ MonoBehaviour:
   StartingState: 0
   Type: 0
   Spread: 0.5
-  TimeBetweenShots: 0.1
-  AttackDuration: 1
+  TimeBetweenShots: 0.05
+  AttackDuration: 0.5
   RotationSpeed: 5
-  WindUpTime: 0.2
+  WindUpTime: 0.3
   SeekingTime: 0.5
-  WindDownTime: 0.2
+  WindDownTime: 0
