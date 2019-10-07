@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    [SerializeField] private Vector3 EndPosition;
+    [SerializeField] private Vector3 MoveBy;
     [SerializeField] private float Speed = 1.0f;
 
     private Vector3 StartPosition;
@@ -16,7 +16,8 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        StartPosition = this.transform.position;
+        StartPosition = transform.position;
+        MoveBy = transform.position + MoveBy;
         startTime = Time.time;
     }
 
@@ -25,6 +26,6 @@ public class MovingPlatform : MonoBehaviour
     {
         float time = Mathf.PingPong(Time.time * Speed, 1);
         // transform.position = Vector3.Lerp(StartPosition, EndPosition, time);
-        rb.MovePosition(Vector3.Lerp(StartPosition, EndPosition, time));
+        rb.MovePosition(Vector3.Lerp(StartPosition, MoveBy, time));
     }
 }

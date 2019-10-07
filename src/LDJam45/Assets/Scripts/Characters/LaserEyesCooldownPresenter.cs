@@ -5,6 +5,7 @@ public class LaserEyesCooldownPresenter : MonoBehaviour
 {
     [SerializeField] private Image OnCooldownImage;
     [SerializeField] private Text CooldownText;
+    [SerializeField] private Text BindText;
 
     private CatLaser LaserEyes;
 
@@ -17,6 +18,7 @@ public class LaserEyesCooldownPresenter : MonoBehaviour
     {
         OnCooldownImage.enabled = LaserEyes.LaserEyesCooldownRemaining > 0;
         CooldownText.enabled = LaserEyes.LaserEyesCooldownRemaining > 0;
+        BindText.enabled = LaserEyes.LaserEyesCooldownRemaining <= 0;
         CooldownText.text = LaserEyes.LaserEyesCooldownRemaining.ToString("0.0");
     }
 }

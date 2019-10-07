@@ -1,4 +1,5 @@
 ﻿
+using Assets.Scripts.Characters;
 using UnityEngine;
 
 public class CatMovement : MonoBehaviour
@@ -8,16 +9,16 @@ public class CatMovement : MonoBehaviour
     [SerializeField] private float MoveSpeed = 5.0f;
     [SerializeField] private CatIsOnGround CatIsOnGround;
     [SerializeField] private Rigidbody CatBody;
-    [SerializeField] private Animator Animator;
     [SerializeField] private GameEvent WalkingStarted;
     [SerializeField] private GameEvent WalkingStopped;
+    [SerializeField] private CatBodyAnimator CatBodyAnimator;
 
     private Vector3 _rotation;
     private Vector3 _inputs = Vector3.zero;
 
     public void Stop()
     {
-        Animator.SetBool("IsWalking", false);
+        CatBodyAnimator.StopWalk();
         WalkingStopped.Publish();
     }
 
@@ -42,7 +43,7 @@ public class CatMovement : MonoBehaviour
             Stop();
         else
         {
-            Animator.SetBool("IsWalking", true);
+            CatBodyAnimator.Walk();
             WalkingStarted.Publish();
             CatBody.AddForce(_inputs * MoveSpeed * Time.fixedDeltaTime, ForceMode.Acceleration);
         }
