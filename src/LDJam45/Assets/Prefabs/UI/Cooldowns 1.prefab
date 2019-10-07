@@ -1620,6 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slashHud: {fileID: 4894747032120480752}
+  rendHud: {fileID: 8246137721731222872}
   dashHud: {fileID: 1489030547392622643}
   laserHud: {fileID: 3865759860461538860}
   state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}

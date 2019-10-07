@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
 public class ThoughtsPresenter : MonoBehaviour
 {
@@ -19,13 +20,13 @@ public class ThoughtsPresenter : MonoBehaviour
     private void Awake()
     {
         targetColor = text.color;
-        targetTransparent = new Color(targetColor.r, targetColor.g, targetColor.b, 0f);
+        targetTransparent = new Color(targetColor.r, targetColor.g, targetColor.b, 255.0f);
     }
 
     private void FixedUpdate()
     {
-        UpdateCounters();
-        UpdatePresentation();
+        // UpdateCounters();
+        // UpdatePresentation();
 
         if (state.ThoughtsMessageQueue.Count > 0)
             StartNextMessage();
@@ -57,10 +58,19 @@ public class ThoughtsPresenter : MonoBehaviour
     private void StartNextMessage()
     {
         _finishedCurrent = false;
+        // Transform parent = text.transform.parent;
+        text.transform.localScale = Vector3.zero;
         text.color = targetTransparent;
         text.text = state.ThoughtsMessageQueue.Dequeue();
-        _finishInSeconds = showDuration + transitionDuration * 2;
-        _fadingInFinishedInSeconds = transitionDuration;
-        _startFadingOutInSeconds = transitionDuration + showDuration;
+
+        text.transform.DOScale(Vector3.one, 2.0f).OnComplete(() => {
+            text.transform.DOScale(Vector3.zero, 1.0f).OnComplete(() => {
+                text.text = "";
+            });
+        });
+
+        // _finishInSeconds = showDuration + transitionDuration * 2;
+        // _fadingInFinishedInSeconds = transitionDuration;
+        // _startFadingOutInSeconds = transitionDuration + showDuration;
     }
 }

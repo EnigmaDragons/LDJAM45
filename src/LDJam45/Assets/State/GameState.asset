@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c52e87842f9394a9d99fe5f5c8b7bd, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: 
+  PlayIronmanMode: 0
   IsTravelling: 0
-  CurrentPlayerHp: 3
-  DashUnlocked: 1
+  CurrentPlayerHp: 9
+  MaxHP: 9
+  DashUnlocked: 0
   SlashUnlocked: 0
   RendUnlocked: 0
   LaserEyesUnlocked: 0
-  LastCheckpoint: {x: 126.252045, y: 2.480193, z: 0.6992003}
+  LastCheckpoint: {x: 0, y: 0, z: 0}
   DebugMuteMusic: 0
+  CatId: -714930595
