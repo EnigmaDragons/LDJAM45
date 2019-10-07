@@ -10,10 +10,13 @@ public class CoolCameraIntro : MonoBehaviour
 
     [SerializeField, ReadOnly] private Transform _currentStartPoint;
     [SerializeField, ReadOnly] private Transform _nextWaypoint;
+    private Transform _finalWaypoint;
     private float _currentDuration = 1f;
     private float _remainingDuration = 1f;
     private int _index = 0;
     private Camera _cam;
+    private bool _showedSkipPrompt = false;
+    private bool _shouldSkip;
 
     private void OnEnable()
     {
@@ -21,6 +24,7 @@ public class CoolCameraIntro : MonoBehaviour
         MoveNext();
         _cam.transform.position = _currentStartPoint.position;
         _cam.transform.rotation = _currentStartPoint.rotation;
+        _finalWaypoint = waypoints[waypoints.Count - 1];
     }
 
     private void Start()
@@ -33,20 +37,26 @@ public class CoolCameraIntro : MonoBehaviour
         if (isFinished)
             return;
 
+        CheckSkipRequested();
         _remainingDuration = Mathf.Max(0, _remainingDuration - Time.deltaTime);
         var amount = _remainingDuration / _currentDuration;
         _cam.transform.position = Vector3.Lerp(_nextWaypoint.position, _currentStartPoint.position, amount);
         _cam.transform.rotation = Quaternion.Lerp(_nextWaypoint.rotation, _currentStartPoint.rotation, amount);
         if (_remainingDuration <= 0)
             MoveNext();
+
+        if (_shouldSkip)
+        {
+            _cam.transform.position = _finalWaypoint.transform.position;
+            _cam.transform.rotation = _finalWaypoint.transform.rotation;
+        }
     }
 
     private void MoveNext()
     {
         if (_index >= waypoints.Count - 1)
         {
-            isFinished = true;
-            state.IsInCutscene = false;
+            Finish();
             return;
         }
 
@@ -55,5 +65,25 @@ public class CoolCameraIntro : MonoBehaviour
         _nextWaypoint = waypoints[_index];
         _currentDuration = durations[_index];
         _remainingDuration = durations[_index];
+    }
+
+    private void CheckSkipRequested()
+    {
+        if (_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            _shouldSkip = true;
+            Finish();
+        }
+        if (!_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            _showedSkipPrompt = true;
+            state.ThoughtsMessageQueue.Enqueue("Press Enter again to skip.");
+        }
+    }
+
+    private void Finish()
+    {
+        isFinished = true;
+        state.IsInCutscene = false;
     }
 }
