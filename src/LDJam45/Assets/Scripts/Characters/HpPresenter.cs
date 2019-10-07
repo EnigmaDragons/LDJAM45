@@ -33,9 +33,7 @@ public class HpPresenter : MonoBehaviour
         hpIcons = new GameObject[transform.childCount];
         for (int i = 0; i < hpIcons.Length; ++i) {
             hpIcons[i] = transform.GetChild(i).gameObject;
-        }
-
-        Debug.Log(hpIcons.Length);        
+        } 
     }
 
     private void LateUpdate() {
@@ -48,7 +46,6 @@ public class HpPresenter : MonoBehaviour
 
     void DrawHealth()
     {
-        Debug.Log(state.CurrentPlayerHp);
         for (int i = 0; i < hpIcons.Length; ++i) {
             //if (i > state.CurrentPlayerHp - 1) {
             //    hpIcons[i].transform.localScale = Vector3.zero;
