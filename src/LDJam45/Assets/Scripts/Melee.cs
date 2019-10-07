@@ -38,6 +38,6 @@ public class Melee : MonoBehaviour
         if (health == null || health.Role.Equals(OwnedBy))
             return;
         if (OnHitSound != null)
-            AudioSource.PlayClipAtPoint(OnHitSound, _camera.transform.position);
+            AudioSupport.PlayClipAt(OnHitSound, _camera.transform.position);
     }
 }

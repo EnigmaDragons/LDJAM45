@@ -84,7 +84,7 @@ public class Health : MonoBehaviour
     private IEnumerator ResolveDestruction()
     {
         if (OnDeathSound != null)
-            AudioSource.PlayClipAtPoint(OnDeathSound, Camera.transform.position);
+            AudioSupport.PlayClipAt(OnDeathSound, Camera.transform.position);
         yield return new WaitForSeconds(0.3f);
         OnDeathEvents.ForEach(x => x.Publish());
         Destroy(gameObject);
