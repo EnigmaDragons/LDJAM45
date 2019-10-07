@@ -12,9 +12,11 @@ public class LaserTurretAI : MonoBehaviour
     [SerializeField] private List<LaserTurretAttack> Stage1Attacks;
     [SerializeField] private List<LaserTurretAttack> Stage2Attacks;
     [SerializeField] private List<LaserTurretAttack> Stage3Attacks;
+    [SerializeField] private int Stage2Threshhold;
+    [SerializeField] private int Stage3Threshhold;
 
     private bool _bossStarted = false;
-    private int _stage = 99;
+    private int _stage = 1;
     private List<LaserTurretAttack> _currentAttackPattern;
     private int _attackIndex;
     private LaserTurretAttack _currentAttack;
@@ -25,6 +27,10 @@ public class LaserTurretAI : MonoBehaviour
     private void Start()
     {
         BossStarted.Subscribe(() => _bossStarted = true, this);
+        _currentAttackPattern = Stage1Attacks;
+        _attackIndex = 0;
+        _secsTilNextShot = 0;
+        UpdateCurrentAttack();
     }
 
     private void OnDisable() => BossStarted.Unsubscribe(this);
@@ -33,20 +39,25 @@ public class LaserTurretAI : MonoBehaviour
     {
         if (!_bossStarted)
             return;
-        if (_stage != 4 - GameState.HealthMap[ID.ID])
+
+        if (_stage < 3 && GameState.HealthMap[ID.ID] <= Stage3Threshhold)
         {
-            _stage = 4 - GameState.HealthMap[ID.ID];
-            if (_stage == 1)
-                _currentAttackPattern = Stage1Attacks;
-            else if (_stage == 2)
-                _currentAttackPattern = Stage2Attacks;
-            else if (_stage == 3)
-                _currentAttackPattern = Stage3Attacks;
+            _stage = 3;
+            _currentAttackPattern = Stage3Attacks;
             _attackIndex = 0;
             _secsTilNextShot = 0;
             UpdateCurrentAttack();
         }
-        else if (_currentAttack.Type == LaserTurretAttackType.Volley)
+        else if (_stage < 2 && GameState.HealthMap[ID.ID] <= Stage2Threshhold)
+        {
+            _stage = 2;
+            _currentAttackPattern = Stage2Attacks;
+            _attackIndex = 0;
+            _secsTilNextShot = 0;
+            UpdateCurrentAttack();
+        }
+
+        if (_currentAttack.Type == LaserTurretAttackType.Volley)
             UpdateVolley();
         else if (_currentAttack.Type == LaserTurretAttackType.Spin)
             UpdateSpin();
