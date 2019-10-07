@@ -67,14 +67,19 @@ public class CoolCameraIntro : MonoBehaviour
         _remainingDuration = durations[_index];
     }
 
+    private bool SkipRequested() => Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Escape);
+
     private void CheckSkipRequested()
     {
-        if (_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        if (!SkipRequested())
+            return;
+
+        if (_showedSkipPrompt)
         {
             _shouldSkip = true;
             Finish();
         }
-        if (!_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        if (!_showedSkipPrompt)
         {
             _showedSkipPrompt = true;
             state.ThoughtsMessageQueue.Enqueue("Press Enter again to skip.");
