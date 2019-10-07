@@ -214,6 +214,14 @@ public class RoombaEnemy : MonoBehaviour
     private void UpdateCurrentAttack()
     {
         _currentAttack = _currentAttackPattern[_attackIndex];
+        if (_currentAttack == null)
+        {
+            for (var i = 0; i < 1; i++)
+                Debug.Log($"My name is {name} and my Number {i} Attack is Null. I can't fight without it. " +
+                    $"Please assign me in the editor and STOP BREAKING MY PREFAB. It's a very hard life to live. Thank you." +
+                    $"Also, my serialization is broken, so I can't be loaded from a different scene. So, maybe take the spaces out of my folder name." +
+                    $"Again, thank you. I love to battle!");
+        }
         _attackState = _currentAttack.StartingState;
         _agent.speed = _currentAttack.ChaseSpeed;
         _agent.angularSpeed = _currentAttack.ChaseAngularSpeed;
