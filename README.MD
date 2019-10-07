@@ -1,5 +1,7 @@
 # LDJam 45
 
+![You Gotta Be Kitten Me](/Screenshots/Title.png)
+
 ----
 
 [Project Kanban Board](https://zube.io/enigmadragons/ldjam45/w/jam/kanban)
@@ -57,7 +59,7 @@ Preparation:
 - Each person should have one personal folder in the project
 - Do not touch or modify contents in anyone else's personal folder
 - Save all of your GameObjects as PreFabs, so that we can quickly compose scenes with the desired elements
-- For any Main Game Scene, only one person may be working on it at a time. 
+- For any Main Game Scene, only one person may be working on it at a time.
 - Announce in the Discord channel when you start and stop work on a Main Game Scene
 
 ----
