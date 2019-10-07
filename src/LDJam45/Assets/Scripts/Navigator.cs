@@ -31,6 +31,6 @@ public class Navigator : ScriptableObject
     {
         Cursor.visible = true;
 
-        SceneManager.LoadScene("VictoryScene");
+        SceneManager.LoadScene("CreditsScene");
     }
 }

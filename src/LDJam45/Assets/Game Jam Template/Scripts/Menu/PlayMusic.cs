@@ -32,7 +32,10 @@ public class PlayMusic : MonoBehaviour {
 			case 2:
                 musicPlayer.PlaySelectedMusic(menuSettings.musicLoopToChangeTo);
 				break;
-		}
+            case 3:
+                musicPlayer.PlaySelectedMusic(menuSettings.musicForCreditsAndVictory);
+                break;
+        }
 
 		//Fade up the volume very quickly, over resetTime seconds (.01 by default)
 		FadeUp(resetTime);

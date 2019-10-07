@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459fa0671b2e01e46812d825a6443cb9, type: 3}
   m_Name: Spin1
   m_EditorClassIdentifier: 
-  StartingState: 0
-  Type: 0
-  AttackDuration: 0
-  WindUpTime: 0
+  StartingState: 1
+  Type: 2
+  AttackDuration: 5
+  WindUpTime: 1
   ChasingTime: 0
   WindDownTime: 0
   ChaseSpeed: 0
   ChaseAngularSpeed: 0
   ChaseAcceleration: 0
-  Speed: 0
-  RotationSpeed: 0
+  Speed: 15000
+  RotationSpeed: 99999

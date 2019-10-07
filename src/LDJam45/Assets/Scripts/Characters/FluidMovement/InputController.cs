@@ -129,7 +129,7 @@ public class InputController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey("z") && Input.GetKey("v") && Input.GetKey("x"))
+        if (Application.isEditor && Input.GetKey("z") && Input.GetKey("v") && Input.GetKey("x"))
         {
             state.DashUnlocked = true;
             state.SlashUnlocked = true;

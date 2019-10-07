@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Spin1
   m_EditorClassIdentifier: 
   StartingState: 0
-  Type: 0
+  Type: 1
   Spread: 0
-  TimeBetweenShots: 0
-  AttackDuration: 0
-  RotationSpeed: 0
-  WindUpTime: 0
+  TimeBetweenShots: 0.15
+  AttackDuration: 3
+  RotationSpeed: 200
+  WindUpTime: 1
   SeekingTime: 0
-  WindDownTime: 0
+  WindDownTime: 1

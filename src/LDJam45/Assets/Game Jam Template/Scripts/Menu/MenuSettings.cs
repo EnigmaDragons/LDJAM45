@@ -16,4 +16,6 @@ public class MenuSettings : ScriptableObject
     [Header("If you want to play new music after Start is pressed, add it here")]
     public AudioClip musicLoopToChangeTo;
 
+    public AudioClip musicForCreditsAndVictory;
+
 }

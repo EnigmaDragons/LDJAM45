@@ -17,3 +17,5 @@ MonoBehaviour:
   nextSceneIndex: 1
   mainMenuMusicLoop: {fileID: 8300000, guid: 9f16b9fa2900662448a81be4db0624c3, type: 3}
   musicLoopToChangeTo: {fileID: 8300000, guid: dcb2a00ff572cc74c9f9d1a7a20af33c, type: 3}
+  musicForCreditsAndVictory: {fileID: 8300000, guid: 69a6ca6aa5cb9be468a4be5c007c0fbd,
+    type: 3}
