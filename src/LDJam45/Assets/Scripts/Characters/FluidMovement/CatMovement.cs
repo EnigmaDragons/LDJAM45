@@ -6,6 +6,7 @@ public class CatMovement : MonoBehaviour
 {
     public bool IsActive;
 
+    [SerializeField] private GameState state;
     [SerializeField] private float MoveSpeed = 5.0f;
     [SerializeField] private CatIsOnGround CatIsOnGround;
     [SerializeField] private Rigidbody CatBody;
@@ -24,7 +25,7 @@ public class CatMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!IsActive)
+        if (!IsActive || state.IsInCutscene)
             return;
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis("Horizontal");
