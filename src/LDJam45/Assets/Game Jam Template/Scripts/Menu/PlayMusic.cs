@@ -25,11 +25,11 @@ public class PlayMusic : MonoBehaviour {
 		switch (SceneManager.GetActiveScene().buildIndex)
 		{
 			//If scene index is 0 (usually title scene) assign the clip titleMusic to musicSource
-			case 0:
+			case 1:
 				musicPlayer.PlaySelectedMusic(menuSettings.mainMenuMusicLoop);
 				break;
 			//If scene index is 1 (usually main scene) assign the clip mainMusic to musicSource
-			case 1:
+			case 2:
                 musicPlayer.PlaySelectedMusic(menuSettings.musicLoopToChangeTo);
 				break;
 		}
