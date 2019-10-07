@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CatHouseHeals : MonoBehaviour
 {
+    [SerializeField] private GameState gameState;
     [SerializeField] private GameObject openDoor;
     [SerializeField] private GameObject closedDoor;
     [SerializeField] private float sleepDuration = 1.5f;
@@ -35,7 +36,7 @@ public class CatHouseHeals : MonoBehaviour
         AudioSource.PlayClipAtPoint(sleepSound, gameCamera.transform.position);
         AudioSource.PlayClipAtPoint(lullaby, gameCamera.transform.position);
         yield return new WaitForSeconds(sleepDuration / 2);
-        // TODO: Heal One Health
+        gameState.HealthMap[gameState.CatId]++;
         yield return new WaitForSeconds(sleepDuration / 2);
 
         // TODO: Close Door afterwards

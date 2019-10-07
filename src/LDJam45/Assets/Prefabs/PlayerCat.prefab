@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 4774105386994753901}
   - component: {fileID: 1106743317170435503}
   - component: {fileID: 4900449597329094294}
+  - component: {fileID: -6385030390174305244}
   m_Layer: 0
   m_Name: PlayerCat
   m_TagString: Player
@@ -171,6 +172,8 @@ MonoBehaviour:
   OnDeathEvents: []
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 1205667276312560101}
+  OnDeathSound: {fileID: 0}
+  Camera: {fileID: 0}
   Role: 1
   MaxHealth: 3
   SecondsOfInvincibility: 0
@@ -376,6 +379,19 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 1205667276312560101}
   Flashing: {fileID: 705329055771361911}
+--- !u!114 &-6385030390174305244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319797692756229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ee9ab15078ce42a190dee420e6149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
 --- !u!1001 &79277415773321144
 PrefabInstance:
   m_ObjectHideFlags: 0

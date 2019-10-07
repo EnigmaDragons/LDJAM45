@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb99a0691d08064f84927615dbe39a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   openDoor: {fileID: 5263506347699084058}
   closedDoor: {fileID: 8756592303832680336}
   sleepDuration: 3
