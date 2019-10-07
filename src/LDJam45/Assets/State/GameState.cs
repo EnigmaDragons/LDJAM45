@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameState : ScriptableObject
 {
+    public bool PlayIronmanMode;
     public bool IsTravelling;
     public int CurrentPlayerHp;
     public bool DashUnlocked;
