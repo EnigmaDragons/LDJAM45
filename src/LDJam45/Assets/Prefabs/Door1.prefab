@@ -50,6 +50,7 @@ MonoBehaviour:
   closeDoorTrigger: {fileID: 0}
   openDoor: {fileID: 1250516464689492581}
   closedDoor: {fileID: 574973684612788584}
+  onToggle: {fileID: 8300000, guid: 0233426020e19d94991b8483932ebcdf, type: 3}
   startsOpen: 0
 --- !u!64 &9017323477344391789
 MeshCollider:
