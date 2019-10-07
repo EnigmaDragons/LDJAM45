@@ -7,12 +7,18 @@ public class Door : MonoBehaviour
     [SerializeField] private GameEvent closeDoorTrigger;
     [SerializeField] private GameObject openDoor;
     [SerializeField] private GameObject closedDoor;
+    [SerializeField] private AudioClip onToggle;
     [SerializeField] private bool startsOpen = false;
+
+    private Camera _gameCamera;
+    private bool _isAwake;
 
     private void Awake()
     {
+        _gameCamera = FindObjectOfType<Camera>();
         isOpen = startsOpen;
         UpdateDoorState();
+        _isAwake = true;
     }
 
     private void OnEnable()
@@ -43,5 +49,7 @@ public class Door : MonoBehaviour
     {
         openDoor.SetActive(isOpen);
         closedDoor.SetActive(!isOpen);
+        if (_isAwake && onToggle != null)
+            AudioSource.PlayClipAtPoint(onToggle, _gameCamera.transform.position, 0.6f);
     }
 }
