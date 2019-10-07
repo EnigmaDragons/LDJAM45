@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MusicPlayer
   m_EditorClassIdentifier: 
   MusicSource: {fileID: 0}
-  DebugDisableMusic: 1
+  DebugDisableMusic: 0

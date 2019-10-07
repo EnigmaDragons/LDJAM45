@@ -16,6 +16,7 @@ public class FadeInImage : MonoBehaviour
 
     private void OnEnable()
     {
+        image.CrossFadeAlpha(0f, 0f, true);
         image.CrossFadeAlpha(255f, duration, true);
     }
 }
