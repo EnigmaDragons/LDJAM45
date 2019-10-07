@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3284468227651859663}
   - component: {fileID: 5334395557189622832}
   - component: {fileID: 8437366101389506538}
+  - component: {fileID: 4286309264846244516}
   m_Layer: 0
   m_Name: GameRules
   m_TagString: Untagged
@@ -100,3 +101,18 @@ MonoBehaviour:
   onPlayerHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b,
     type: 2}
   gameOver: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
+--- !u!114 &4286309264846244516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809137533544101979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59239866d9798d40a6d93a39a861338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  UnlockDash: {fileID: 11400000, guid: a7857f41c0c53d444b00099a2f6f96bb, type: 2}
+  UnlockSlash: {fileID: 11400000, guid: b875716884453bf4697059fe334f9990, type: 2}
