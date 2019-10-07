@@ -19,6 +19,7 @@ public class GameState : ScriptableObject
     public bool DebugMuteMusic;
     public Queue<string> ThoughtsMessageQueue;
     public int CatId;
+    public bool IsVictory;
 
     public void Reset()
     {
@@ -33,6 +34,7 @@ public class GameState : ScriptableObject
         IsInvincibleMap = new Dictionary<int, bool>();
         ThoughtsMessageQueue = new Queue<string>();
         CatId = -1;
+        IsVictory = false;
     }
 
     public void Gain1PlayerHealth() => HealthMap[CatId] = Math.Min(HealthMap[CatId] + 1, MaxHP);
