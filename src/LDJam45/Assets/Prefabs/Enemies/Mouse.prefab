@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6677425690971091794}
-  - component: {fileID: 3955577626786466709}
   - component: {fileID: 1561225696}
   - component: {fileID: 6362947326988101142}
   - component: {fileID: 2579379463450528742}
+  - component: {fileID: 3317856529901703613}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3955577626786466709
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6891916477328458785}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0.25}
 --- !u!114 &1561225696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,11 +63,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
-  IFrames: 3
-  Collider: {fileID: 3955577626786466709}
-  OnDeathEvent: {fileID: 0}
+  IFrames: 0
+  Collider: {fileID: 3317856529901703613}
+  OnDeathEvents: []
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 2579379463450528742}
+  OnDeathSound: {fileID: 0}
+  Camera: {fileID: 0}
   Role: 2
   MaxHealth: 1
   SecondsOfInvincibility: 0
@@ -98,6 +87,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+--- !u!136 &3317856529901703613
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6891916477328458785}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.2
+  m_Height: 99
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7149641921986450232
 GameObject:
   m_ObjectHideFlags: 0
