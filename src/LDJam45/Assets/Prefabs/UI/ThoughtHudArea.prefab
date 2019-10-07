@@ -294,5 +294,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   text: {fileID: 8026184654078540218}
-  showDuration: 2
+  showDuration: 3
   transitionDuration: 0.7
