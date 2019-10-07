@@ -101,8 +101,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32c8a4d2d25c36a42821d08c4fafeef6, type: 2}
   Stage2Attacks: []
   Stage3Attacks: []
-  Stage2Threshhold: 0
-  Stage3Threshhold: 0
+  Stage2Threshhold: -1
+  Stage3Threshhold: -1
 --- !u!114 &2720846227189257859
 MonoBehaviour:
   m_ObjectHideFlags: 0
