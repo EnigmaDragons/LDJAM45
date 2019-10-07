@@ -2202,15 +2202,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d,
         type: 2}
-    - target: {fileID: 574973684612788584, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1250516464689492581, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574973684612788584, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ade2f4f88855e54d86f6ba45a2fec77, type: 3}
@@ -4893,15 +4893,15 @@ PrefabInstance:
       propertyPath: startsOpen
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 574973684612788584, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1250516464689492581, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574973684612788584, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ade2f4f88855e54d86f6ba45a2fec77, type: 3}
@@ -5822,7 +5822,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnDeathEvents.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 6d53a26951fb65348b516a47984661a1,
+      objectReference: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4,
         type: 2}
     - target: {fileID: 7111162615321918705, guid: 17d899b928c7b6a48861aa2f758747d3,
         type: 3}
@@ -6611,15 +6611,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d,
         type: 2}
-    - target: {fileID: 574973684612788584, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1250516464689492581, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574973684612788584, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ade2f4f88855e54d86f6ba45a2fec77, type: 3}
