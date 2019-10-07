@@ -17,6 +17,7 @@ MonoBehaviour:
   closeDoorTrigger: {fileID: 0}
   openDoor: {fileID: 4311073627145398991}
   closedDoor: {fileID: 1807224288602395973}
+  onToggle: {fileID: 0}
   startsOpen: 0
 --- !u!114 &8582420510129300595
 MonoBehaviour:
@@ -7488,7 +7489,7 @@ PrefabInstance:
     - target: {fileID: 5534813546034134267, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
         type: 3}
       propertyPath: startsOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ade2f4f88855e54d86f6ba45a2fec77, type: 3}
