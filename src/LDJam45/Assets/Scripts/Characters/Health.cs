@@ -29,6 +29,8 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
+        if (Role.Friendly == Role)
+            GameState.MaxHP = MaxHealth;
         GameState.HealthMap[ID.ID] = MaxHealth;
         GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
     }

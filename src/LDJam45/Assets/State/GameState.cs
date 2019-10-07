@@ -8,6 +8,7 @@ public class GameState : ScriptableObject
     public bool PlayIronmanMode;
     public bool IsTravelling;
     public int CurrentPlayerHp;
+    public int MaxHP;
     public bool DashUnlocked;
     public bool SlashUnlocked;
     public bool RendUnlocked;

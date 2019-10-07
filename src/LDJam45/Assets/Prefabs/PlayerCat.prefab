@@ -175,7 +175,7 @@ MonoBehaviour:
   OnDeathSound: {fileID: 0}
   Camera: {fileID: 0}
   Role: 1
-  MaxHealth: 3
+  MaxHealth: 9
   SecondsOfInvincibility: 0
   IsInvincible: 0
 --- !u!114 &863764196747629492
