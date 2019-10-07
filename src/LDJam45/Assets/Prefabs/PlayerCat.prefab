@@ -1069,6 +1069,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9070050270434108440, guid: 8ee2c2ed17007b345a6cff40d69baa8f,
+        type: 3}
+      propertyPath: LaserEyesCooldown
+      value: 9.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275200603605179142, guid: 8ee2c2ed17007b345a6cff40d69baa8f,
+        type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 11400000, guid: afc19deabfa17d24cbdc97312ccdc87f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ee2c2ed17007b345a6cff40d69baa8f, type: 3}
 --- !u!4 &4900477909117383389 stripped

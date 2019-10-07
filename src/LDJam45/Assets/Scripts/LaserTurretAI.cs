@@ -7,6 +7,7 @@ public class LaserTurretAI : MonoBehaviour
     [SerializeField] private GunBehaviour LaserGun;
     [SerializeField] private TurnTowardsTarget Turning;
     [SerializeField] private Rigidbody LaserTurretBody;
+    [SerializeField] private Health Health;
     [SerializeField] private CharacterID ID;
     [SerializeField] private GameState GameState;
     [SerializeField] private List<LaserTurretAttack> Stage1Attacks;
@@ -26,7 +27,12 @@ public class LaserTurretAI : MonoBehaviour
 
     private void Start()
     {
-        FightStarted.Subscribe(() => _fightStarted = true, this);
+        Health.IsInvincible = true;
+        FightStarted.Subscribe(() =>
+        {
+            _fightStarted = true;
+            Health.IsInvincible = false;
+        }, this);
         _currentAttackPattern = Stage1Attacks;
         _attackIndex = 0;
         _secsTilNextShot = 0;

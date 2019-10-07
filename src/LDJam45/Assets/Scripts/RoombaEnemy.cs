@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class RoombaEnemy : MonoBehaviour
 {
+    [SerializeField] private Health Health;
     [SerializeField] private GameEvent StartFight;
     [SerializeField] private Patrol Patrol;
     [SerializeField] private GameObject Spinning;
@@ -31,8 +32,10 @@ public class RoombaEnemy : MonoBehaviour
 
     public void Start()
     {
+        Health.IsInvincible = true;
         StartFight?.Subscribe(() =>
         {
+            Health.IsInvincible = false;
             _fightStarted = true;
             Patrol.enabled = false;
         }, this);

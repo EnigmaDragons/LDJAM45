@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3996937605751924505}
   - component: {fileID: 8365133326883673034}
   - component: {fileID: 3284468227651859663}
-  - component: {fileID: 3288639991404655676}
   - component: {fileID: 5334395557189622832}
+  - component: {fileID: 8437366101389506538}
   m_Layer: 0
   m_Name: GameRules
   m_TagString: Untagged
@@ -64,24 +64,6 @@ MonoBehaviour:
   unlockSlash: {fileID: 11400000, guid: b875716884453bf4697059fe334f9990, type: 2}
   unlockRend: {fileID: 11400000, guid: a21c3cfd52234ec43b1c0c20e13e30bb, type: 2}
   unlockLaser: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}
---- !u!114 &3288639991404655676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809137533544101979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d10dcb2009afdf4292eb797b90b781c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnStepsCompleted: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
-  RequiredEvents:
-  - {fileID: 11400000, guid: fd4626fe3051b534dbe74cc6f1475341, type: 2}
-  IsReoccuring: 1
-  _isFinished: 0
-  _finishedEvents: []
 --- !u!114 &5334395557189622832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,3 +82,21 @@ MonoBehaviour:
   IsReoccuring: 1
   _isFinished: 0
   _finishedEvents: []
+--- !u!114 &8437366101389506538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809137533544101979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a661b6ea5f0504498cdc0d77e7fd9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  PlayerID: {fileID: 0}
+  onPlayerHealthLost: {fileID: 11400000, guid: 4e904c0bf877487439787c19510ec111, type: 2}
+  onPlayerHealthGained: {fileID: 11400000, guid: b79c696b8317a504cbb5c410a615919b,
+    type: 2}
+  gameOver: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}

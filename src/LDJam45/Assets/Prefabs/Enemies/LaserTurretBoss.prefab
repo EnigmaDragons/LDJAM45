@@ -96,6 +96,7 @@ MonoBehaviour:
   LaserGun: {fileID: 7111162615321918704}
   Turning: {fileID: 7111162615321918707}
   LaserTurretBody: {fileID: 7111162615321918709}
+  Health: {fileID: 7111162615321918706}
   ID: {fileID: -624152312658737001}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   Stage1Attacks:

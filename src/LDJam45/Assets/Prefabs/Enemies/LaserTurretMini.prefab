@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8530526985821364692}
   - component: {fileID: 4310602984845119836}
   m_Layer: 0
-  m_Name: MiniLaserTurret
+  m_Name: LaserTurretMini
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   LaserGun: {fileID: 2720846227189257859}
   Turning: {fileID: 2720846227189257856}
   LaserTurretBody: {fileID: 2720846227189257862}
+  Health: {fileID: 2720846227189257857}
   ID: {fileID: 3475405922021663460}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   Stage1Attacks:

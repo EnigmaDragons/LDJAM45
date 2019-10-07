@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1a22d32abfcd6448a16e7a9ecfeaea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: {fileID: 4121283625668631024}
   StartFight: {fileID: 0}
   Patrol: {fileID: 2641816907689633002}
   Spinning: {fileID: 8679614393006269812}
