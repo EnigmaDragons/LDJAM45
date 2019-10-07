@@ -10,6 +10,8 @@ public class SwitchMusicWhen : MonoBehaviour
     [SerializeField] private AudioClip bossMusic;
     [SerializeField] private GameEvent[] bossStarted;
 
+    private Mood _mood = Mood.Chill;
+
     private void OnEnable()
     {
         shouldChill?.ForEach(e => e.Subscribe(PlayChill, this));
@@ -26,16 +28,35 @@ public class SwitchMusicWhen : MonoBehaviour
 
     private void PlayChill()
     {
+        if (_mood == Mood.Chill)
+            return;
+
+        _mood = Mood.Chill;
         player.PlaySelectedMusic(chillMusic);
     }
 
     private void PlayFightMusic()
     {
+        if (_mood == Mood.Action)
+            return;
+
+        _mood = Mood.Action;
         player.PlaySelectedMusic(fightMusic);
     }
 
     private void PlayBossMusic()
     {
+        if (_mood == Mood.Boss)
+            return;
+
+        _mood = Mood.Boss;
         player.PlaySelectedMusic(bossMusic);
+    }
+
+    private enum Mood
+    {
+        Chill,
+        Action,
+        Boss
     }
 }
