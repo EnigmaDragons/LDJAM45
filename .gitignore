@@ -40,3 +40,7 @@ sysinfo.txt
 *.unitypackage
 
 *.idea/
+
+
+*Noah.meta
+src/LDJam45/Assets/Z_Plugins/AAA Projectiles/*
