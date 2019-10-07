@@ -7,6 +7,8 @@ public class OnEventEnable : MonoBehaviour
 
     private void OnEnable()
     {
+        if (trigger == null || target == null)
+            Debug.Log("Missing Either Trigger or Target for Event Enable: " + name);
         trigger.Subscribe(() => target.SetActive(true), this);
     }
 

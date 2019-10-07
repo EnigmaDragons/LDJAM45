@@ -43,7 +43,7 @@ public class RoombaEnemy : MonoBehaviour
         UpdateCurrentAttack();
     }
 
-    private void OnDisable() => StartFight.Unsubscribe(this);
+    private void OnDisable() => StartFight?.Unsubscribe(this);
 
     public void Update()
     {
