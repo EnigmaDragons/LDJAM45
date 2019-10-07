@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2805978413520565311}
   - component: {fileID: 8717686010656569311}
   m_Layer: 0
-  m_Name: FloorDecor1
+  m_Name: FloorGreenHazard1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnedBy: 2
+  OnHitSound: {fileID: 8300000, guid: 1e0a90af8f4d6db4bba3216dd71bcee9, type: 3}
 --- !u!65 &8717686010656569311
 BoxCollider:
   m_ObjectHideFlags: 0
