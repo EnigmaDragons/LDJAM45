@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayIronmanMode: 0
   IsTravelling: 0
-  CurrentPlayerHp: 9
-  MaxHP: 9
-  DashUnlocked: 0
-  SlashUnlocked: 0
+  CurrentPlayerHp: 1
+  MaxHP: 1
+  DashUnlocked: 1
+  SlashUnlocked: 1
   RendUnlocked: 0
   LaserEyesUnlocked: 0
   LastCheckpoint: {x: 0, y: 0, z: 0}
   DebugMuteMusic: 0
-  CatId: -714930595
+  CatId: 196890391
+  IsVictory: 0
+  IsInCutscene: 0

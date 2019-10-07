@@ -31,12 +31,17 @@ public class Health : MonoBehaviour
     {
         if (Role.Friendly == Role)
         {
-            GameState.MaxHP = GameState.PlayIronmanMode 
-                ? 1 
+            GameState.MaxHP = GameState.PlayIronmanMode
+                ? 1
                 : MaxHealth;
+            GameState.HealthMap[ID.ID] = GameState.MaxHP;
+            GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
         }
-        GameState.HealthMap[ID.ID] = MaxHealth;
-        GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
+        else
+        {
+            GameState.HealthMap[ID.ID] = MaxHealth;
+            GameState.IsInvincibleMap[ID.ID] = SecondsOfInvincibility > 0 || IsInvincible;
+        }
     }
 
     private void Update()
