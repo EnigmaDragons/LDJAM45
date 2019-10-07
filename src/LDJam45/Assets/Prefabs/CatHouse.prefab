@@ -152,6 +152,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -385982570378576455, guid: 222a20ba76f4a88489fbef713c97eb12,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d31ec6c6f70cf3419cfe9e6c1713814, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222a20ba76f4a88489fbef713c97eb12, type: 3}
 --- !u!1 &8756592303832680336 stripped
@@ -177,6 +182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatHouseOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ca6d05ca88a0c3c45a42807b887965e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ca6d05ca88a0c3c45a42807b887965e4,
         type: 3}
@@ -233,6 +243,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -385982570378576455, guid: ca6d05ca88a0c3c45a42807b887965e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d31ec6c6f70cf3419cfe9e6c1713814, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca6d05ca88a0c3c45a42807b887965e4, type: 3}
 --- !u!1 &5263506347699084058 stripped
