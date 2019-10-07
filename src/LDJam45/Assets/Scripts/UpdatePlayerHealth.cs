@@ -19,7 +19,10 @@ public class UpdatePlayerHealth : MonoBehaviour
                 onPlayerHealthLost.Publish();
                 Debug.Log($"Player Health is now {state.CurrentPlayerHp}");
                 if (state.CurrentPlayerHp <= 0)
+                {
+                    Cursor.visible = true;
                     gameOver.Publish();
+                }                  
             }
             else
             {
