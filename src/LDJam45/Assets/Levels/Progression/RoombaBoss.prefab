@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b96039ff9dbae448aad6cc00791017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollide: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d, type: 2}
+  onCollide: {fileID: 11400000, guid: aa3deb18dd94c83458c381906b453642, type: 2}
   cooldown:
     UseConstant: 1
     ConstantValue: 999
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b96039ff9dbae448aad6cc00791017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollide: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d, type: 2}
+  onCollide: {fileID: 11400000, guid: aa3deb18dd94c83458c381906b453642, type: 2}
   cooldown:
     UseConstant: 1
     ConstantValue: 999
@@ -1395,7 +1395,7 @@ PrefabInstance:
         type: 3}
       propertyPath: openDoorTrigger
       value: 
-      objectReference: {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4,
+      objectReference: {fileID: 11400000, guid: 6d53a26951fb65348b516a47984661a1,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ade2f4f88855e54d86f6ba45a2fec77, type: 3}
@@ -1551,7 +1551,7 @@ PrefabInstance:
         type: 3}
       propertyPath: closeDoorTrigger
       value: 
-      objectReference: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d,
+      objectReference: {fileID: 11400000, guid: aa3deb18dd94c83458c381906b453642,
         type: 2}
     - target: {fileID: 5534813546034134267, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
         type: 3}
@@ -2922,7 +2922,7 @@ PrefabInstance:
         type: 3}
       propertyPath: closeDoorTrigger
       value: 
-      objectReference: {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d,
+      objectReference: {fileID: 11400000, guid: aa3deb18dd94c83458c381906b453642,
         type: 2}
     - target: {fileID: 5534813546034134267, guid: 7ade2f4f88855e54d86f6ba45a2fec77,
         type: 3}
