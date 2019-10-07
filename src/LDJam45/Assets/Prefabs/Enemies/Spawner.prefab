@@ -104,7 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23142b9141af3c84e9b9880fcc021f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartEvent: {fileID: 11400000, guid: 9ed0be3ad38abe040b964bf8cae6ac1c, type: 2}
   MousePrefab: {fileID: 6891916477328458785, guid: e6fd12e3791d54f43bd11dbde655b3e4,
     type: 3}
   SpawnTimeMin: 1
   SpawnTimeMax: 2
+  TotalTime: 60
