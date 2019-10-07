@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 220032076001787899}
   - component: {fileID: 6204072752542538894}
   - component: {fileID: 8857274545577279175}
+  - component: {fileID: 902609343479260104}
   m_Layer: 0
   m_Name: StartFight
   m_TagString: Untagged
@@ -119,6 +120,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onCollide: {fileID: 11400000, guid: c4b27b64a3e13a842abef22773836ef9, type: 2}
+  cooldown:
+    UseConstant: 1
+    ConstantValue: 999
+    Variable: {fileID: 0}
+  TriggerOnly: 0
+--- !u!114 &902609343479260104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569483890565031675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b96039ff9dbae448aad6cc00791017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollide: {fileID: 11400000, guid: a21c3cfd52234ec43b1c0c20e13e30bb, type: 2}
   cooldown:
     UseConstant: 1
     ConstantValue: 999
@@ -5011,6 +5030,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2720846227189257857, guid: d415776d91b83454d99cf5df934c9a61,
+        type: 3}
+      propertyPath: OnDeathEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720846227189257857, guid: d415776d91b83454d99cf5df934c9a61,
+        type: 3}
+      propertyPath: OnDeathEvents.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e32f7404ad3621e4f9b2686f51307d8e,
+        type: 2}
     - target: {fileID: 2720846227189257858, guid: d415776d91b83454d99cf5df934c9a61,
         type: 3}
       propertyPath: FightStarted
