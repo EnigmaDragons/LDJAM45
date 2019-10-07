@@ -774,7 +774,7 @@ PrefabInstance:
     - target: {fileID: 105057959026316324, guid: 7ea1d5b7d15c4bd4a9a38ebbbbd457b6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 105057959026316324, guid: 7ea1d5b7d15c4bd4a9a38ebbbbd457b6,
         type: 3}
@@ -1130,6 +1130,7 @@ GameObject:
   - component: {fileID: 472834520}
   - component: {fileID: 472834523}
   - component: {fileID: 472834524}
+  - component: {fileID: 472834525}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1229,6 +1230,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navigator: {fileID: 11400000, guid: 63f27014cddc28046848396d63d81e35, type: 2}
+--- !u!114 &472834525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472834519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf46d9ae41f1c46892997a804c20af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloomAmount: 0.75
+  BlurAmount: 0.25
+  FadeAmount: 0.88
+  material: {fileID: 2100000, guid: 6ced9dc3165b9bd439f57ddcee8abac6, type: 2}
 --- !u!1 &478164803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,8 +1620,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 472834521}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1974,7 +1991,7 @@ PrefabInstance:
     - target: {fileID: 1830700750020044212, guid: 43d320d154d0de040ad26ab61276e970,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1830700750020044212, guid: 43d320d154d0de040ad26ab61276e970,
         type: 3}
@@ -3226,7 +3243,7 @@ PrefabInstance:
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
