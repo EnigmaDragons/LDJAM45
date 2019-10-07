@@ -76,6 +76,9 @@ GameObject:
   - component: {fileID: 5169367539280685277}
   - component: {fileID: 6087630544013641968}
   - component: {fileID: 4533709032396870350}
+  - component: {fileID: 3421179676245460315}
+  - component: {fileID: 3626556085307265419}
+  - component: {fileID: 575745381642117776}
   m_Layer: 0
   m_Name: CheckpointFight
   m_TagString: Untagged
@@ -92,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 4892633674925103356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -32, y: 6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 10, z: 8}
   m_Children: []
   m_Father: {fileID: 7740281911330360154}
   m_RootOrder: 0
@@ -108,7 +111,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 10, z: 6}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6087630544013641968
 MonoBehaviour:
@@ -140,6 +143,65 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 999
     Variable: {fileID: 0}
+  TriggerOnly: 0
+--- !u!114 &3421179676245460315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892633674925103356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02efa1d865049064cb35868f0e877e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!33 &3626556085307265419
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892633674925103356}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &575745381642117776
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892633674925103356}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e7e89774f4be0e64fb327361fe64413c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &5301474226545934711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2421,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3776167832504889681}
     m_Modifications:
+    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Patrol
+      objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2413,11 +2480,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Patrol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37edc8a8eed79f41b6a4e5a38597f91, type: 3}
@@ -3094,6 +3156,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: Waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: Waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2068522155190763557}
+    - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: Waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 8451572584654205789}
     - target: {fileID: 4121283625668631024, guid: 6f97c04204f346d4db6cfb9c669d70f5,
         type: 3}
       propertyPath: OnDeathEvents.Array.size
@@ -3111,21 +3188,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: bfea37bb11ea8d14a9761ccde76975b2,
         type: 2}
-    - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: Waypoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: Waypoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 2068522155190763557}
-    - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: Waypoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 8451572584654205789}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f97c04204f346d4db6cfb9c669d70f5, type: 3}
 --- !u!4 &1119556495639125807 stripped
@@ -4132,6 +4194,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3776167832504889681}
     m_Modifications:
+    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Patrol (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4309568450455271002, guid: b37edc8a8eed79f41b6a4e5a38597f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4186,11 +4253,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309568450455271003, guid: b37edc8a8eed79f41b6a4e5a38597f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Patrol (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37edc8a8eed79f41b6a4e5a38597f91, type: 3}
