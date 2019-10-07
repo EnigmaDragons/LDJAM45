@@ -54,7 +54,7 @@ MonoBehaviour:
   OnDeathEvents: []
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 6286095022399657124}
-  OnDeathSound: {fileID: 0}
+  OnDeathSound: {fileID: 8300000, guid: e1f4908bd945395458ff7ce82441eac1, type: 3}
   Camera: {fileID: 0}
   Role: 2
   MaxHealth: 1
