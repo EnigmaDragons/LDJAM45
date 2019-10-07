@@ -40,8 +40,8 @@ public class CatHouseHeals : MonoBehaviour
 
         CloseDoor();
 
-        AudioSource.PlayClipAtPoint(sleepSound, gameCamera.transform.position);
-        AudioSource.PlayClipAtPoint(lullaby, gameCamera.transform.position);
+        AudioSupport.PlayClipAt(sleepSound, gameCamera.transform.position);
+        AudioSupport.PlayClipAt(lullaby, gameCamera.transform.position);
         yield return new WaitForSeconds(sleepDuration / 2);
         gameState.HealthMap[gameState.CatId] = gameState.MaxHP;
         yield return new WaitForSeconds(sleepDuration / 2);

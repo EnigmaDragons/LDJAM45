@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: b4c6b308f5757134a89a64a50603e8e0
+guid: 3dd6c36fd0054874e8f4a28a6f2bab6b
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -2635229713689972849
-    second: Base Stack
+    second: SpiderIdle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Base Stack
+      name: SpiderIdle
       takeName: Base Stack
       internalID: -2635229713689972849
       firstFrame: 0
@@ -46,7 +46,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

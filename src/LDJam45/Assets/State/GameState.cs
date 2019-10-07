@@ -20,6 +20,7 @@ public class GameState : ScriptableObject
     public Queue<string> ThoughtsMessageQueue;
     public int CatId;
     public bool IsVictory;
+    public bool IsInCutscene;
 
     public void Reset()
     {
@@ -35,6 +36,7 @@ public class GameState : ScriptableObject
         ThoughtsMessageQueue = new Queue<string>();
         CatId = -1;
         IsVictory = false;
+        IsInCutscene = false;
     }
 
     public void Gain1PlayerHealth() => HealthMap[CatId] = Math.Min(HealthMap[CatId] + 1, MaxHP);
