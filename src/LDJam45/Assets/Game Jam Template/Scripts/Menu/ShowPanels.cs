@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class ShowPanels : MonoBehaviour {
+public class ShowPanels : MonoBehaviour
+{
 
 	public GameObject optionsPanel;							//Store a reference to the Game Object OptionsPanel 
 	public GameObject optionsTint;							//Store a reference to the Game Object OptionsTint 
@@ -12,7 +13,7 @@ public class ShowPanels : MonoBehaviour {
     public GameObject creditsTint;
     public GameObject menuButtons;
 
-    private GameObject activePanel;                         
+    public GameObject activePanel;                         
     private MenuObject activePanelMenuObject;
     private EventSystem eventSystem;
 

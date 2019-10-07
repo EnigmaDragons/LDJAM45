@@ -560,20 +560,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Strings:
-  - Noah Reinagel
   - Silas Reinagel
-  - GraphicEdit (contact@graphicedit.com)
+  - Noah Reinagel
+  - Mark Arneman
   - GraphicEdit
-  - Silas Reinagel
-  - Noah Reinagel
   - Pietro Cogo
+  - "Jaroslav Voz\xE1r"
   - Amerigo Gazaway
   - Austin (Crow)
-  - Silas Reinagel
-  - Noah Reinagel
-  - Mark
-  - "Jaroslav Voz\xE1r"
-  - Silas Reinagel
   - Gordy Keene
   Text: {fileID: 954048359}
   Panel: {fileID: 210146047}
@@ -2156,16 +2150,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4037471436309708999, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4121283625668631024, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4121283625665896913, guid: 6f97c04204f346d4db6cfb9c669d70f5,
         type: 3}
       propertyPath: m_Speed
@@ -2175,6 +2159,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Acceleration
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121283625668631024, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683249006673878850, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037471436309708999, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282418567072709706, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
         type: 3}
@@ -2281,16 +2285,6 @@ PrefabInstance:
       propertyPath: Waypoints.Array.data[19]
       value: 
       objectReference: {fileID: 1449702154}
-    - target: {fileID: 2683249006673878850, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282418567072709706, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5691587805623986554, guid: 6f97c04204f346d4db6cfb9c669d70f5,
         type: 3}
       propertyPath: m_Enabled
@@ -2966,21 +2960,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Strings:
-  - Game Designer
   - Project Manager
+  - Lead Programmer
+  - Game Design
   - 3D Characters
-  - 3D Terrain
-  - 3D Terrain
-  - VFX
-  - UI Artist
+  - 2D Artist
+  - UI/Sound Programmer
   - Music
   - Sound Effects
-  - Sound Effects
-  - Lead Programmer
-  - Programmer
-  - Programmer
-  - Programmer
-  - Tester
+  - Quality Assurance
   Text: {fileID: 321395907}
   Panel: {fileID: 527531727}
 --- !u!95 &1180490476

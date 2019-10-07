@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private GameObject OnDeathVfx;
     [SerializeField] private float IFrames;
-    [SerializeField] private Collider Collider;
+    [SerializeField] private Renderer Renderer;
     [SerializeField] private List<GameEvent> OnDeathEvents;
     [SerializeField] private GameState GameState;
     [SerializeField] private CharacterID ID;
@@ -74,7 +74,7 @@ public class Health : MonoBehaviour
             return;
 
         var explosion = Instantiate(OnDeathVfx, transform.position, transform.rotation);
-        explosion.transform.localScale = Collider.bounds.size;
+        explosion.transform.localScale = Renderer.bounds.size;
         var explosionRigidBody = explosion.GetComponent<Rigidbody>();
         var rigidBody = GetComponent<Rigidbody>();
         if (rigidBody != null && explosionRigidBody != null)

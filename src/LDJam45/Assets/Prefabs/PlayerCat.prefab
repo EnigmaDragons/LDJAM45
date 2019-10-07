@@ -169,7 +169,7 @@ MonoBehaviour:
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
   IFrames: 3
-  Collider: {fileID: 4443046246461775642}
+  Renderer: {fileID: 8491772823263444423}
   OnDeathEvents: []
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 1205667276312560101}
@@ -591,12 +591,6 @@ PrefabInstance:
       objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 736daa022056fb54ea87c57baa195f3f, type: 3}
---- !u!4 &2219098142096019470 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1794344848905979744, guid: 736daa022056fb54ea87c57baa195f3f,
-    type: 3}
-  m_PrefabInstance: {fileID: 445039575669872494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2959736266857931256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3404159840776582806, guid: 736daa022056fb54ea87c57baa195f3f,
@@ -609,6 +603,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd12c48012f0e43409812bc29241d664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2219098142096019470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1794344848905979744, guid: 736daa022056fb54ea87c57baa195f3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 445039575669872494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &815850574141069626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -857,6 +857,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1962677708998603276}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &8491772823263444423 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7990514518480293835, guid: 1c46c783243fdf24d8b46a3e9c68b04d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962677708998603276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4248945755464931548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -961,6 +967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandingRend
       objectReference: {fileID: 0}
+    - target: {fileID: 4445749637587098612, guid: c9487406d5b60a94981124aa8617b523,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 5351236797153470547, guid: c9487406d5b60a94981124aa8617b523,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1016,11 +1027,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4445749637587098612, guid: c9487406d5b60a94981124aa8617b523,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9487406d5b60a94981124aa8617b523, type: 3}
 --- !u!114 &474068369091960153 stripped
@@ -1151,6 +1157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingDoubleSlash
       objectReference: {fileID: 0}
+    - target: {fileID: 5582041336305791262, guid: c62674314ae91af479eb30cb8dbdfbb4,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 8723034944367226579, guid: c62674314ae91af479eb30cb8dbdfbb4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1206,11 +1217,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5582041336305791262, guid: c62674314ae91af479eb30cb8dbdfbb4,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62674314ae91af479eb30cb8dbdfbb4, type: 3}
 --- !u!114 &968100842501484878 stripped
@@ -1340,6 +1346,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatMovement
       objectReference: {fileID: 0}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: CatIsOnGround
+      value: 
+      objectReference: {fileID: 5513228514965521403}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 6589930768010418438}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: WalkingStarted
+      value: 
+      objectReference: {fileID: 11400000, guid: e44d85d44b5d55041a9ed1b7c68e09b5,
+        type: 2}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: WalkingStopped
+      value: 
+      objectReference: {fileID: 11400000, guid: c4f7642b8cd043044bd9ca1862276729,
+        type: 2}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: CatBodyAnimator
+      value: 
+      objectReference: {fileID: 1106743317170435503}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: state
+      value: 
+      objectReference: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d,
+        type: 2}
     - target: {fileID: 7164714077095864694, guid: a72f730f99cfb8444b0ec531333c4e30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1395,44 +1439,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: CatIsOnGround
-      value: 
-      objectReference: {fileID: 5513228514965521403}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: Animator
-      value: 
-      objectReference: {fileID: 6589930768010418438}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: WalkingStarted
-      value: 
-      objectReference: {fileID: 11400000, guid: e44d85d44b5d55041a9ed1b7c68e09b5,
-        type: 2}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: WalkingStopped
-      value: 
-      objectReference: {fileID: 11400000, guid: c4f7642b8cd043044bd9ca1862276729,
-        type: 2}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: CatBodyAnimator
-      value: 
-      objectReference: {fileID: 1106743317170435503}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: state
-      value: 
-      objectReference: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72f730f99cfb8444b0ec531333c4e30, type: 3}
 --- !u!114 &1688980512418252143 stripped

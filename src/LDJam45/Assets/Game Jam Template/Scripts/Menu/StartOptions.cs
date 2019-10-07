@@ -76,7 +76,7 @@ public class StartOptions : MonoBehaviour {
     public void CreditsButtonClicked()
     {
         _navigatingToGame = false;
-        Cursor.visible = false;
+        Cursor.visible = true;
 
         //If changeMusicOnStart is true, fade out volume of music group of AudioMixer by calling FadeDown function of PlayMusic
         //To change fade time, change length of animation "FadeToColor"
