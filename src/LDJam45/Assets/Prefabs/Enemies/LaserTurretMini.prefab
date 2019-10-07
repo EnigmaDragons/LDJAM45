@@ -69,7 +69,7 @@ MonoBehaviour:
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
   IFrames: 1
-  Collider: {fileID: 8530526985821364692}
+  Renderer: {fileID: 6961925616838997051}
   OnDeathEvents: []
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 3475405922021663460}
@@ -249,6 +249,12 @@ PrefabInstance:
 --- !u!4 &6969557869655872704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: dd20a7a6b0260d447b45b568ca6b0147,
+    type: 3}
+  m_PrefabInstance: {fileID: 2720846226848514010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6961925616838997051 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4998953032778845153, guid: dd20a7a6b0260d447b45b568ca6b0147,
     type: 3}
   m_PrefabInstance: {fileID: 2720846226848514010}
   m_PrefabAsset: {fileID: 0}
