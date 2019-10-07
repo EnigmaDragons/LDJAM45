@@ -39,7 +39,7 @@ public class CatMovement : MonoBehaviour
     {
         if (!IsActive)
             return;
-        if (_inputs == Vector3.zero || !CatIsOnGround.IsOnGround)
+        if (_inputs == Vector3.zero)
             Stop();
         else
         {

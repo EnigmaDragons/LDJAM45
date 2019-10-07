@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Spin1
   m_EditorClassIdentifier: Assembly-CSharp::RoombaAttack
-  StartingState: 0
+  StartingState: 1
   Type: 2
   AttackDuration: 5
   WindUpTime: 0.5
-  ChasingTime: 1
-  WindDownTime: 20
-  ChaseSpeed: 10
-  ChaseAngularSpeed: 200
-  ChaseAcceleration: 10
+  ChasingTime: 0
+  WindDownTime: 2
+  ChaseSpeed: 0
+  ChaseAngularSpeed: 0
+  ChaseAcceleration: 0
   Speed: 10000
-  RotationSpeed: 100000
+  RotationSpeed: 99999

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4728261832960266873}
   - component: {fileID: 4728261832960266872}
   - component: {fileID: 8827684858262319977}
+  - component: {fileID: 3705541673230785936}
   m_Layer: 0
   m_Name: RoombaBoss
   m_TagString: Untagged
@@ -38,6 +39,7 @@ Transform:
   m_Children:
   - {fileID: 3032400371966223336}
   - {fileID: 2610618091855876399}
+  - {fileID: 44895556753403520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115,11 +117,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
-  IFrames: 3
+  IFrames: 6
   Collider: {fileID: 8827684858262319977}
-  OnDeathEvents: []
+  OnDeathEvents:
+  - {fileID: 11400000, guid: 6d53a26951fb65348b516a47984661a1, type: 2}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 1799335903259545270}
+  OnDeathSound: {fileID: 0}
+  Camera: {fileID: 0}
   Role: 2
   MaxHealth: 3
   SecondsOfInvincibility: 0
@@ -195,19 +200,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1a22d32abfcd6448a16e7a9ecfeaea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartFight: {fileID: 0}
-  Patrol: {fileID: 0}
-  Melee: {fileID: 0}
+  StartFight: {fileID: 11400000, guid: aa3deb18dd94c83458c381906b453642, type: 2}
+  Patrol: {fileID: 3705541673230785936}
+  Melee: {fileID: 1608900080669225328}
   ID: {fileID: 1799335903259545270}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   Stage1Attacks:
-  - {fileID: 11400000, guid: 0be8f246cba538b4e8b14d216a41ed31, type: 2}
+  - {fileID: 11400000, guid: 77f74a4b1b2d17d4e912264eb8a09fa0, type: 2}
   Stage2Attacks:
-  - {fileID: 11400000, guid: d3be8e2e4d23a6f43adab23aca6e9389, type: 2}
-  - {fileID: 11400000, guid: 77f74a4b1b2d17d4e912264eb8a09fa0, type: 2}
+  - {fileID: 11400000, guid: 0be8f246cba538b4e8b14d216a41ed31, type: 2}
+  - {fileID: 11400000, guid: 02d44350a308fb9459254b339bb0423e, type: 2}
   Stage3Attacks:
-  - {fileID: 11400000, guid: d3be8e2e4d23a6f43adab23aca6e9389, type: 2}
-  - {fileID: 11400000, guid: 77f74a4b1b2d17d4e912264eb8a09fa0, type: 2}
+  - {fileID: 11400000, guid: dfb50bf3d3e0a6c429e951f81988b5e3, type: 2}
+  - {fileID: 11400000, guid: 4f5284390d739f9458f906ae799e2f1a, type: 2}
   Stage2Threshhold: 2
   Stage3Threshhold: 1
 --- !u!136 &8827684858262319977
@@ -224,6 +229,51 @@ CapsuleCollider:
   m_Height: 1.58
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &3705541673230785936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747205318167400412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe08287ce51c9548884b7da61c16377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!1 &8719871669713289598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44895556753403520}
+  m_Layer: 0
+  m_Name: Spinning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44895556753403520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719871669713289598}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.15903527, y: 0.47113115, z: 0.02087661}
+  m_LocalScale: {x: 0.14285713, y: 0.14285713, z: 0.14285713}
+  m_Children: []
+  m_Father: {fileID: 747205318167400416}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3032400371965835520
 PrefabInstance:
   m_ObjectHideFlags: 0
