@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -13,7 +14,8 @@ public class GameState : ScriptableObject
     public Vector3 LastCheckpoint;
     public Dictionary<int, int> HealthMap;
     public Dictionary<int, bool> IsInvincibleMap;
-    public bool DebugMuteMusic;        
+    public bool DebugMuteMusic;
+    public Queue<string> ThoughtsMessageQueue;
 
     private void Awake()
     {
@@ -32,5 +34,6 @@ public class GameState : ScriptableObject
         LastCheckpoint = Vector3.zero;
         HealthMap = new Dictionary<int, int>();
         IsInvincibleMap = new Dictionary<int, bool>();
+        ThoughtsMessageQueue = new Queue<string>();
     }
 }

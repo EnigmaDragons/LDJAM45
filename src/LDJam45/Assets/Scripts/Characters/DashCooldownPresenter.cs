@@ -6,6 +6,7 @@ public class DashCooldownPresenter : MonoBehaviour
 {
     [SerializeField] private Image OnCooldownImage;
     [SerializeField] private Text CooldownText;
+    [SerializeField] private Text BindText;
 
     private CatDash _dash;
 
@@ -18,6 +19,7 @@ public class DashCooldownPresenter : MonoBehaviour
     {
         OnCooldownImage.enabled = _dash.DashCooldownRemaining > 0;
         CooldownText.enabled = _dash.DashCooldownRemaining > 0;
+        BindText.enabled = _dash.DashCooldownRemaining <= 0;
         CooldownText.text = _dash.DashCooldownRemaining.ToString("0.0");
     }
 }
