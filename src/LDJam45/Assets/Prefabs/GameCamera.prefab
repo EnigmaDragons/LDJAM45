@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4faf46d9ae41f1c46892997a804c20af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BloomAmount: 1.3
-  BlurAmount: 0
-  FadeAmount: 0.4
+  BloomAmount: 0.75
+  BlurAmount: 0.25
+  FadeAmount: 0.88
   material: {fileID: 2100000, guid: 6ced9dc3165b9bd439f57ddcee8abac6, type: 2}
 --- !u!114 &3414127911392690560
 MonoBehaviour:
