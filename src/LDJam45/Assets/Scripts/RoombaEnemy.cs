@@ -106,7 +106,7 @@ public class RoombaEnemy : MonoBehaviour
     private void Charge()
     {
         Melee.IsDeadly = true;
-        _body.AddForce(_body.transform.forward * _currentAttack.Speed * Time.fixedDeltaTime, ForceMode.Force);
+        _body.AddForce(_body.transform.forward * _currentAttack.Speed * Time.deltaTime, ForceMode.Force);
         Attack();
     }
 
