@@ -29,7 +29,7 @@ public class RoombaEnemy : MonoBehaviour
 
     public void Start()
     {
-        StartFight.Subscribe(() =>
+        StartFight?.Subscribe(() =>
         {
             _fightStarted = true;
             Patrol.enabled = false;

@@ -162,8 +162,6 @@ public class StartOptions : MonoBehaviour {
         {
             fadeImage.gameObject.SetActive(false);
         }
-        
-        Debug.Log("Coroutine done. Game started in same scene! Put your game starting stuff here.");
     }
 
 
