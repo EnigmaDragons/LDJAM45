@@ -44,7 +44,8 @@ public class StartOptions : MonoBehaviour {
 
 	public void StartButtonClicked()
 	{
-	    Cursor.visible = false;
+	    _navigatingToGame = true;
+        Cursor.visible = false;
 
         //If changeMusicOnStart is true, fade out volume of music group of AudioMixer by calling FadeDown function of PlayMusic
         //To change fade time, change length of animation "FadeToColor"
@@ -71,6 +72,37 @@ public class StartOptions : MonoBehaviour {
 			StartGameInScene();
 		}
 	}
+
+    public void CreditsButtonClicked()
+    {
+        _navigatingToGame = false;
+        Cursor.visible = false;
+
+        //If changeMusicOnStart is true, fade out volume of music group of AudioMixer by calling FadeDown function of PlayMusic
+        //To change fade time, change length of animation "FadeToColor"
+        if (menuSettingsData.musicForCreditsAndVictory != null)
+        {
+            StartCoroutine(FadeOut(playMusic.musicSource, 2f));
+
+            //playMusic.FadeDown(menuSettingsData.menuFadeTime);
+        }
+
+        //If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
+        if (menuSettingsData.nextSceneIndex != 0)
+        {
+            //Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
+            Invoke("LoadDelayed", menuSettingsData.menuFadeTime);
+
+            StartCoroutine(FadeCanvasGroupAlpha(0f, 1f, fadeOutImageCanvasGroup));
+        }
+
+        //If changeScenes is false, call StartGameInScene
+        else
+        {
+            //Call the StartGameInScene function to start game without loading a new scene.
+            StartCreditsInScene();
+        }
+    }
 
     public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
     {
@@ -107,6 +139,7 @@ public class StartOptions : MonoBehaviour {
 		}	
 	}
 
+    private bool _navigatingToGame = false;
 
 	public void LoadDelayed()
 	{
@@ -117,9 +150,12 @@ public class StartOptions : MonoBehaviour {
 		showPanels.HideMenu ();
 
 		//Load the selected scene, by scene index number in build settings
-	    navigator.NavigateToGameScene();
+        if (_navigatingToGame)
+	        navigator.NavigateToGameScene();
+	    else
+	        navigator.NavigateToVictoryScene();
 
-	    StartCoroutine(FadeCanvasGroupAlpha(1f, 0f, fadeOutImageCanvasGroup));
+        StartCoroutine(FadeCanvasGroupAlpha(1f, 0f, fadeOutImageCanvasGroup));
     }
 
 	public void HideDelayed()
@@ -142,6 +178,21 @@ public class StartOptions : MonoBehaviour {
         
         StartCoroutine(FadeCanvasGroupAlpha(1f, 0f, menuCanvasGroup));
 	}
+
+    public void StartCreditsInScene()
+    {
+        //Pause button now works if escape is pressed since we are no longer in Main menu.
+        inMainMenu = false;
+
+        //If there is a second music clip in MenuSettings, fade out volume of music group of AudioMixer by calling FadeDown function of PlayMusic 
+        if (menuSettingsData.musicForCreditsAndVictory != null)
+        {
+            //Wait until game has started, then play new music
+            Invoke("PlayNewMusic", menuSettingsData.menuFadeTime);
+        }
+
+        StartCoroutine(FadeCanvasGroupAlpha(1f, 0f, menuCanvasGroup));
+    }
 
     public IEnumerator FadeCanvasGroupAlpha(float startAlpha, float endAlpha, CanvasGroup canvasGroupToFadeAlpha)
     {
