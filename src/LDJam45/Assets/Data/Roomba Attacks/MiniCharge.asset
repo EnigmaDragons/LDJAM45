@@ -16,10 +16,10 @@ MonoBehaviour:
   Type: 1
   AttackDuration: 0.1
   WindUpTime: 0.3
-  ChasingTime: 1
-  WindDownTime: 0.3
-  ChaseSpeed: 10
+  ChasingTime: 2
+  WindDownTime: 0.5
+  ChaseSpeed: 9
   ChaseAngularSpeed: 300
-  ChaseAcceleration: 10
+  ChaseAcceleration: 9
   Speed: 10000
   RotationSpeed: 0

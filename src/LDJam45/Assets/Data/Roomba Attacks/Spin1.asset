@@ -15,11 +15,11 @@ MonoBehaviour:
   StartingState: 1
   Type: 2
   AttackDuration: 5
-  WindUpTime: 0.5
+  WindUpTime: 1
   ChasingTime: 0
-  WindDownTime: 2
+  WindDownTime: 0
   ChaseSpeed: 0
   ChaseAngularSpeed: 0
   ChaseAcceleration: 0
-  Speed: 10000
+  Speed: 15000
   RotationSpeed: 99999

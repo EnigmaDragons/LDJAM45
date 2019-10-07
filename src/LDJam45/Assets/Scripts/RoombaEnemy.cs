@@ -6,6 +6,8 @@ public class RoombaEnemy : MonoBehaviour
 {
     [SerializeField] private GameEvent StartFight;
     [SerializeField] private Patrol Patrol;
+    [SerializeField] private GameObject Spinning;
+    [SerializeField] private TrailRenderer DashTrail;
     [SerializeField] private Melee Melee;
     [SerializeField] private CharacterID ID;
     [SerializeField] private GameState GameState;
@@ -153,6 +155,8 @@ public class RoombaEnemy : MonoBehaviour
 
     private void SetToWindingUp()
     {
+        if (_currentAttack.Type == RoombaAttackType.Spin)
+            Spinning.SetActive(true);
         _agent.enabled = false;
         _body.isKinematic = false;
         _attackState = RoombaAttackState.WindingUp;
@@ -169,6 +173,8 @@ public class RoombaEnemy : MonoBehaviour
 
     private void SetToAttack()
     {
+        if (_currentAttack.Type == RoombaAttackType.Charge)
+            DashTrail.emitting = true;
         _attackState = RoombaAttackState.Attacking;
         _timeTilNextState = _currentAttack.AttackDuration;
     }
@@ -182,6 +188,8 @@ public class RoombaEnemy : MonoBehaviour
 
     private void SetToWindDown()
     {
+        if (_currentAttack.Type == RoombaAttackType.Spin)
+            Spinning.SetActive(false);
         _attackState = RoombaAttackState.WindingDown;
         _timeTilNextState = _currentAttack.WindDownTime;
     }
@@ -191,6 +199,8 @@ public class RoombaEnemy : MonoBehaviour
         _timeTilNextState -= Time.deltaTime;
         if (_timeTilNextState <= 0)
         {
+            if (DashTrail.emitting)
+                DashTrail.emitting = false;
             _attackIndex++;
             if (_currentAttackPattern.Count == _attackIndex)
                 _attackIndex = 0;
