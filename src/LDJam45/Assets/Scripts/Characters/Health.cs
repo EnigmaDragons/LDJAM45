@@ -11,7 +11,9 @@ public class Health : MonoBehaviour
     [SerializeField] private List<GameEvent> OnDeathEvents;
     [SerializeField] private GameState GameState;
     [SerializeField] private CharacterID ID;
+    [SerializeField] private AudioClip OnDeathSound;
 
+    [ReadOnly] public Camera Camera;
     public Role Role;
     public int MaxHealth;
     public Action OnDamage { private get; set; } = () => { };
@@ -19,6 +21,11 @@ public class Health : MonoBehaviour
     public bool IsInvincible;
 
     private bool _isDead = false;
+
+    private void Awake()
+    {
+        Camera = FindObjectOfType<Camera>();
+    }
 
     private void Start()
     {
@@ -57,6 +64,9 @@ public class Health : MonoBehaviour
 
     private void PlayExplosion()
     {
+        if (OnDeathVfx == null)
+            return;
+
         var explosion = Instantiate(OnDeathVfx, transform.position, transform.rotation);
         explosion.transform.localScale = Collider.bounds.size;
         var explosionRigidBody = explosion.GetComponent<Rigidbody>();
@@ -67,6 +77,8 @@ public class Health : MonoBehaviour
 
     private IEnumerator ResolveDestruction()
     {
+        if (OnDeathSound != null)
+            AudioSource.PlayClipAtPoint(OnDeathSound, Camera.transform.position);
         yield return new WaitForSeconds(0.3f);
         OnDeathEvents.ForEach(x => x.Publish());
         Destroy(gameObject);
