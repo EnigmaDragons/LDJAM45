@@ -17,6 +17,7 @@ public class GameState : ScriptableObject
     public Dictionary<int, bool> IsInvincibleMap;
     public bool DebugMuteMusic;
     public Queue<string> ThoughtsMessageQueue;
+    public int CatId;
 
     public void Reset()
     {
@@ -30,5 +31,6 @@ public class GameState : ScriptableObject
         HealthMap = new Dictionary<int, int>();
         IsInvincibleMap = new Dictionary<int, bool>();
         ThoughtsMessageQueue = new Queue<string>();
+        CatId = -1;
     }
 }
