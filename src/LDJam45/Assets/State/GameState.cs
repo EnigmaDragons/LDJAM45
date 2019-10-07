@@ -22,6 +22,11 @@ public class GameState : ScriptableObject
     public bool IsVictory;
     public bool IsInCutscene;
 
+    public void Win()
+    {
+        IsVictory = true;
+    }
+
     public void Reset()
     {
         CurrentPlayerHp = 0;
