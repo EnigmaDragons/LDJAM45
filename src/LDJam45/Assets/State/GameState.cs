@@ -17,12 +17,6 @@ public class GameState : ScriptableObject
     public bool DebugMuteMusic;
     public Queue<string> ThoughtsMessageQueue;
 
-    private void Awake()
-    {
-        HealthMap = new Dictionary<int, int>();
-        IsInvincibleMap = new Dictionary<int, bool>();
-    }
-
     public void Reset()
     {
         CurrentPlayerHp = 0;

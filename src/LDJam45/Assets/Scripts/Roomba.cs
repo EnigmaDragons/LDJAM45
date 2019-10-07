@@ -6,7 +6,6 @@ public class Roomba : MonoBehaviour
 {
     [SerializeField] private GameObject OpenDoor;
     [SerializeField] private GameObject CloseDoor;
-    [SerializeField] private GameEvent HealthLostEvent;
     [SerializeField] private float MaxSpeed = 25.0f; 
     [SerializeField] private float SpeedIncrease = 0.5f;
     [SerializeField] private float ChaseDistance = 20.0f;

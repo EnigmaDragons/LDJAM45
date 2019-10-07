@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: MiniCharge
+  m_EditorClassIdentifier: Assembly-CSharp::RoombaAttack
+  StartingState: 0
+  Type: 1
+  AttackDuration: 0.1
+  WindUpTime: 0.5
+  ChasingTime: 1
+  WindDownTime: 0.5
+  ChaseSpeed: 10
+  ChaseAngularSpeed: 300
+  ChaseAcceleration: 10
+  Speed: 10000
+  RotationSpeed: 300

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -7,7 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject OnDeathVfx;
     [SerializeField] private float IFrames;
     [SerializeField] private Collider Collider;
-    [SerializeField] private GameEvent OnDeathEvent;
+    [SerializeField] private List<GameEvent> OnDeathEvents;
     [SerializeField] private GameState GameState;
     [SerializeField] private CharacterID ID;
 
@@ -67,7 +68,7 @@ public class Health : MonoBehaviour
     private IEnumerator ResolveDestruction()
     {
         yield return new WaitForSeconds(0.3f);
-        OnDeathEvent?.Publish();
+        OnDeathEvents.ForEach(x => x.Publish());
         Destroy(gameObject);
     }
 }

@@ -32,7 +32,7 @@ public class CatIsOnGround : MonoBehaviour
         if (!Grounds.Any())
             IsOnGround = false;
         else
-            IsOnGround = _catCollider.bounds.center.y - _catCollider.bounds.extents.y + 0.01 >=
+            IsOnGround = _catCollider.bounds.center.y - _catCollider.bounds.extents.y + 0.03 >=
                          Grounds[0].bounds.center.y + Grounds[0].bounds.extents.y;
     }
 } 
