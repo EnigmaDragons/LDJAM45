@@ -71,7 +71,8 @@ MonoBehaviour:
     type: 3}
   IFrames: 6
   Renderer: {fileID: 2877859488109321800}
-  OnDeathEvents: []
+  OnDeathEvents:
+  - {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: -624152312658737001}
   OnDeathSound: {fileID: 0}
