@@ -1,25 +1,28 @@
-# LDJam 45
+# You Gotta Be Kitten Me
 
 ![You Gotta Be Kitten Me](/Screenshots/Title.png)
+
+A game by [Engima Dragons](https://enigmadragons.itch.io/) for [Ludum Dare 45](https://ldjam.com/events/ludum-dare/45/$163569)
 
 ----
 
 [Project Kanban Board](https://zube.io/enigmadragons/ldjam45/w/jam/kanban)
 
-
 ----
 
-### Development Environment Setup
+## Development Environment Setup
 
 ----
 
 Software Requirements:
+
 - Git
 - Unity 2019 (Version 2019.2.0f1)
 
 Preparation:
+
 - Login to Kanban Board (https://zube.io/enigmadragons/ldjam45/w/jam/kanban)
-- Create one sample ticket on the Kanban board and ensure that it gets created in Github as well az Zube
+- Create one sample ticket on the Kanban board and ensure that it gets created in Github as well as Zube
 - Push a Git Commit to `master`
 - Open the Unity Project `src` and run the Sample Scene
 
@@ -39,7 +42,7 @@ Preparation:
 
 ----
 
-- All work must happen against Github tickets.
+- All work must happen against GitHub tickets.
 - All active tickets must have a Role label.
 - To begin work on a ticket, ensure that the ticket is assigned to you and is moved to the “In Progress” column.
 - Only work on 1, or at most 2, ticket(s) at a time.
