@@ -6,12 +6,17 @@ public class CatHouseHeals : MonoBehaviour
     [SerializeField] private GameObject openDoor;
     [SerializeField] private GameObject closedDoor;
     [SerializeField] private float sleepDuration = 1.5f;
+    [SerializeField] private AudioClip sleepSound;
+    [SerializeField] private AudioClip lullaby;
 
     [SerializeField, ReadOnly] private bool isFinished;
+
+    private Camera gameCamera;
 
     private void Awake()
     {
         isFinished = false;
+        gameCamera = FindObjectOfType<Camera>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +32,8 @@ public class CatHouseHeals : MonoBehaviour
         closedDoor.SetActive(true);
         openDoor.SetActive(false);
 
-        // TODO: Play Sleep Sound
+        AudioSource.PlayClipAtPoint(sleepSound, gameCamera.transform.position);
+        AudioSource.PlayClipAtPoint(lullaby, gameCamera.transform.position);
         yield return new WaitForSeconds(sleepDuration / 2);
         // TODO: Heal One Health
         yield return new WaitForSeconds(sleepDuration / 2);

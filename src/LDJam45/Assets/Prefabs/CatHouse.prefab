@@ -61,7 +61,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openDoor: {fileID: 5263506347699084058}
   closedDoor: {fileID: 8756592303832680336}
-  sleepDuration: 1.5
+  sleepDuration: 3
+  sleepSound: {fileID: 8300000, guid: b321c02fd228a2245992f87321752fbf, type: 3}
+  lullaby: {fileID: 8300000, guid: 635039c97b47aa1429df42f3ed053197, type: 3}
   isFinished: 0
 --- !u!64 &2600920991926264884
 MeshCollider:
