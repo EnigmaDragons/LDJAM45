@@ -16,7 +16,7 @@ public class Patrol : MonoBehaviour
     {
         Agent.SetDestination(Waypoints[CurrentWaypoint].position);
 
-        if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 5.0f)
+        if (Vector3.Distance(transform.position, Waypoints[CurrentWaypoint].position) <= 6.0f)
         {
             CurrentWaypoint++;
             if (CurrentWaypoint == Waypoints.Length)
