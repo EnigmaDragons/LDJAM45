@@ -46,7 +46,7 @@ public class CatDash : MonoBehaviour
 
         if (_direction != Vector3.zero)
             CatBody.transform.forward = _direction;
-        CatBody.AddForce(CatBody.transform.forward * DashSpeed * Time.fixedDeltaTime, ForceMode.Force);
+        CatBody.AddForce(CatBody.transform.forward * DashSpeed * Time.deltaTime, ForceMode.Force);
 
         _dashTime -= Time.deltaTime;
         if (_dashTime <= 0)
