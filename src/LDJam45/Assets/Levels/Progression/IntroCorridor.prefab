@@ -5831,6 +5831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThoughtTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882850, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5889,7 +5894,7 @@ PrefabInstance:
     - target: {fileID: 7769569194478882851, guid: bcba3fcd80487ea4f989bbe017f8fac1,
         type: 3}
       propertyPath: message
-      value: Maybe I should take a quick cat nap
+      value: I should take a quick catnap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcba3fcd80487ea4f989bbe017f8fac1, type: 3}

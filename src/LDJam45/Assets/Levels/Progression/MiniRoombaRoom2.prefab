@@ -3169,6 +3169,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 13ede8d30d8b2924ababcbaf2b7597fa,
         type: 2}
+    - target: {fileID: 8282418567072709706, guid: 6f97c04204f346d4db6cfb9c669d70f5,
+        type: 3}
+      propertyPath: StartFight
+      value: 
+      objectReference: {fileID: 11400000, guid: bfea37bb11ea8d14a9761ccde76975b2,
+        type: 2}
     - target: {fileID: 2641816907689633002, guid: 6f97c04204f346d4db6cfb9c669d70f5,
         type: 3}
       propertyPath: Waypoints.Array.size
@@ -3184,12 +3190,6 @@ PrefabInstance:
       propertyPath: Waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 8451572584654205789}
-    - target: {fileID: 8282418567072709706, guid: 6f97c04204f346d4db6cfb9c669d70f5,
-        type: 3}
-      propertyPath: StartFight
-      value: 
-      objectReference: {fileID: 11400000, guid: bfea37bb11ea8d14a9761ccde76975b2,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f97c04204f346d4db6cfb9c669d70f5, type: 3}
 --- !u!4 &1119556495639125807 stripped
@@ -4796,11 +4796,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3791697936241190967}
     m_Modifications:
-    - target: {fileID: 1516984841192912180, guid: 7d9ac70434ae0a943bf45ddff62bec3f,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light
-      objectReference: {fileID: 0}
     - target: {fileID: 6576298238880492894, guid: 7d9ac70434ae0a943bf45ddff62bec3f,
         type: 3}
       propertyPath: m_RootOrder
@@ -4820,6 +4815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516984841192912180, guid: 7d9ac70434ae0a943bf45ddff62bec3f,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9ac70434ae0a943bf45ddff62bec3f, type: 3}
@@ -5874,7 +5874,7 @@ PrefabInstance:
     - target: {fileID: 7769569194478882851, guid: bcba3fcd80487ea4f989bbe017f8fac1,
         type: 3}
       propertyPath: message
-      value: It's time to do CatNip and kill vacuums, and I'm all out of CatNip
+      value: It's time to for CatNip and to kill vacuums, and I'm all out of CatNip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcba3fcd80487ea4f989bbe017f8fac1, type: 3}
