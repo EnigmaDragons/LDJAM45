@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1836863699757973903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624916655913611198}
+  - component: {fileID: 1629372779501745292}
+  m_Layer: 0
+  m_Name: MoodMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624916655913611198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836863699757973903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629372779501745292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836863699757973903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2c6db2d6dddc44db7b44e3b176ffa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 980cc00095f68e442b60b7debe3d0647, type: 2}
+  chillMusic: {fileID: 8300000, guid: dcb2a00ff572cc74c9f9d1a7a20af33c, type: 3}
+  shouldChill:
+  - {fileID: 11400000, guid: cb1ac28e863d1dc4bbee02c0618a13f4, type: 2}
+  - {fileID: 11400000, guid: e32f7404ad3621e4f9b2686f51307d8e, type: 2}
+  - {fileID: 11400000, guid: 1775fcb97990e05419e295e035c35ac4, type: 2}
+  - {fileID: 11400000, guid: 0fc4e943b99bd2d47beda079783c02da, type: 2}
+  - {fileID: 11400000, guid: 13ede8d30d8b2924ababcbaf2b7597fa, type: 2}
+  - {fileID: 11400000, guid: 6d53a26951fb65348b516a47984661a1, type: 2}
+  - {fileID: 11400000, guid: de7454aee04217e49a1cb609d78c89a8, type: 2}
+  - {fileID: 11400000, guid: bb2cb4e1f406a5d4b9aadc631fc174b9, type: 2}
+  fightMusic: {fileID: 8300000, guid: 69a6ca6aa5cb9be468a4be5c007c0fbd, type: 3}
+  fightStarted:
+  - {fileID: 11400000, guid: 13f3f88e19b7aaf47af95d7334050b6f, type: 2}
+  - {fileID: 11400000, guid: c4b27b64a3e13a842abef22773836ef9, type: 2}
+  - {fileID: 11400000, guid: bfea37bb11ea8d14a9761ccde76975b2, type: 2}
+  - {fileID: 11400000, guid: 0587be0f249869a4a9bb3565489588fc, type: 2}
+  - {fileID: 11400000, guid: 0aff6a834aeb659478bab301c93b7ee1, type: 2}
+  - {fileID: 11400000, guid: 2917f5efb6e77f341b1a58e0fd7d1a1f, type: 2}
+  bossMusic: {fileID: 8300000, guid: 810bbd0f9f2239241855a2786982cf5e, type: 3}
+  bossStarted:
+  - {fileID: 11400000, guid: dfd289768d35fa1488f40c604bcad56d, type: 2}
+  - {fileID: 11400000, guid: aa3deb18dd94c83458c381906b453642, type: 2}
