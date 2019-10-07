@@ -69,12 +69,12 @@ public class CoolCameraIntro : MonoBehaviour
 
     private void CheckSkipRequested()
     {
-        if (_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        if (_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return))
         {
             _shouldSkip = true;
             Finish();
         }
-        if (!_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        if (!_showedSkipPrompt && Input.GetKeyDown(KeyCode.Return))
         {
             _showedSkipPrompt = true;
             state.ThoughtsMessageQueue.Enqueue("Press Enter again to skip.");
