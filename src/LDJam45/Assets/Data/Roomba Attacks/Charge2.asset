@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Charge2
   m_EditorClassIdentifier: 
   StartingState: 0
-  Type: 0
-  AttackDuration: 0
-  WindUpTime: 0
-  ChasingTime: 0
-  WindDownTime: 0
-  ChaseSpeed: 0
-  ChaseAngularSpeed: 0
-  ChaseAcceleration: 0
-  Speed: 0
+  Type: 1
+  AttackDuration: 0.1
+  WindUpTime: 0.3
+  ChasingTime: 2
+  WindDownTime: 0.5
+  ChaseSpeed: 9
+  ChaseAngularSpeed: 500
+  ChaseAcceleration: 9
+  Speed: 30000
   RotationSpeed: 0
