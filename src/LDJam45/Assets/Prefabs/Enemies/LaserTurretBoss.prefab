@@ -416,6 +416,11 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9904b320bccecfe46bcb8061027d7ecd, type: 3}
 --- !u!1 &1791761955166904054 stripped

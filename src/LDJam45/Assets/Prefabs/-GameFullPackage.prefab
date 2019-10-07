@@ -53,6 +53,17 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+        m_MethodName: Win
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 63f27014cddc28046848396d63d81e35, type: 2}
         m_MethodName: NavigateToVictoryScene
         m_Mode: 1
@@ -461,37 +472,37 @@ PrefabInstance:
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
@@ -506,7 +517,7 @@ PrefabInstance:
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7319797692756229465, guid: 6272e3f1727fe2f47a4b80f3a6289579,
         type: 3}
