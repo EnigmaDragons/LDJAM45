@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 459fa0671b2e01e46812d825a6443cb9, type: 3}
   m_Name: Charge2
-  m_EditorClassIdentifier: Assembly-CSharp::RoombaAttack
+  m_EditorClassIdentifier: 
   StartingState: 0
-  Type: 1
-  AttackDuration: 0.1
-  WindUpTime: 0.3
-  ChasingTime: 2
-  WindDownTime: 0.5
-  ChaseSpeed: 18
-  ChaseAngularSpeed: 500
-  ChaseAcceleration: 9
-  Speed: 30000
+  Type: 0
+  AttackDuration: 0
+  WindUpTime: 0
+  ChasingTime: 0
+  WindDownTime: 0
+  ChaseSpeed: 0
+  ChaseAngularSpeed: 0
+  ChaseAcceleration: 0
+  Speed: 0
   RotationSpeed: 0

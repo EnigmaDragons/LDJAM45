@@ -102,7 +102,7 @@ MonoBehaviour:
   Stage1Attacks:
   - {fileID: 11400000, guid: 83809519629abfa4688c65f9f45f11f0, type: 2}
   Stage2Attacks:
-  - {fileID: 11400000, guid: a1be54f08df025847a2720e689da23e6, type: 2}
+  - {fileID: 11400000, guid: 80838766f130688438d44189c64fdb18, type: 2}
   - {fileID: 11400000, guid: 0ac975ec00ec2a24f81b67534af3b835, type: 2}
   Stage3Attacks:
   - {fileID: 11400000, guid: cb9462f3c445b5c4f9d09b98c13e6190, type: 2}
