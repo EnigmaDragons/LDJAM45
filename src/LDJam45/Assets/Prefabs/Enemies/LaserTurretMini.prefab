@@ -99,7 +99,7 @@ MonoBehaviour:
   ID: {fileID: 3475405922021663460}
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   Stage1Attacks:
-  - {fileID: 11400000, guid: 32c8a4d2d25c36a42821d08c4fafeef6, type: 2}
+  - {fileID: 11400000, guid: c8bf6f2b7ff258d458e1e423fdda0a31, type: 2}
   Stage2Attacks: []
   Stage3Attacks: []
   Stage2Threshhold: -1

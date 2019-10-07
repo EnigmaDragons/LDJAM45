@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 459fa0671b2e01e46812d825a6443cb9, type: 3}
   m_Name: Spin2
-  m_EditorClassIdentifier: Assembly-CSharp::RoombaAttack
-  StartingState: 1
-  Type: 2
-  AttackDuration: 5
-  WindUpTime: 1
+  m_EditorClassIdentifier: 
+  StartingState: 0
+  Type: 0
+  AttackDuration: 0
+  WindUpTime: 0
   ChasingTime: 0
   WindDownTime: 0
   ChaseSpeed: 0
   ChaseAngularSpeed: 0
   ChaseAcceleration: 0
-  Speed: 30000
-  RotationSpeed: 99999
+  Speed: 0
+  RotationSpeed: 0
