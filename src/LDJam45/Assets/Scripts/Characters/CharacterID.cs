@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CharacterID : MonoBehaviour
 {
-    public int ID;
+    [SerializeField, ReadOnly] public int ID;
 
     public void Awake()
     {
