@@ -7,6 +7,5 @@ public class SaveCatId : MonoBehaviour
     private void Start()
     {
         state.CatId = GetComponent<CharacterID>().ID;
-        Debug.Log($"CatId = {state.CatId}");
     }
 }

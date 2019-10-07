@@ -18,6 +18,8 @@ public class CatHouseHeals : MonoBehaviour
     {
         isFinished = false;
         gameCamera = FindObjectOfType<Camera>();
+        if (gameState.PlayIronmanMode)
+            CloseDoor();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,13 +27,18 @@ public class CatHouseHeals : MonoBehaviour
         StartCoroutine(HealSleep());
     }
 
+    private void CloseDoor()
+    {
+        closedDoor.SetActive(true);
+        openDoor.SetActive(false);
+    }
+
     private IEnumerator HealSleep()
     {
         if (isFinished)
             yield break;
 
-        closedDoor.SetActive(true);
-        openDoor.SetActive(false);
+        CloseDoor();
 
         AudioSource.PlayClipAtPoint(sleepSound, gameCamera.transform.position);
         AudioSource.PlayClipAtPoint(lullaby, gameCamera.transform.position);
