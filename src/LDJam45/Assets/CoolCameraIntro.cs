@@ -67,7 +67,7 @@ public class CoolCameraIntro : MonoBehaviour
         _remainingDuration = durations[_index];
     }
 
-    private bool SkipRequested() => Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Escape);
+    private bool SkipRequested() => Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space);
 
     private void CheckSkipRequested()
     {
@@ -79,6 +79,7 @@ public class CoolCameraIntro : MonoBehaviour
             _shouldSkip = true;
             Finish();
         }
+
         if (!_showedSkipPrompt)
         {
             _showedSkipPrompt = true;
