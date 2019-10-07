@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Charge1
+  m_Name: Spin2
   m_EditorClassIdentifier: Assembly-CSharp::RoombaAttack
-  StartingState: 0
-  Type: 1
-  AttackDuration: 0.1
-  WindUpTime: 0.4
-  ChasingTime: 3
-  WindDownTime: 0.2
-  ChaseSpeed: 10
-  ChaseAngularSpeed: 500
-  ChaseAcceleration: 20
-  Speed: 25000
-  RotationSpeed: 0
+  StartingState: 1
+  Type: 2
+  AttackDuration: 5
+  WindUpTime: 0.25
+  ChasingTime: 0
+  WindDownTime: 1
+  ChaseSpeed: 0
+  ChaseAngularSpeed: 0
+  ChaseAcceleration: 0
+  Speed: 15000
+  RotationSpeed: 99999
