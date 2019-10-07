@@ -1402,6 +1402,12 @@ PrefabInstance:
       propertyPath: CatBodyAnimator
       value: 
       objectReference: {fileID: 1106743317170435503}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: state
+      value: 
+      objectReference: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72f730f99cfb8444b0ec531333c4e30, type: 3}
 --- !u!114 &1688980512418252143 stripped

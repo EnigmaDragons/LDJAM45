@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CoolCameraIntro : MonoBehaviour
 {
+    [SerializeField] private GameState state;
     [SerializeField] private List<float> durations = new List<float>();
     [SerializeField] private List<Transform> waypoints = new List<Transform>();
     [SerializeField, ReadOnly] private bool isFinished;
@@ -20,6 +21,11 @@ public class CoolCameraIntro : MonoBehaviour
         MoveNext();
         _cam.transform.position = _currentStartPoint.position;
         _cam.transform.rotation = _currentStartPoint.rotation;
+    }
+
+    private void Start()
+    {
+        state.IsInCutscene = true;
     }
 
     void FixedUpdate()
@@ -40,7 +46,7 @@ public class CoolCameraIntro : MonoBehaviour
         if (_index >= waypoints.Count - 1)
         {
             isFinished = true;
-            Debug.Log("Finished Camera Intro");
+            state.IsInCutscene = false;
             return;
         }
 
