@@ -19,7 +19,7 @@ public class Pause : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update ()
-	{
+	{	   
 		//Check if the Cancel button in Input Manager is down this frame (default is Escape key) and that game is not paused, and that we're not in main menu
 		if (Input.GetButtonDown("Cancel") && !isPaused && !startScript.inMainMenu) 
 		{
@@ -36,8 +36,27 @@ public class Pause : MonoBehaviour {
 		}
 	}
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if (startScript.inMainMenu)
+        {          
+            Cursor.visible = true;
+        }
+        else
+        {
+            if (isPaused)
+            {
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.visible = false;
+            }
+        }
+    }
 
-	public void DoPause()
+
+    public void DoPause()
 	{
 		//Set isPaused to true
 		isPaused = true;
