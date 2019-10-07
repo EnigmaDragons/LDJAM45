@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class ThoughtsPresenter : MonoBehaviour
 {
@@ -63,14 +64,20 @@ public class ThoughtsPresenter : MonoBehaviour
         text.color = targetTransparent;
         text.text = state.ThoughtsMessageQueue.Dequeue();
 
-        text.transform.DOScale(Vector3.one, 2.0f).OnComplete(() => {
-            text.transform.DOScale(Vector3.zero, 1.0f).OnComplete(() => {
-                text.text = "";
-            });
+        text.transform.DOScale(Vector3.one, 1.0f).OnComplete(() => {
+            StartCoroutine(DescaleThought(text));
         });
 
         // _finishInSeconds = showDuration + transitionDuration * 2;
         // _fadingInFinishedInSeconds = transitionDuration;
         // _startFadingOutInSeconds = transitionDuration + showDuration;
+    }
+    
+    IEnumerator DescaleThought(TextMeshProUGUI text) {                
+        yield return new WaitForSeconds(2.0f);
+
+        text.transform.DOScale(Vector3.zero, 1.0f).OnComplete(() => {
+            text.text = "";
+        });        
     }
 }

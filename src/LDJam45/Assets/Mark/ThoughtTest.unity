@@ -399,53 +399,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8124095719533671229, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 750
-      objectReference: {fileID: 0}
-    - target: {fileID: 4923529195588631053, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465481847598751919, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: Health2
-      value: 
-      objectReference: {fileID: 21300000, guid: 47e60cb39cc8dbd4c82a108811416e69,
-        type: 3}
-    - target: {fileID: 3465481847598751919, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: Health3
-      value: 
-      objectReference: {fileID: 21300000, guid: b08794b0677ddab48a49a396c15bcc57,
-        type: 3}
-    - target: {fileID: 3465481847598751919, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: Delay
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 8124095719533671228, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -20.102222
-      objectReference: {fileID: 0}
-    - target: {fileID: 8124095719533671228, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 514
-      objectReference: {fileID: 0}
-    - target: {fileID: 8124095719533671228, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8124095719533671228, guid: f45a0be4855b7ce4180cc772e0c0a586,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45a0be4855b7ce4180cc772e0c0a586, type: 3}
 --- !u!1 &954269698

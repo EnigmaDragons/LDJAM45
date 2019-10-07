@@ -17,6 +17,7 @@ MonoBehaviour:
   closeDoorTrigger: {fileID: 0}
   openDoor: {fileID: 4311073627145398991}
   closedDoor: {fileID: 1807224288602395973}
+  onToggle: {fileID: 0}
   startsOpen: 0
 --- !u!114 &8582420510129300595
 MonoBehaviour:
@@ -8546,7 +8547,7 @@ PrefabInstance:
     - target: {fileID: 7769569194478882851, guid: bcba3fcd80487ea4f989bbe017f8fac1,
         type: 3}
       propertyPath: message
-      value: This door is made of iron, must be for iron cats only
+      value: This door is locked, there must be another way
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcba3fcd80487ea4f989bbe017f8fac1, type: 3}

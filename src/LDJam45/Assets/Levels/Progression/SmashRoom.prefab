@@ -129,6 +129,7 @@ Transform:
   - {fileID: 3552305650851058057}
   - {fileID: 965724038122156455}
   - {fileID: 2109098514817665566}
+  - {fileID: 8316699873657529020}
   m_Father: {fileID: 4079355865971561211}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -298,7 +299,7 @@ GameObject:
   - component: {fileID: 5956177250286264576}
   - component: {fileID: 6433756653675055904}
   m_Layer: 0
-  m_Name: UnlockSmash
+  m_Name: UnlockSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2167,6 +2168,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3967826869339987689, guid: 2e85694ac500b594ba859653523012d4,
     type: 3}
   m_PrefabInstance: {fileID: 1774087296221138563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1781688760373605019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5123496915730528504}
+    m_Modifications:
+    - target: {fileID: 7769569194478882850, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_Name
+      value: ThoughtTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769569194478882851, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+        type: 3}
+      propertyPath: message
+      value: I should knock those beakers down to the ground
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bcba3fcd80487ea4f989bbe017f8fac1, type: 3}
+--- !u!4 &8316699873657529020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7769569194478882855, guid: bcba3fcd80487ea4f989bbe017f8fac1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1781688760373605019}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1933758557505109204
 PrefabInstance:
@@ -4575,17 +4656,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5301165679456449588}
     m_Modifications:
-    - target: {fileID: 8324418036515501317, guid: 0f166048641d6be4ea9d3e7e72156553,
-        type: 3}
-      propertyPath: OnDeathEvents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8324418036515501317, guid: 0f166048641d6be4ea9d3e7e72156553,
-        type: 3}
-      propertyPath: OnDeathEvents.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4adba5f7d8e8cb54490aacf2bc0157b1,
-        type: 2}
     - target: {fileID: 3263794442880360180, guid: 0f166048641d6be4ea9d3e7e72156553,
         type: 3}
       propertyPath: m_Name
@@ -4646,6 +4716,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8324418036515501317, guid: 0f166048641d6be4ea9d3e7e72156553,
+        type: 3}
+      propertyPath: OnDeathEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324418036515501317, guid: 0f166048641d6be4ea9d3e7e72156553,
+        type: 3}
+      propertyPath: OnDeathEvents.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4adba5f7d8e8cb54490aacf2bc0157b1,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f166048641d6be4ea9d3e7e72156553, type: 3}
 --- !u!4 &1191700980189864312 stripped
@@ -7655,7 +7736,7 @@ PrefabInstance:
     - target: {fileID: 7769569194478882851, guid: bcba3fcd80487ea4f989bbe017f8fac1,
         type: 3}
       propertyPath: message
-      value: That was fun! Those scientists are up to no good.
+      value: They deserved that!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcba3fcd80487ea4f989bbe017f8fac1, type: 3}
