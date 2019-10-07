@@ -8,6 +8,8 @@ public class ActiveGameObjectSelector : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<StartOptions>().inMainMenu = true;
+
         ShowPanels showPanelsScript = FindObjectOfType<ShowPanels>();
 
         if (showPanelsScript != null)
