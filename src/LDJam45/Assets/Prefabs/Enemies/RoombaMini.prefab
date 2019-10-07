@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 2683249006673878850}
   - component: {fileID: 4037471436309708999}
   - component: {fileID: 8282418567072709707}
-  - component: {fileID: 8282418567072709701}
   - component: {fileID: 8282418567072709706}
   - component: {fileID: 2641816907689633002}
+  - component: {fileID: 5691587805623986554}
   m_Layer: 0
   m_Name: RoombaMini
   m_TagString: Untagged
@@ -89,7 +89,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4121283625665896942}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Speed: 5
   m_Acceleration: 15
   avoidancePriority: 50
@@ -99,7 +99,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.15
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4121283625668631024
@@ -117,7 +117,7 @@ MonoBehaviour:
   OnDeathVfx: {fileID: 2030630232648206281, guid: c40ebf5d3f9306748bdeee83c31655d3,
     type: 3}
   IFrames: 3
-  Collider: {fileID: 8282418567072709701}
+  Collider: {fileID: 5691587805623986554}
   OnDeathEvents: []
   GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
   ID: {fileID: 3141155876664107140}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnedBy: 2
+  OnHitSound: {fileID: 0}
   IsDeadly: 0
 --- !u!114 &4037471436309708999
 MonoBehaviour:
@@ -183,19 +184,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!135 &8282418567072709701
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4121283625665896942}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.16
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8282418567072709706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +220,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waypoints: []
+--- !u!136 &5691587805623986554
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121283625665896942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.16
+  m_Height: 1.32
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &1835892817992128306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,21 +369,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.3882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.67058825
-      objectReference: {fileID: 0}
     - target: {fileID: 8218418670654092173, guid: 9904b320bccecfe46bcb8061027d7ecd,
         type: 3}
       propertyPath: InitialModule.startColor.minColor.r
@@ -411,6 +398,21 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.3882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218418670092900545, guid: 9904b320bccecfe46bcb8061027d7ecd,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.67058825
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9904b320bccecfe46bcb8061027d7ecd, type: 3}
