@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2113297944693279821}
   - component: {fileID: 1587071937418092498}
   - component: {fileID: 878307471960136082}
+  - component: {fileID: 7054662383025548666}
   m_Layer: 5
   m_Name: GameOverUI
   m_TagString: Untagged
@@ -60,6 +61,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
   target: {fileID: 6719678836627696712}
+--- !u!114 &7054662383025548666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3412890120866378797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580cf81715c3fca4486fbf1545923081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onGameOver: {fileID: 11400000, guid: 57766ef1fe9ace84fa4484fd4d66e4de, type: 2}
+  navigator: {fileID: 11400000, guid: 63f27014cddc28046848396d63d81e35, type: 2}
 --- !u!1 &3776228142588581095
 GameObject:
   m_ObjectHideFlags: 0
