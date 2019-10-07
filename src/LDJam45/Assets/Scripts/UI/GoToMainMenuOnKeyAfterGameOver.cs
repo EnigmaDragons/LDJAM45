@@ -19,7 +19,7 @@ public class GoToMainMenuOnKeyAfterGameOver : MonoBehaviour
 
     private void Update()
     {
-        if (_acceptsButtons && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
+        if (_acceptsButtons && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape)))
             navigator.NavigateToMainMenu();
     }
 }
