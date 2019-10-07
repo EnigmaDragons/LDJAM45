@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LaserTurretAI : MonoBehaviour
 {
-    [SerializeField] private GameEvent BossStarted;
+    [SerializeField] private GameEvent FightStarted;
     [SerializeField] private GunBehaviour LaserGun;
     [SerializeField] private TurnTowardsTarget Turning;
     [SerializeField] private Rigidbody LaserTurretBody;
@@ -15,7 +15,7 @@ public class LaserTurretAI : MonoBehaviour
     [SerializeField] private int Stage2Threshhold;
     [SerializeField] private int Stage3Threshhold;
 
-    private bool _bossStarted = false;
+    private bool _fightStarted = false;
     private int _stage = 1;
     private List<LaserTurretAttack> _currentAttackPattern;
     private int _attackIndex;
@@ -26,18 +26,18 @@ public class LaserTurretAI : MonoBehaviour
 
     private void Start()
     {
-        BossStarted.Subscribe(() => _bossStarted = true, this);
+        FightStarted.Subscribe(() => _fightStarted = true, this);
         _currentAttackPattern = Stage1Attacks;
         _attackIndex = 0;
         _secsTilNextShot = 0;
         UpdateCurrentAttack();
     }
 
-    private void OnDisable() => BossStarted.Unsubscribe(this);
+    private void OnDisable() => FightStarted?.Unsubscribe(this);
 
     public void Update()
     {
-        if (!_bossStarted)
+        if (!_fightStarted)
             return;
 
         if (_stage < 3 && GameState.HealthMap[ID.ID] <= Stage3Threshhold)
