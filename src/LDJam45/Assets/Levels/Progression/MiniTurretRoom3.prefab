@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 1674896511498447324}
   - component: {fileID: 1590203254580055589}
   - component: {fileID: 6526848569020530100}
+  - component: {fileID: 5721911644988137909}
   m_Layer: 0
   m_Name: StartFight
   m_TagString: Untagged
@@ -343,6 +344,19 @@ MonoBehaviour:
     ConstantValue: 999
     Variable: {fileID: 0}
   TriggerOnly: 0
+--- !u!114 &5721911644988137909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987390052086200456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3430d1c70b8142b7cd328feb3c818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
 --- !u!1 &4319880369338189368
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,10 +492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d10dcb2009afdf4292eb797b90b781c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnStepsCompleted: {fileID: 11400000, guid: 0fc4e943b99bd2d47beda079783c02da, type: 2}
+  OnStepsCompleted: {fileID: 11400000, guid: bb2cb4e1f406a5d4b9aadc631fc174b9, type: 2}
   RequiredEvents:
-  - {fileID: 11400000, guid: 9ef4d8fc59f07d54eb814b318d4894ae, type: 2}
-  - {fileID: 11400000, guid: 14dc723d5f6146847a1c8f5ea29d8851, type: 2}
+  - {fileID: 11400000, guid: 4c445117908c06b4c89781f6a7a59f66, type: 2}
+  - {fileID: 11400000, guid: e64b233baec1c224f87461873185ca88, type: 2}
+  - {fileID: 11400000, guid: 0d229ec75a9d36044a903ab0709ccaa1, type: 2}
   IsReoccuring: 0
   _isFinished: 0
   _finishedEvents: []
