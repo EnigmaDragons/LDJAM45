@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navigator: {fileID: 11400000, guid: 63f27014cddc28046848396d63d81e35, type: 2}
+  state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
 --- !u!23 &7015465710634870172
 MeshRenderer:
   m_ObjectHideFlags: 0

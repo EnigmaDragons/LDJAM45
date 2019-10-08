@@ -1512,6 +1512,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -10.000061
       objectReference: {fileID: 0}
+    - target: {fileID: 7306220040727634561, guid: f45a0be4855b7ce4180cc772e0c0a586,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121705377659122696, guid: f45a0be4855b7ce4180cc772e0c0a586,
+        type: 3}
+      propertyPath: m_text
+      value: 59:59:999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121705377659122696, guid: f45a0be4855b7ce4180cc772e0c0a586,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121705377659122696, guid: f45a0be4855b7ce4180cc772e0c0a586,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121705377659122696, guid: f45a0be4855b7ce4180cc772e0c0a586,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121705377659122696, guid: f45a0be4855b7ce4180cc772e0c0a586,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45a0be4855b7ce4180cc772e0c0a586, type: 3}
 --- !u!1001 &1713379545

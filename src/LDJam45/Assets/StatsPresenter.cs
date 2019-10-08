@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -13,6 +11,6 @@ public class StatsPresenter : MonoBehaviour
     public void Start()
     {
         var timespan = TimeSpan.FromSeconds(GameState.RunTime);
-        Runtime.text = timespan.ToString("c");
+        Runtime.text = "Run Time: " + timespan.ToString(@"h\:mm\:ss\.fff");
     }
 }
