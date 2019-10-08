@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4306657449884023753}
   - component: {fileID: 8453879980801820216}
   - component: {fileID: 5205917149769071360}
+  - component: {fileID: 7693034730925012938}
   m_Layer: 0
   m_Name: CatSounds
   m_TagString: Untagged
@@ -280,3 +281,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e0d6a293372874bb543b0641544051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7693034730925012938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7238039114136240688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be4196b313bce34f96e639de9f4ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shared: {fileID: 11400000, guid: bbb4cc2a3fffc6740bbeb64ca5d4a7db, type: 2}
+  trigger: {fileID: 11400000, guid: f2d154d1b4e8ef04a83a200add0c951e, type: 2}
+  clip: {fileID: 8300000, guid: 5bc3b7cf2e042234da7f96507f9f8269, type: 3}
+  numTimesTriggered: 0
