@@ -4,6 +4,8 @@ using UnityEngine;
 public class CoolCameraIntro : MonoBehaviour
 {
     [SerializeField] private GameState state;
+    [SerializeField] private GameEvent onStart;
+    [SerializeField] private GameEvent onFinish;
     [SerializeField] private List<float> durations = new List<float>();
     [SerializeField] private List<Transform> waypoints = new List<Transform>();
     [SerializeField, ReadOnly] private bool isFinished;
@@ -30,6 +32,7 @@ public class CoolCameraIntro : MonoBehaviour
     private void Start()
     {
         state.IsInCutscene = true;
+        onStart.Publish();
     }
 
     void FixedUpdate()
@@ -91,5 +94,6 @@ public class CoolCameraIntro : MonoBehaviour
     {
         isFinished = true;
         state.IsInCutscene = false;
+        onFinish.Publish();
     }
 }

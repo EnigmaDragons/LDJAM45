@@ -1580,6 +1580,8 @@ GameObject:
   - component: {fileID: 1897092224550503203}
   - component: {fileID: 2432440275034917976}
   - component: {fileID: 7832996199920849600}
+  - component: {fileID: 3266297978112945285}
+  - component: {fileID: 4314004366800470997}
   m_Layer: 5
   m_Name: Cooldowns 1
   m_TagString: Untagged
@@ -1680,6 +1682,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnlockEvent: {fileID: 11400000, guid: 2d1abbb9cb0883f43a06a6053fa16b4f, type: 2}
   Icon: {fileID: 3865759860461538860}
+--- !u!114 &3266297978112945285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021294470210012413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6c591a87ac5e94ca37b1b5a469c408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 11400000, guid: eaa0ddadfdd784d4d94a4d68def45b70, type: 2}
+  target: {fileID: 4875605162340735015}
+--- !u!114 &4314004366800470997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021294470210012413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4655b90c71da9643b3a7bdc50a2ca4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 11400000, guid: c27aa7d72f3e7d14794944e852cfaef9, type: 2}
+  target: {fileID: 4875605162340735015}
 --- !u!1 &8246137721731222872
 GameObject:
   m_ObjectHideFlags: 0

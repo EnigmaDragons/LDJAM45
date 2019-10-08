@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d, type: 2}
+  onStart: {fileID: 11400000, guid: c27aa7d72f3e7d14794944e852cfaef9, type: 2}
+  onFinish: {fileID: 11400000, guid: eaa0ddadfdd784d4d94a4d68def45b70, type: 2}
   durations:
   - 1
   - 3
