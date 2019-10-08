@@ -22,6 +22,7 @@ public class GameState : ScriptableObject
     public bool IsVictory;
     public bool IsInCutscene;
     public bool IronmanModeUnlocked;
+    public float RunTime;
 
     public void Win()
     {
@@ -31,6 +32,7 @@ public class GameState : ScriptableObject
 
     public void Reset()
     {
+
         CurrentPlayerHp = 0;
         IsTravelling = false;
         DashUnlocked = false;
@@ -45,6 +47,7 @@ public class GameState : ScriptableObject
         IsVictory = false;
         IsInCutscene = false;
         IronmanModeUnlocked = PlayerPrefs.GetInt(nameof(IronmanModeUnlocked)) > 0;
+        RunTime = 0;
     }
 
     public void Gain1PlayerHealth() => HealthMap[CatId] = Math.Min(HealthMap[CatId] + 1, MaxHP);
