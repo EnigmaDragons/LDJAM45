@@ -8,14 +8,10 @@ public class IronCatMode : MonoBehaviour
     
     private void OnEnable()
     {
-        GameState.Reset();
-        gameObject.SetActive(GameState.IronmanModeUnlocked);
-    }
-
-    void Start()
-    {
         GameState.PlayIronmanMode = false;
         Checkbox.isOn = GameState.PlayIronmanMode;
+        GameState.Reset();
+        gameObject.SetActive(GameState.IronmanModeUnlocked);
     }
 
     public void Toggle()
