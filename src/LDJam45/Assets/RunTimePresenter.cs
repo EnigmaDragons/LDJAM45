@@ -13,5 +13,7 @@ public class RunTimePresenter : MonoBehaviour
     {
         if (GameState.PlayIronmanMode)
             RunTimer.text = TimeSpan.FromSeconds(GameState.RunTime).ToString(@"mm\:ss\.fff");
+        else
+            RunTimer.text = "";
     }
 }
