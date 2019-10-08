@@ -12,7 +12,7 @@ public class OnCollisionThought : MonoBehaviour
 
     private void Trigger(GameObject other)
     {
-        if (isFinished)
+        if (isFinished || !other.tag.Equals("Player"))
             return;
 
         isFinished = true;
