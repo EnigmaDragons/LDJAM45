@@ -21,6 +21,7 @@ public class GameState : ScriptableObject
     public int CatId;
     public bool IsVictory;
     public bool IsInCutscene;
+    public float RunTime;
 
     public void Win()
     {
@@ -29,6 +30,7 @@ public class GameState : ScriptableObject
 
     public void Reset()
     {
+
         CurrentPlayerHp = 0;
         IsTravelling = false;
         DashUnlocked = false;
@@ -42,6 +44,7 @@ public class GameState : ScriptableObject
         CatId = -1;
         IsVictory = false;
         IsInCutscene = false;
+        RunTime = 0;
     }
 
     public void Gain1PlayerHealth() => HealthMap[CatId] = Math.Min(HealthMap[CatId] + 1, MaxHP);

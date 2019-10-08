@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c52e87842f9394a9d99fe5f5c8b7bd, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: 
-  PlayIronmanMode: 0
+  PlayIronmanMode: 1
   IsTravelling: 0
   CurrentPlayerHp: 1
   MaxHP: 1
@@ -22,6 +22,7 @@ MonoBehaviour:
   LaserEyesUnlocked: 0
   LastCheckpoint: {x: 0, y: 0, z: 0}
   DebugMuteMusic: 0
-  CatId: 196890391
-  IsVictory: 0
+  CatId: -1476364061
+  IsVictory: 1
   IsInCutscene: 0
+  RunTime: 0
