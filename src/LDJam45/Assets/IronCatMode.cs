@@ -5,6 +5,12 @@ public class IronCatMode : MonoBehaviour
 {
     [SerializeField] private GameState GameState;
     [SerializeField] private Toggle Checkbox;
+    
+    private void OnEnable()
+    {
+        GameState.Reset();
+        gameObject.SetActive(GameState.IronmanModeUnlocked);
+    }
 
     void Start()
     {
