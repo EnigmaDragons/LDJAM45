@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 5638540562608576060}
   - component: {fileID: 158175489657927249}
   - component: {fileID: 6900495996824820478}
-  - component: {fileID: 2377983786331301052}
   m_Layer: 0
   m_Name: PlayerCat
   m_TagString: Player
@@ -464,19 +463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319797692756229459}
   m_CullTransparentMesh: 0
---- !u!65 &2377983786331301052
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319797692756229459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 5}
-  m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &7459198951525614340
 MonoBehaviour:
   m_ObjectHideFlags: 0
