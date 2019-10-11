@@ -9,8 +9,15 @@ public class CatOnMovingPlatform : MonoBehaviour
     Transform _platform;
 
     private void Start() {
-        _parent = this.transform.parent;
-        Debug.Log(_parent.ToString());
+        _parent = this.transform.parent;        
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        // HACK: Magic number for when kitty is face hanging
+        if (transform.position.y < 1.7f) {
+            Debug.Log("Kitty stuck");
+            transform.position = new Vector3(transform.position.x, 3.0f, transform.position.z);
+        }
     }
 
     private void OnTriggerEnter(Collider other) {

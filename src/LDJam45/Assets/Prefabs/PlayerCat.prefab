@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5638540562608576060}
   - component: {fileID: 158175489657927249}
   - component: {fileID: 6900495996824820478}
+  - component: {fileID: 340876284016637917}
   m_Layer: 0
   m_Name: PlayerCat
   m_TagString: Player
@@ -463,6 +464,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319797692756229459}
   m_CullTransparentMesh: 0
+--- !u!114 &340876284016637917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319797692756229459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c402ca5ff656524093a9d14d6ce7acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7459198951525614340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,11 +507,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingSlash
       objectReference: {fileID: 0}
-    - target: {fileID: 5868929042991015462, guid: 49ee13afd9a5004499558c7af6f1bde1,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 1299703118828251731, guid: 49ee13afd9a5004499558c7af6f1bde1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -554,6 +562,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5868929042991015462, guid: 49ee13afd9a5004499558c7af6f1bde1,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49ee13afd9a5004499558c7af6f1bde1, type: 3}
 --- !u!114 &5794788829966815646 stripped
@@ -586,11 +599,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingRend
       objectReference: {fileID: 0}
-    - target: {fileID: 3404159840776582806, guid: 736daa022056fb54ea87c57baa195f3f,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 1794344848905979744, guid: 736daa022056fb54ea87c57baa195f3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -646,6 +654,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3404159840776582806, guid: 736daa022056fb54ea87c57baa195f3f,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 736daa022056fb54ea87c57baa195f3f, type: 3}
 --- !u!114 &2959736266857931256 stripped
@@ -678,11 +691,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandingDoubleSlash
       objectReference: {fileID: 0}
-    - target: {fileID: 4485158502373992397, guid: 23ec3f086ae563e45a27bc69f8327c21,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 1411497362780386232, guid: 23ec3f086ae563e45a27bc69f8327c21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,6 +746,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4485158502373992397, guid: 23ec3f086ae563e45a27bc69f8327c21,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23ec3f086ae563e45a27bc69f8327c21, type: 3}
 --- !u!4 &1784796101872118402 stripped
@@ -932,11 +945,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DashRend
       objectReference: {fileID: 0}
-    - target: {fileID: 8474018423049939012, guid: 0e9f3fff54a77c644bf04334762a086b,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 4587656113536493741, guid: 0e9f3fff54a77c644bf04334762a086b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -992,6 +1000,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8474018423049939012, guid: 0e9f3fff54a77c644bf04334762a086b,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e9f3fff54a77c644bf04334762a086b, type: 3}
 --- !u!114 &5723665544857907352 stripped
@@ -1024,11 +1037,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandingRend
       objectReference: {fileID: 0}
-    - target: {fileID: 4445749637587098612, guid: c9487406d5b60a94981124aa8617b523,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 5351236797153470547, guid: c9487406d5b60a94981124aa8617b523,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1084,6 +1092,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4445749637587098612, guid: c9487406d5b60a94981124aa8617b523,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9487406d5b60a94981124aa8617b523, type: 3}
 --- !u!4 &8170983922484522750 stripped
@@ -1115,11 +1128,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CatLaser
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070050270434108440, guid: 8ee2c2ed17007b345a6cff40d69baa8f,
-        type: 3}
-      propertyPath: LaserEyesCooldown
-      value: 9.9
       objectReference: {fileID: 0}
     - target: {fileID: 8717888085819087700, guid: 8ee2c2ed17007b345a6cff40d69baa8f,
         type: 3}
@@ -1176,6 +1184,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9070050270434108440, guid: 8ee2c2ed17007b345a6cff40d69baa8f,
+        type: 3}
+      propertyPath: LaserEyesCooldown
+      value: 9.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6275200603605179142, guid: 8ee2c2ed17007b345a6cff40d69baa8f,
         type: 3}
       propertyPath: Gun
@@ -1214,11 +1227,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingDoubleSlash
       objectReference: {fileID: 0}
-    - target: {fileID: 5582041336305791262, guid: c62674314ae91af479eb30cb8dbdfbb4,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 8723034944367226579, guid: c62674314ae91af479eb30cb8dbdfbb4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1274,6 +1282,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5582041336305791262, guid: c62674314ae91af479eb30cb8dbdfbb4,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62674314ae91af479eb30cb8dbdfbb4, type: 3}
 --- !u!114 &968100842501484878 stripped
@@ -1306,16 +1319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatDash
       objectReference: {fileID: 0}
-    - target: {fileID: 3961161214608876391, guid: 73c071f592f12834bbcad65f9060e4cf,
-        type: 3}
-      propertyPath: Health
-      value: 
-      objectReference: {fileID: 7319797692756229470}
-    - target: {fileID: 3961161214608876391, guid: 73c071f592f12834bbcad65f9060e4cf,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 6882635715328604348, guid: 73c071f592f12834bbcad65f9060e4cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1371,6 +1374,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3961161214608876391, guid: 73c071f592f12834bbcad65f9060e4cf,
+        type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 7319797692756229470}
+    - target: {fileID: 3961161214608876391, guid: 73c071f592f12834bbcad65f9060e4cf,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c071f592f12834bbcad65f9060e4cf, type: 3}
 --- !u!114 &8878039535138888416 stripped
@@ -1403,44 +1416,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatMovement
       objectReference: {fileID: 0}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: CatIsOnGround
-      value: 
-      objectReference: {fileID: 5513228514965521403}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: Animator
-      value: 
-      objectReference: {fileID: 6589930768010418438}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: WalkingStarted
-      value: 
-      objectReference: {fileID: 11400000, guid: e44d85d44b5d55041a9ed1b7c68e09b5,
-        type: 2}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: WalkingStopped
-      value: 
-      objectReference: {fileID: 11400000, guid: c4f7642b8cd043044bd9ca1862276729,
-        type: 2}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: CatBodyAnimator
-      value: 
-      objectReference: {fileID: 1106743317170435503}
-    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
-        type: 3}
-      propertyPath: state
-      value: 
-      objectReference: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d,
-        type: 2}
     - target: {fileID: 7164714077095864694, guid: a72f730f99cfb8444b0ec531333c4e30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1496,6 +1471,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: CatIsOnGround
+      value: 
+      objectReference: {fileID: 5513228514965521403}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 6589930768010418438}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: WalkingStarted
+      value: 
+      objectReference: {fileID: 11400000, guid: e44d85d44b5d55041a9ed1b7c68e09b5,
+        type: 2}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: WalkingStopped
+      value: 
+      objectReference: {fileID: 11400000, guid: c4f7642b8cd043044bd9ca1862276729,
+        type: 2}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: CatBodyAnimator
+      value: 
+      objectReference: {fileID: 1106743317170435503}
+    - target: {fileID: 5087761230962825971, guid: a72f730f99cfb8444b0ec531333c4e30,
+        type: 3}
+      propertyPath: state
+      value: 
+      objectReference: {fileID: 11400000, guid: 29745ffb03e1bac438d656522bca7d3d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72f730f99cfb8444b0ec531333c4e30, type: 3}
 --- !u!114 &1688980512418252143 stripped
@@ -1528,11 +1541,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandingSlash
       objectReference: {fileID: 0}
-    - target: {fileID: 578979048233908554, guid: cdee7cabc7f27854ea47f6ddc64fb66c,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 9108021239349719322, guid: cdee7cabc7f27854ea47f6ddc64fb66c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1588,6 +1596,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 578979048233908554, guid: cdee7cabc7f27854ea47f6ddc64fb66c,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdee7cabc7f27854ea47f6ddc64fb66c, type: 3}
 --- !u!114 &7289219894888309392 stripped
@@ -1706,11 +1719,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DashSlash
       objectReference: {fileID: 0}
-    - target: {fileID: 2870882829559174469, guid: 4a05ed460636918429c3cbbfc892569a,
-        type: 3}
-      propertyPath: CatBody
-      value: 
-      objectReference: {fileID: 7319797692756229464}
     - target: {fileID: 6782468643966065560, guid: 4a05ed460636918429c3cbbfc892569a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1766,6 +1774,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2870882829559174469, guid: 4a05ed460636918429c3cbbfc892569a,
+        type: 3}
+      propertyPath: CatBody
+      value: 
+      objectReference: {fileID: 7319797692756229464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a05ed460636918429c3cbbfc892569a, type: 3}
 --- !u!114 &6492901355601089001 stripped
