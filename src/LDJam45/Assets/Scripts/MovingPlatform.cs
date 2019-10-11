@@ -25,7 +25,7 @@ public class MovingPlatform : MonoBehaviour
     void Update()
     {
         float time = Mathf.PingPong(Time.time * Speed, 1);
-        // transform.position = Vector3.Lerp(StartPosition, EndPosition, time);
-        rb.MovePosition(Vector3.Lerp(StartPosition, MoveBy, time));
+        transform.position = Vector3.Lerp(StartPosition, MoveBy, time);
+        // rb.MovePosition(Vector3.Lerp(StartPosition, MoveBy, time));
     }
 }
